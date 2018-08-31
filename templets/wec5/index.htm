@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="content-type"content="text/html; charset=utf-8">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description"content="{dede:global.cfg_description/}"/>
+<meta name="keywords"content="{dede:global.cfg_keywords/}"/>
+<meta name="author" content="design by {dede:global.cfg_webname/}" />
+<meta charset="utf-8">
+<meta name="viewport"content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control"content="no-transform">
+<meta http-equiv="Cache-Control"content="no-siteapp">
+<link type="text/css"media="all"href="{dede:global.cfg_templets_skin/}/gong/css/gong.css"rel="stylesheet">
+<link href="{dede:global.cfg_templets_skin/}/gong/css/share_style1_24.css"rel="stylesheet">
+<script type="text/javascript"src="{dede:global.cfg_templets_skin/}/gong/js/jquery.js"></script>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js"type="text/javascript"charset="utf-8"></script>
+<!--[if lt IE 9]>
+<script src="http://www.wpdaxue.com/wp-content/themes/wpdx/js/html5.js"></script>
+<script src="http://www.wpdaxue.com/wp-content/themes/wpdx/js/css3-mediaqueries.js"></script>
+<![endif]--><!--[if IE 8]>
+<link rel="stylesheet"href="http://www.wpdaxue.com/wp-content/themes/wpdx/css/ie8.css">
+<![endif]--><!--[if IE 7]>
+<link rel="stylesheet"href="http://www.wpdaxue.com/wp-content/themes/wpdx/font-awesome/css/font-awesome-ie7.min.css">
+<link rel="stylesheet"href="http://www.wpdaxue.com/wp-content/themes/wpdx/css/ie7.css">
+<![endif]--><!--[if IE 6]>
+<script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]--><!--<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?b6ca4c7f50ea42579ccbbbd85fd66206";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script>
+-->
+</head>
+<body class="home blog">
+{dede:include filename="head.htm"/}
+
+
+<div id="main-content">
+  <div class="container-fluid home-fluid"> 
+    <!--顶部广告位-->
+    <div class="row-fluid gtop mobile-no">
+      <div class="span6"> 
+        <script src='/plus/ad_js.php?aid=1'language='javascript'></script> 
+      </div>
+      <div class="span6"> 
+        <script src='/plus/ad_js.php?aid=2'language='javascript'></script> 
+      </div>
+    </div>
+    <!--顶部广告位-->
+    <div class="row-fluid"> 
+      <!--幻灯3张-->
+      <div class="span8">
+        <div id="home-slider" class="widget-box">
+          <div class="widget-content">
+            <div class="bx-wrapper" style="max-width: 100%;">
+              <div class="bx-viewport">
+                <ul class="bxslider">
+                  {dede:arclist titlelen='80' flag='f' row='5'}
+                  <li><a target="_blank"href="[field:arcurl/]"title="[field:title/]"><img src="[field:id runphp=yes]  
+        global $dsql;
+        $id = @me;
+        $sql='select slider_img from dede_archives where id='.$id;
+        $row=$dsql->getone($sql);
+        @me=$row['slider_img'];
+     [/field:id]" title="[field:title/]" alt="[field:title/]"/></a>
+                    <div class="bx-caption"> <span>[field:title/]</span> </div>
+                  </li>
+                  {/dede:arclist}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--幻灯3张--><!--右侧广告位2-->
+      <div class="span4 home-g430 mobile-no">
+        <div class="widget-box">
+          <div class="widget-content">
+            <div class="gright"> 
+              <script src='/plus/ad_js.php?aid=21'language='javascript'></script> 
+              <script src='/plus/ad_js.php?aid=3'language='javascript'></script> 
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--右侧广告位2--> 
+    </div>
+    <div class="row-fluid">
+      <section class="span4 home-recent">
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-list"></i></span>
+            <h2>最新文章</h2>
+          </div>
+          <div class="widget-content">
+            <ul class="news-list">
+              {dede:arclist titlelen=80 orderby ='pubdate' row='8'}
+              <li><span>[field:pubdate function='strftime("%m-%d",@me)'/]</span><a href="[field:arcurl/]"title="[field:title/]"><i class="icon-angle-right"></i>[field:title/]</a></li>
+              {/dede:arclist}
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="span4 home-recent">
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-list"></i></span>
+            <h2>近期热门</h2>
+          </div>
+          <div class="widget-content">
+            <ul class="news-list">
+              {dede:arclist titlelen='80' flag='a' row='8'}
+              <li class="most-view"><span>[field:click/]℃</span><a href="[field:arcurl/]"title="[field:title/]"><i class="icon-angle-right"></i>[field:title/]</a></li>
+              {/dede:arclist}
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="span4 home-recent">
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-list"></i></span>
+            <h2>{dede:type  typeid='12'}[field:typename/]{/dede:type}</h2>
+          </div>
+          <div class="widget-content">
+            <ul class="news-list">
+              {dede:arclist titlelen='80' typeid='12' row='8'}
+              <li class="most-view"><span>[field:click/]℃</span><a href="[field:arcurl/]"title="[field:title/]"><i class="icon-angle-right"></i>[field:title/]</a></li>
+              {/dede:arclist}
+            </ul>
+          </div>
+        </div>
+      </section>
+     
+      <section class="span6 column2 first-column ">
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-list"></i></span>
+            <h2>{dede:type  typeid='12'}<a href="[field:typelink/]">[field:typename/]</a>{/dede:type}</h2>
+          </div>
+          <div class="widget-content">
+            <ul>
+               {dede:arclist titlelen='80' typeid='12' row='1' limit='0,1'}
+              <li class="first-posts"><a href="[field:arcurl/]"class="post-thumbnail"title="[field:title/]"rel="bookmark"><img src="[field:picname/]"alt="[field:title/]"style="height:120px; width:180px"/></a>
+                <h3><a href="[field:arcurl/]"title="[field:title/]"rel="bookmark">[field:title/]</a></h3>
+                <p class="summary"> [field:description function="cn_substr(@me,220)"/]...</p>
+              </li>
+              {/dede:arclist}
+
+              <div class="clear"> </div>
+              {dede:arclist titlelen='80' typeid='12'  row='5' limit='2,7' }
+              <li class="other-news"><span>[field:pubdate function='strftime("%m-%d",@me)'/]</span><a href="[field:arcurl/]"title="[field:title/]"><i class="icon-angle-right"></i>[field:title/]</a></li>
+               {/dede:arclist}
+            </ul>
+            <div class="clear"> </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="span6 column2 ">
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-list"></i></span>
+            <h2>{dede:autochannel  typeid='18'}<a href="[field:typelink/]">[field:typename/]</a>{/dede:autochannel}</h2>
+          </div>
+          <div class="widget-content">
+            <ul>
+               {dede:arclist titlelen='80' typeid='18' row='1' limit='0,1'}
+              <li class="first-posts"><a href="[field:arcurl/]"class="post-thumbnail"title="[field:title/]"rel="bookmark"><img src="[field:picname/]"alt="[field:title/]"style="height:120px; width:180px"/></a>
+                <h3><a href="[field:arcurl/]"title="[field:title/]"rel="bookmark">[field:title/]</a></h3>
+                <p class="summary"> [field:description function="cn_substr(@me,220)"/]...</p>
+              </li>
+              {/dede:arclist}
+
+              <div class="clear"> </div>
+              {dede:arclist titlelen='80' typeid='18' row='5' limit='2,7' }
+              <li class="other-news"><span>[field:pubdate function='strftime("%m-%d",@me)'/]</span><a href="[field:arcurl/]"title="[field:title/]"><i class="icon-angle-right"></i>[field:title/]</a></li>
+               {/dede:arclist}
+            </ul>
+            <div class="clear"> </div>
+          </div>
+        </div>
+      </section>
+      <section class="span6 column2 first-column ">
+        <div class="widget-box">
+          <div class="widget-title"> <span class="icon"><i class="icon-list"></i></span>
+            <h2>{dede:autochannel  typeid='14'}<a href="[field:typelink/]">[field:typename/]</a>{/dede:autochannel}</h2>
+          </div>
+          <div class="widget-content">
+            <ul>
+               {dede:arclist titlelen='80' typeid='14' row='1' limit='0,1'}
+              <li class="first-posts"><a href="[field:arcurl/]"class="post-thumbnail"title="[field:title/]"rel="bookmark"><img src="[field:picname/]"alt="[field:title/]"style="height:120px; width:180px"/></a>
+                <h3><a href="[field:arcurl/]"title="[field:title/]"rel="bookmark">[field:title/]</a></h3>
+                <p class="summary"> [field:description function="cn_substr(@me,220)"/]...</p>
+              </li>
+              {/dede:arclist}
+
+              <div class="clear"> </div>
+              {dede:arclist titlelen='80' typeid='14' row='5' limit='2,7' }
+              <li class="other-news"><span>[field:pubdate function='strftime("%m-%d",@me)'/]</span><a href="[field:arcurl/]"title="[field:title/]"><i class="icon-angle-right"></i>[field:title/]</a></li>
+               {/dede:arclist}
+            </ul>
+            <div class="clear"> </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="yqlj">
+      <div class="widget-title"> <span class="icon"><i class="icon-list"></i></span>
+        <h2>友情链接</h2>
+      </div>
+      <div class="yqlj_01"> <li><a href='http://www.adminbuy.cn' target='_blank'>织梦源码</a> </li><li><a href='http://www.adminbuy.cn' target='_blank'>织梦模板</a> </li><li><a href='http://www.adminbuy.cn' target='_blank'>模板王</a> </li><li><a href='http://www.adminbuy.cn' target='_blank'>网站模板</a> </li><li><a href='http://www.adminbuy.cn' target='_blank'>discuz模板</a> </li><li><a href='http://www.adminbuy.cn' target='_blank'>图标下载</a> </li> </div>
+    </div>
+  </div>
+</div>
+{dede:include filename="foot.htm"/}
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="content-type"content="text/html; charset=utf-8">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description"content="{dede:global.cfg_description/}"/>
+<meta name="keywords"content="{dede:global.cfg_keywords/}"/>
+<meta name="author" content="design by {dede:global.cfg_webname/}" />
+<meta charset="utf-8">
+<meta name="viewport"content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control"content="no-transform">
+<meta http-equiv="Cache-Control"content="no-siteapp">
+<link type="text/css"media="all"href="{dede:global.cfg_templets_skin/}/gong/css/gong.css"rel="stylesheet">
+<link href="{dede:global.cfg_templets_skin/}/gong/css/share_style1_24.css"rel="stylesheet">
+<script type="text/javascript"src="{dede:global.cfg_templets_skin/}/gong/js/jquery.js"></script>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js"type="text/javascript"charset="utf-8"></script>
+<!--[if lt IE 9]>
+<script src="http://www.wpdaxue.com/wp-content/themes/wpdx/js/html5.js"></script>
+<script src="http://www.wpdaxue.com/wp-content/themes/wpdx/js/css3-mediaqueries.js"></script>
+<![endif]--><!--[if IE 8]>
+<link rel="stylesheet"href="http://www.wpdaxue.com/wp-content/themes/wpdx/css/ie8.css">
+<![endif]--><!--[if IE 7]>
+<link rel="stylesheet"href="http://www.wpdaxue.com/wp-content/themes/wpdx/font-awesome/css/font-awesome-ie7.min.css">
+<link rel="stylesheet"href="http://www.wpdaxue.com/wp-content/themes/wpdx/css/ie7.css">
+<![endif]--><!--[if IE 6]>
+<script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]--><!--<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?b6ca4c7f50ea42579ccbbbd85fd66206";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script>
+-->
+</head>
+<body class="home blog">
+{dede:include filename="head.htm"/}
+<div id="main-content">
+<div class="container-fluid"> 
+    <!--顶部广告位-->
+    <div class="row-fluid gtop mobile-no">
+      <div class="span6"> 
+        <script src="/plus/ad_js.php?aid=1" language="javascript"></script> 
+      </div>
+      <div class="span6"> 
+        <script src="/plus/ad_js.php?aid=2" language="javascript"></script> 
+      </div>
+    </div>
+    <!--顶部广告位-->
+    <div class="row-fluid">
+      <div class="span8">
+        <div class="widget-box">
+          <article id="post-16663" class="widget-content single-post">
+            <header id="post-header">
+              <h1 class="post-title" itemprop="headline">{dede:field.title/}</h1>
+              <div class="clear"> </div>
+              <p class="post-meta"> <span class="time"><i class="icon-time"></i>[field:pubdate function='strftime("%Y-%m-%d",@me)'/]</span><span class="eye"><i class="icon-eye-open"></i> 
+               {dede:field.click/}
+                </span><span class="comm"></span> </p>
+              <div class="clear"> </div>
+            </header>
+            <div class="entry" itemprop="articleBody">
+              <div class="gpost-above">
+                <div class="old-message"> <script src="/plus/ad_js.php?aid=26" language="javascript"></script></div>
+              </div>
+              {dede:field.body/}
+
+              <div class="old-message"> 请尊重我们的辛苦付出，未经允许，请不要转载
+            </div>
+            <div class="post-navigation">
+              <div class="post-previous">{dede:prenext get='pre'/}</div>
+              <div class="post-next">{dede:prenext get='pre'/} </div>
+            </div>
+          </article>
+        </div>
+        <section id="related-posts" class="widget-box">
+          <h3>相关文章</h3>
+          <div class="widget-content"> 
+
+            {dede:arclist titlelen=80  orderby ='rand' row='4' limit='0,4'}
+            <div class="related-item">
+              <div class="post-thumbnail"> <a href="[filed:arcurl/]" title="[field:title/]" rel="bookmark"><img class="lazy" src="[field:picname/]" alt="[field:title/]" style="height:120px; width:180px"></a> </div>
+              <a href="[field:arcurl/]" title="[field:title/]" rel="bookmark">[field:title/]</a>
+              <p class="post-meta"> [field:pubdate function='strftime("%Y-%m-%d",@me)'/] </p>
+            </div>
+             {/dede:arclist}
+            <div class="clear"> </div>
+          </div>
+        </section>
+        
+      </div>
+
+{dede:include filename="right.htm"/}
+ </div>
+  </div>
+</div>
+{dede:include filename="foot.htm"/}
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="order by {dede:global.cfg_basehost/}" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<link rel='stylesheet' id='contact-form-7-css'  href='{dede:global.cfg_templets_skin/}/skin/styles.css' type='text/css' media='all' />
+<link rel='stylesheet' id='responsive-lightbox-swipebox-front-css'  href='{dede:global.cfg_templets_skin/}/skin/swipebox.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css'  href='{dede:global.cfg_templets_skin/}/skin/pagenavi-css.css' type='text/css' media='all' />
+<link rel='stylesheet' id='kube-css'  href='{dede:global.cfg_templets_skin/}/skin/kube.css' type='text/css' media='all' />
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/jquery.min.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/jquery.swipebox.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var rlArgs = {"script":"swipebox","selector":"lightbox","custom_events":"","activeGalleries":"1","animation":"1","hideCloseButtonOnMobile":"0","hideBars":"1","hideBarsDelay":"5000","videoMaxWidth":"1080","useSVG":"","loopAtEnd":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/front.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/jquery.masonry.js'></script>
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/skin/black.css" />
+<style></style>
+</head>
+<body  class="custom-background">
+{dede:include filename='head.htm'/}
+<div class="container">
+
+  <div class="row">
+    <div class="subsidiary box">
+      <div class="bulletin fourfifth"> <span class="sixth">当前位置：</span> <span class="current">{dede:field.position/}</span> </div>
+    </div>
+  </div>
+  <!--right--> 
+{dede:include filename="right.htm"/}
+  <!--right end -->
+  
+  <div class="mainleft">
+    <ul id="post_container" class="masonry clearfix" style="position: relative; height: 2385.5px;">
+      {dede:list pagesize ='12'}
+      <li class="post box row  masonry-brick" style="position: absolute; top: 0px; left: 0px;">
+        <div class="thumbnail"> <a href="[field:arcurl/]" class="zoom" target="_blank" title="[field:title/]"> <img src="[field:picname/]" alt="[field:title/]">
+          <div class="zoomOverlay"></div>
+          </a> </div>
+        <div class="article">
+          <h2><a href="[field:arcurl/]" target="_blank" title="[field:title/]">[field:title/]</a></h2>
+        </div>
+        <div class="info"> <span class="info_date info_ico">[field:pubdate function='strftime("%m-%d",@me)'/]</span> <span class="info_views info_ico">[field:click/]</span> 
+          <!--评论数 <span class="info_comment info_ico"><a href="#">88</a></span>--> 
+          <span class="info_category info_ico"><a href="[field:typeurl/]" rel="category">[field:typename/]</a></span> </div>
+      </li>
+      {/dede:list}
+     
+    </ul>
+    <div class="clear"></div>
+    <div class="pages"> {dede:pagelist listitem="index,end,pre,next,pageno" listsize="3"/}
+ </div>
+  </div>
+</div>
+{dede:include filename="foot.htm"/}
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<link rel="stylesheet" type="text/css" href="/skin8/css/main.css" media="screen"/>
+<link rel="stylesheet" href="/skin8/css/fontello.css"/>
+<!--[if IE 7]><link rel="stylesheet" href="/skin8/css/fontello-ie7.css"><![endif]-->
+<link rel="stylesheet" href="/skin8/css/animate.css"/>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/skin8/js/html5-css3.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/skin8/js/jquery-1.11.0.min.js"></script>
+<link href="/skin8/css/prettify.css" rel="stylesheet" type="text/css" />
+<script src="/skin8/js/prettify.js" type="text/javascript"></script>
+<script src="/skin8/js/common_tpl.js" type="text/javascript"></script>
+<script type="text/javascript" src="/skin8/js/wow.js"></script>
+<script>new WOW().init();</script>
+<script type="text/javascript" src="/skin8/js/leonhere.js"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="blank"></div>
+<div class="inner topad animated fadeIn"> {dede:myad name='toppic'/}</div>
+<div class="inner container">
+  <main class="main">
+    <div class="content">
+     <div class="breadcrumb"> <span> <i class="icon-home"></i> {dede:field name='position'/} </span> </div>
+      <article class="post">
+        <h1 class="post-title">{dede:field.title/}</h1>
+        <div class="postmeta"> <span><i class="icon-user-circle-o"></i> <a>{dede:field.writer/}</a></span> <span><i class="icon-calendar"></i>
+          <time>{dede:field.pubdate function="MyDate('Y-m-d',@me)"/}</time>
+          </span> <span><i class="icon-eye"></i> <script src="/plus/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}"type='text/javascript' language="javascript"></script></span> </div>
+        
+        <div class="entry">
+          {dede:field.body/}
+        </div>
+        <div class="tags"> <i class="icon-tags"></i> {dede:tag getall='0'}<a href="[field:link/]">[field:tag/]</a>{/dede:tag} </div>
+        <div class="postnavi">
+          <div class="prev">{dede:prenext get='pre'/}</div>
+          <div class="next">{dede:prenext get='next'/}</div>
+        </div>
+        <section class="related-post">
+          <h3><i class="icon-list-alt"></i> 您可能还会对下面的文章感兴趣：</h3>
+          <ul>
+          </ul>
+        </section>
+        <section class="related-pic">
+          <h3><i class="icon-file-image"></i> 相关文章</h3>
+          <ul>
+         {dede:arclist titlelen=80  orderby ='rand' row='4'}
+            <li>
+              <div class="thumbnail"><a href="[field:arcurl/]" title="[field:title/]" target="_blank"><img src="[field:picname/]"/></a></div>
+              <p><a href="[field:arcurl/]" title="[field:title/]" target="_blank">[field:title/]</a></p>
+            </li>
+            {/dede:arclist}
+          </ul>
+        </section>
+        <section class="commentslist">
+          <!-- UY BEGIN -->
+<div id="uyan_frame"></div>
+<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js"></script>
+<!-- UY END -->
+        </section>
+        
+      </article>
+    </div>
+  </main>
+  {dede:include filename="left.htm"/}
+</div>
+<div class="inner mainad">{dede:myad name='footepic'/}</div>
+<div class="fixed-widget">
+  <ul>
+    <li><i class="icon-up-open"></i></li>
+  </ul>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

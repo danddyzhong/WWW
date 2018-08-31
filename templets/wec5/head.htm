@@ -1,0 +1,45 @@
+<div id="top-part">
+  <div id="top-bar"class="navbar navbar-inverse">
+    <div id="logo">
+      <hgroup itemscope itemtype="http://schema.org/WPHeader">
+        <h1 class="logoimg"><a href="/" title="{dede:global.cfg_webname/}" rel="home" >{dede:global.cfg_webname/}</a></h1>
+      </hgroup>
+    </div>
+    
+    <div id="search">
+      <div class="toggle-search"> <i class="icon-fixed-width icon-search icon-white"></i> </div>
+      <div class="search-expand">
+        <div class="search-expand-inner">
+          <form class="searchform themeform"action="/plus/search.php">
+            <div>
+              <input type="text"class="search"name="q"x-webkit-speech=""value="输入内容并按回车键"/>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <header id="header"role="banner">
+    <nav id="main-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement"> <a href="#" class="visible-phone"><i class="icon-align-justify"></i>导航菜单</a>
+      <ul>
+        <li class="{dede:field name=typeid runphp='yes'}(@me=='')? @me='current-menu-item':@me='';{/dede:field}" class="submenu"> <a href="/" title="{dede:global.cfg_webname/}"><i class="icon-fixed-width icon-home"></i>网站首页</a>
+        </li>
+        {dede:channelartlist typeid='12,18,14,15'  currentstyle="current-menu-item"}
+        <li class="{dede:field.currentstyle/}"><a id="{dede:global.itemindex/}" href="{dede:field name='typeurl'/}"> <i class="icon-fixed-width icon-00{dede:global.itemindex/}"></i>{dede:field name='typename'/}</a>
+          <ul {dede:field name=typeid runphp="yes"}
+global $dsql;
+$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+$row = $dsql->GetOne($sql);
+@me=is_array($row)?'class="sub-menu"':'style="display:none"';
+{/dede:field} >
+              {dede:channel type='son'} >
+              <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+              {/dede:channel}
+          </ul>
+        </li>
+        {/dede:channelartlist}
+      </ul>
+      <div class="clear"> </div>
+    </nav>
+  </header>
+</div>

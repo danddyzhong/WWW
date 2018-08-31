@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        var serverData = {
+            logowidth: '144',
+            logoheight: '30',
+            coverlogoheight: '50',
+            menuCount: 4,
+            terms: '',
+            menu: [],
+            channelname: '',
+            device: 'pc'
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/skin/css/style.css"/>
+</head>
+<body>
+<style>
+    body {
+        padding-top: 0
+    }
+    #Header {
+        position: relative;
+    }
+</style>
+<div class="wrap">
+<!-- <div id="Cover" class="mod-cover">
+    <div class="cover">
+        <div class="coverbg"></div>
+        <div class="coverlogo"><img
+                src="/skin/images/logo.png"></div>
+        <div class="coverslogan">
+            <p class="ll"></p>
+            <span>新闻是有分量的</span>
+            <p class="rl"></p>
+        </div>
+    </div>
+</div> -->
+{dede:include filename='head.htm'/}
+<div id="Body">
+<div class="body">
+<div class="left">
+<div id="banners">
+    <h1 class="page-title"> <a href="/">首页</a>&nbsp;&gt;&nbsp;关键词：{dede:global name='keyword' function='RemoveXSS(@me)'/} 的信息 </h1>
+{dede:list row='10'}
+<div class="feed_tegao long" data-href="[field:typeurl/]">
+    <h4>
+        <a href="[field:typeurl/]"
+           target="_blank">[field:title/]</a>
+    </h4>
+    <p class="picture"><a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]" alt="[field:title/]"/></a></p>
+    <p class="summary">[field:description function='cn_substr(@me,220)'/]<a href="[field:arcurl/]" class="more" target="_blank">[详情]</a></p>
+    <div class="infos">
+        <span class="time">[field:pubdate function='strftime("%m月%d日",@me)'/]</span>
+    </div>
+</div>
+{/dede:list}
+</div>
+
+<!-- page start -->
+<div class="pagination">
+    {dede:pagelist listitem="index,end,pre,next,pageno" listsize="3"/}
+</div>
+<!-- page end -->
+</div>
+{dede:include filename='right.htm'/}
+
+</div>
+</div>
+{dede:include filename='foot.htm'/}
+
+</body>
+</html>

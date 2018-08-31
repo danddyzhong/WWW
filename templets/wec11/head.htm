@@ -1,0 +1,78 @@
+ <!-- 移动导航开始--> 
+  <aside id="navmenu-mobile">
+  <div id="navmenu-mobile-wraper">
+    <ul id="menu-mobile" class="menu-mobile">
+
+      <li id="menu-item-737" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-737"> <a title="{dede:global.cfg_webname/}" href="/"> <i class="fa fa-home"></i> 首页</a></li>
+
+      {dede:channelartlist typeid='12,18,14,15'  currentstyle="current-menu-item"}
+      <li id="menu-item-1106" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1106"><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+        <ul class='{dede:field name=typeid runphp="yes"}
+global $dsql;
+$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+$row = $dsql->GetOne($sql);
+@me=is_array($row)?'class="sub-menu"':'style="display:none"';
+{/dede:field}'>
+          {dede:channel type='son'}
+          <li id="menu-item-1147" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1147"><a href="[field:typeurl/]">[field:typename/]</a></li>
+          {/dede:channel}
+        </ul>
+      </li>
+      {/dede:channelartlist}
+    </ul>
+  </div>
+</aside>
+ 
+  <!-- 移动导航结束 -->
+  <section id="content-container" style="background:#f1f4f9; ">
+  <header class="header-wrap" id="nav-scroll">
+  <div class="nav-wrap"> 
+    <!-- 移动按钮 -->
+    <div class="toggle-menu"> <i class="fa fa-bars"></i> </div>
+    <!-- 移动按钮结束 -->
+    <div class="logo"> <a href="/" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}" id="logo" > <img src="{dede:global.cfg_templets_skin/}/skin/logo.png"> </a> </div>
+    <!-- 搜索框 -->
+    <div class="search-btn-click"> <i class="fa fa-search"></i>
+      <div class="header-search-slide">
+        <form method="get" id="searchform-slide" class="searchform" action="/plus/search.php" target="_blank" role="search">
+          <input type="search" class="field" name="q" value="" placeholder="Search" required>
+        </form>
+      </div>
+    </div>
+    <!-- 搜索框结束--> 
+    <!-- 关注我们开始 -->
+  <!--   <div id="focus-us"> 关注我们
+      <div id="focus-slide" class="ie_pie">
+        <div class="focus-title">关注我们</div>
+        <p class="focus-content"> <a href="http://www.weibo.com/" target="_blank" class="sinaweibo"><span><i class="fa fa-weibo"></i>新浪微博</span></a> <a href="http://t.qq.com/" target="_blank" class="sinaweibo"><span><i class="fa fa-tencent-weibo"></i>腾讯微博</span></a> </p>
+        <div class="focus-title">联系我们</div>
+        <p class="focus-content" style="line-height: 20px;margin-bottom: 10px;"> <a href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes" target="_blank" class="qq"><span><i class="fa fa-qq"></i>QQ</span></a> <a href="http://mail.qq.com/" target="_blank"><span><i class="fa fa-envelope"></i>发送邮件</span></a> <a target="_blank" href="http://shang.qq.com/wpa/qunwpa?idkey=64e08ec7f61c86d263383661dc6f7599e98ffd820f77907a8b02c51dc49a5c2b"><i class="fa fa-users">&nbsp;&nbsp;</i>加入QQ群</a> </p>
+      </div>
+    </div> -->
+    <!-- 关注我们结束--> 
+    <!-- pc导航开始 -->
+    <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+      <div class="menu-quarter-container">
+        <ul id="menu-quarter" class="nav-menu">
+
+          <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-737"> <a title="{dede:global.cfg_webname/}" href="/"><i class="fa fa-home"></i> 首页</a></li>
+          {dede:channelartlist typeid='12,18,14,15'  currentstyle="current-menu-item"}
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1106"><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+            <ul class='{dede:field name=typeid runphp="yes"}
+global $dsql;
+$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+$row = $dsql->GetOne($sql);
+@me=is_array($row)?'class="sub-menu"':'style="display:none"';
+{/dede:field}'>
+              {dede:channel type='son'}
+              <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1147"><a href="[field:typeurl/]">[field:typename/]</a></li>
+              {/dede:channel}
+            </ul>
+          </li>
+          {/dede:channelartlist}
+        </ul>
+      </div>
+    </nav>
+    <!-- pc导航结束 --> 
+  </div>
+</header>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+<meta http-equiv="content-type"content="text/html; charset=utf-8">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description"content="{dede:global.cfg_description/}"/>
+<meta name="keywords"content="{dede:global.cfg_keywords/}"/>
+<meta name="author" content="design by {dede:global.cfg_webname/}" />
+<meta charset="utf-8">
+<meta name="viewport"content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control"content="no-transform">
+<meta http-equiv="Cache-Control"content="no-siteapp">
+<link type="text/css"media="all"href="{dede:global.cfg_templets_skin/}/gong/css/gong.css"rel="stylesheet">
+<link href="{dede:global.cfg_templets_skin/}/gong/css/share_style1_24.css"rel="stylesheet">
+<script type="text/javascript"src="{dede:global.cfg_templets_skin/}/gong/js/jquery.js"></script>
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js"type="text/javascript"charset="utf-8"></script>
+<!--[if lt IE 9]>
+<script src="http://www.wpdaxue.com/wp-content/themes/wpdx/js/html5.js"></script>
+<script src="http://www.wpdaxue.com/wp-content/themes/wpdx/js/css3-mediaqueries.js"></script>
+<![endif]--><!--[if IE 8]>
+<link rel="stylesheet"href="http://www.wpdaxue.com/wp-content/themes/wpdx/css/ie8.css">
+<![endif]--><!--[if IE 7]>
+<link rel="stylesheet"href="http://www.wpdaxue.com/wp-content/themes/wpdx/font-awesome/css/font-awesome-ie7.min.css">
+<link rel="stylesheet"href="http://www.wpdaxue.com/wp-content/themes/wpdx/css/ie7.css">
+<![endif]--><!--[if IE 6]>
+<script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]--><!--<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="//hm.baidu.com/hm.js?b6ca4c7f50ea42579ccbbbd85fd66206";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s)})();</script>
+-->
+</head>
+<body class="home blog">
+{dede:include filename="head.htm"/}
+<div id="main-content">
+  <div id="content-header">
+
+    <div id="breadcrumb"><a itemprop="breadcrumb" href="/" title="" class="tip-bottom" data-original-title="返回首页"><i class="icon-home"></i>首页</a><i class="icon-angle-right"></i><span class="current"> &gt; <a href="{dede:field name='typelink'/}">{dede:field name='typename'/}</a> &gt; </span></div>
+  </div>
+  <div class="container-fluid"> 
+    <!--顶部广告位-->
+    <div class="row-fluid gtop mobile-no">
+      <div class="span6"> 
+        <script src="/plus/ad_js.php?aid=1" language="javascript"></script> 
+      </div>
+      <div class="span6"> 
+        <script src="/plus/ad_js.php?aid=2" language="javascript"></script> 
+      </div>
+    </div>
+    <!--顶部广告位-->
+    <div class="row-fluid">
+      <section class="span8 archive-list">
+        <div class="widget-box" role="main" itemscope="" itemtype="http://schema.org/CollectionPage">
+          <header id="archive-head">
+            <h1 itemprop="headline"><i class="fa fa-folder-open"></i>&nbsp;&nbsp;分类：{dede:field name='typename'/}</h1>
+            <div class="archive-description">
+              <p></p>
+            </div>
+          </header>
+          <div class="widget-content">
+            <ul>
+              {dede:list pagesize ='6'}
+              <li class="archive-thumb">
+                <article>
+                  <h2><a href="[field:arcurl/]" title="">[field:title/]</a></h2>
+                  <a class="pic float-left" href="[field:arcurl/]" title=""> <img class="lazy" src="[field:picname/]" style="height:120px; width:180px"></a>
+                  <p> [field:description function='cn_substr(@me,250)'/]... </p>
+                  <p class="post-meta"> <span><i class="icon-user"></i>[field:writer/]</span><span><i class="icon-time"></i>[field:pubdate function='strftime("%Y-%m-%d",@me)'/]</span><span><i class="icon-eye-open"></i>[field:click/]</span><span></span> </p>
+                  <div class="clear"> </div>
+                </article>
+              </li>
+              {/dede:list}
+
+             
+              <div class="pagination">
+                <ul>
+                </ul>
+              </div>
+            </ul>
+            <div class="page-nav">
+              {dede:pagelist listitem="index,end,pre,next,pageno" listsize="3"/}
+</div>
+            <div class="clear"> </div>
+
+          </div>
+        </div>
+      </section>
+{dede:include filename="right.htm"/}    
+ </div>
+  </div>
+</div>
+{dede:include filename="foot.htm"/}
+</body>
+</html>

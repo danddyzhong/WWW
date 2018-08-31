@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="{dede:global.cfg_soft_lang /}" ?>
+<rss version="2.0">
+<channel>
+<title>{dede:global.cfg_webname/}</title>
+<link>{dede:global.cfg_basehost/}</link>
+<description>{dede:global.cfg_description/}</description>
+<language>zh_cn</language>
+<generator>{dede:global.cfg_webname/}</generator>
+<webmaster>{dede:global.cfg_adminemail/}</webmaster>
+{dede:arclist row='50' orderby='pubdate' titlelen='200'}
+<item>
+<title><![CDATA[[field:title/]]]></title>
+<link>[field:arcurl/]</link>
+<category>[field:typename/]</category>
+<pubdate>[field:pubdate function='strftime("%a,%d%b%Y%H:%M:%S +0800",@me)'/]</pubdate>
+<description><![CDATA[[field:description function='html2text(@me)'/] ... ]]></description>
+</item>
+{/dede:arclist}
+</channel>
+</rss>

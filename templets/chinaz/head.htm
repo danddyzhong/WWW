@@ -1,0 +1,35 @@
+<div class="t">
+<div class="tip">
+ <h1>易用通：专业的织梦模板下载站 www.yiyongtong.com</h1>
+ <p>
+  <a href="{dede:type typeid='5'}[field:typelink /]{/dede:type}">{dede:type typeid='5'}[field:typename /]{/dede:type}</a>
+  <a href="" target="_blank" title="{dede:global.cfg_webname/}">联系站长</a>
+ </p>
+</div>
+</div>
+<div class="head">
+ <div class="logo">
+  <h1><a href="/"><img src="/style/logo.png" alt="{dede:global.cfg_webname/}"/></a></h1>
+ </div>
+ <div class="headr">
+ <div class="search">
+  <form action="/plus/search.php" name="formsearch">
+  <input type="hidden" name="kwtype" value="0" />
+  <input type="text"  name="q" value="请输入关键词 如：仿站视频" class="s_w" onblur="if (this.value ==&#39;&#39;){this.value=this.defaultValue}" onclick="if(this.value==&#39;请输入关键词 如：仿站视频&#39;)this.value=&#39;&#39;"/>
+  <input type="submit" name="submit" value="提 交" class='an' style="border:0"/>
+  </form>
+ </div>
+ </div>
+</div>
+
+<div id="m">
+<div id="menu">
+ <ul>
+  <li><a href="/">网站首页</a></li>
+  {dede:channel row='5' type='top' }
+  <LI><a href="[field:typelink/]" title="[field:typename function='substr(@me,0,8)'/]" >[field:typename function='substr(@me,0,8)'/]</a></LI>
+  {/dede:channel}
+ </ul>
+ <p><a href="#">投稿爆料</a></p>
+</div>
+</div>

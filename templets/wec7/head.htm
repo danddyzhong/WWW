@@ -1,0 +1,51 @@
+<div id="page" class="hfeed site">
+<header id="masthead" class="site-header">
+    <nav id="top-header">
+      <div class="top-nav"> </div>
+    </nav>
+    <div id="menu-box">
+      <div id="top-menu"> <span class="nav-search"> 搜索 </span>
+        <hgroup class="logo-site">
+          <h1 class="site-title"> <a href="/"> <img src="{dede:global.cfg_templets_skin/}/skin/img/logo.png" width="220" height="50" alt="{dede:global.cfg_webname/}" /></a> </h1>
+        </hgroup>
+        <div id="site-nav-wrap">
+          <div id="sidr-close"> <a href="#sidr-close" class="toggle-sidr-close">×</a> </div>
+          <nav id="site-nav" class="main-nav"> <a href="#sidr-main" id="navigation-toggle" class="bars"> 菜单 </a>
+            <div class="menu-%e4%b8%bb%e5%af%bc%e8%88%aa-container">
+              <ul id="menu-%e4%b8%bb%e5%af%bc%e8%88%aa" class="down-menu nav-menu">
+
+                <li class="{dede:field name=typeid runphp='yes'}(@me=='')? @me='current-menu-item':@me='';{/dede:field}"><a href="/">&nbsp;&nbsp;首页</a></li>
+
+                 {dede:channelartlist typeid='12,18,14,15'  currentstyle="current-menu-item"}
+                <li class="{dede:field.currentstyle/}"><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+
+                  <ul class='{dede:field name=typeid runphp="yes"}
+global $dsql;
+$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+$row = $dsql->GetOne($sql);
+@me=is_array($row)?'class="sub-menu"':'style="display:none"';
+{/dede:field}'>
+                    {dede:channel type='son'}
+                    <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+                    {/dede:channel} 
+                  </ul>
+                </li>
+                {/dede:channelartlist}
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+   <div id="main-search">
+    <div id="searchbar">
+      <form onsubmit="return checkSearchForm()" method="post" name="formsearch" id="searchform" action="/plus/search.php">
+        <input type="hidden" name="kwtype" value="0" />
+        <input type="text" value="" name="q" id="q" placeholder="输入搜索内容" required />
+        <button type="submit" name="submit" id="searchsubmit">搜索</button>
+      </form>
+    </div>
+  </div>
+  <div class="clear"> </div>
+</div>

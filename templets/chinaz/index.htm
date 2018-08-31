@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<TITLE>{dede:global.cfg_webname/}</TITLE>
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+<meta name="description" content="{dede:global.cfg_description/}">
+<link rel="Shortcut Icon" type=image/ico href="favicon.ico">
+<link href="/style/index.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/style/jquery.min.js"></script>
+<script type="text/javascript" src="style/focus.js"></script>
+<script src="/style/jquery.lazyload.js" type="text/javascript"></script> 
+<script type="text/javascript">
+jQuery(document).ready(
+function($){
+$("img").lazyload({
+placeholder:"/style/loading.gif", //加载图片前的占位图片
+effect:"fadeIn" //加载图片使用的效果(淡入)
+});
+});
+</script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+
+<div class="con">
+ <div class="hot">
+  <div class="hot_l">
+   <div class="tit"><h3>最新信息</h3></div>
+   {dede:arclist titlelen='40' row='4'}
+   <span><a href="[field:arcurl/]" title="[field:title /]">[field:title /]</a><br /><b>[field:pubdate function='strftime("%Y-%m-%d",@me)'/]</b></span>
+   {/dede:arclist} 
+  </div>
+  <div class="banner">
+   <div class="banner_t"><span>头条</span>{dede:arclist titlelen='60' row='1' flag='h'}<h4><a href="[field:arcurl/]" title="[field:title /]">[field:title /]</a></h4>{/dede:arclist}</div>
+   <div class="bimg">
+   <div id="focus">
+		<ul>
+         {dede:arclist titlelen='40' row='3' flag='f'}
+			
+			<li><a href="[field:arcurl/]" title="[field:title /]"><img src="[field:litpic/]" alt="[field:title /]" /></a></li>
+		  {/dede:arclist}
+		</ul>
+	</div>
+   </div>
+   <div class="b_tag">{dede:tag row='6' getall='1' sort='month'}<a href="[field:link/]" target="_blank">[field:tag /]</a> | {/dede:tag}</div>
+  </div>
+  <div class="hot_r r">
+  <div class="tit"><h3>一周热门点击</h3></div>
+  <div class="dreamer"> 
+   <ul>
+    {dede:arclist titlelen='40' row='2' orderby='click' }
+     <li>
+      <h4><a href="[field:arcurl/]" title="[field:title /]">[field:title /]</a></h4>
+       <div class="wiget">
+        <a href="[field:arcurl/]" title="[field:title /]"><img width="120" height="90" class="dream-img"  src="[field:litpic/]" alt="[field:title /]"></a>
+       <div class="dreamer-info"><p>[field:description function="cn_substr(@me,120)"/]...</p></div>
+       </div>
+      </li>    
+     {/dede:arclist}   
+     </ul>
+    </div>
+  </div>
+ </div>
+ <div class="nl l">
+  <div class="list">
+   <div class="listc">
+    {dede:arclist titlelen='55' row='10' typeid='all' noflag='f,c'}
+    <dl>
+     <dt><img src="[field:litpic/]" alt="[field:title /]" /><h5>[field:pubdate function="MyDate('m-d',@me)"/] / 浏览量：[field:click/] 次</h5></dt>
+     <dd>
+      <h3><a href="[field:arcurl/]">[field:title /]</a></h3>
+      <span>[field:description function="cn_substr(@me,220)"/]......[详细]</span>
+      <h6>[field:id function=GetTags(@me)/]</h6>
+      <div class="jw">
+       <div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&uuid=cefff51d-26d3-4436-a3f7-2ab64beca899&pophcol=3&lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+      </div>
+     </dd>
+    </dl>
+   {/dede:arclist}
+   </div>
+   <div class="wx_page">
+    <a href="{dede:type typeid='1'}[field:typelink /]{/dede:type}"><div class="indexpage">更多精彩内容</div></a>
+   </div>
+  </div>
+ </div>
+
+ <div class="nr r">
+  {dede:include filename="right.htm"/}
+ </div>
+<div class="clear"></div>
+
+{dede:include filename="foot.htm"/}
+</div>
+</body>
+</html>
+

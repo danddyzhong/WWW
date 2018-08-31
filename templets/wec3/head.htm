@@ -1,0 +1,59 @@
+<div class="top"> <span href="#" class="totop"></span>
+  <div class="topmenu">
+    <ul id="menu-top" class="wrap">
+      <li><a>本站有AB模板网提供技术支持 Www.AdminBuy.Cn</a></li>
+    </ul>
+  </div>
+  <div class="wrap page-header">
+    <h1 style="margin-top: 20px;"><a href="/" title="首页"><img src="{dede:global.cfg_templets_skin/}/html5_blue/images/logo.png" width="" height="" border="0" alt=""></a></h1>
+    <span>{dede:global.cfg_webname/}</span>
+    <div class="contact">
+      <li><a href="http://wpa.qq.com/msgrd?v=3&uin=9490489&site=qq&menu=yes" target="_blank" title="QQ联系"><i class="fa fa-qq fa-2x"></i></a></li>
+      <li><a href="http://www.weibo.com/gooxao" target="_blank" title="新浪微博"><i class="fa fa-weibo fa-2x"></i></a></li>
+      <li><a href="http://t.qq.com/gooxao2" target="_blank" title="腾讯微博"><i class="fa fa-pinterest-square fa-2x"></i></a></li>
+    </div>
+  </div>
+  <div class="nav">
+    <div class="wrap zwrap">
+      <div class="navbar-header">
+        <li class="navbar-toggle"> <i class="fa fa-list fa-2x"></i> </li>
+        <li style="float:right;display:inline-block">
+          <div class="toggle-search"><i class="fa fa-search fa-2x"></i></div>
+        </li>
+        <li style="float:right;">
+          <div class="search-expand">
+            <div class="search-expand-inner">
+              <form onSubmit="return checkSearchForm()" method="post" name="formsearch" id="searchform" class="searchform themeform" action="/plus/search.php" >
+                <input type="text" class="search" name="q" onblur="if(this.value=='')this.value='按回车键搜索...';" onfocus="if(this.value=='按回车键搜索...')this.value='';" value="按回车键搜索..." placeholder="按回车键搜索">
+                <input type="hidden" value="title" name="show">
+                <input type="hidden" value="1" name="tempid">
+                <input type="hidden" value="news" name="tbname">
+                <input name="mid" value="1" type="hidden">
+                <input name="submit" value="search" type="hidden">
+              </form>
+            </div>
+          </div>
+        </li>
+      </div>
+      <div class="navbar-collapse">
+        <ul>
+          <li class="menu-item {dede:field name=typeid runphp='yes'}(@me=='')? @me='current_page_item':@me='';{/dede:field}"><a href="/">首页</a></li>
+          {dede:channelartlist typeid='12,18,14,15'  currentstyle='current'}
+          <li class="menu-item {dede:field.currentstyle/}"><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+            <ul {dede:field name=typeid runphp="yes"}
+global $dsql;
+$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+$row = $dsql->GetOne($sql);
+@me=is_array($row)?'class="menu-item"':'style="display:none"';
+{/dede:field} >
+              {dede:channel type='son'}
+              <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+            {/dede:channel} 
+            </ul>
+          </li>
+          {/dede:channelartlist} 
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

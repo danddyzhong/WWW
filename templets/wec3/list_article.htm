@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="applicable-device" content="pc,mobile"/>
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/solid.css" integrity="sha384-wnAC7ln+XN0UKdcPvJvtqIH3jOjs9pnKnq9qX68ImXvOGz2JuFoEiCjT8jyZQX2z" crossorigin="anonymous">
+<link rel="shortcut icon" href="{dede:global.cfg_templets_skin/}/html5_blue/images/favicon.ico" />
+<link rel="stylesheet" type="text/css" media="all" href="{dede:global.cfg_templets_skin/}/html5_blue/css/style.css" />
+<link rel="stylesheet" type="text/css"  href="{dede:global.cfg_templets_skin/}/html5_blue/css/font-awesome.min.css"/>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/html5_blue/js/jquery.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/html5_blue/js/responsiveslides.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/html5_blue/js/yycm.js"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="wrap">
+  <div class="main">
+    <div class="map1"> <span> 当前位置: {dede:field.position/}
+      </span> </div>
+       {dede:list pagesize ='6'}
+    <div class="block">
+      <h2><span class="category"> <a href="[field:typeurl/]" rel="category tag" >[field:typename/]</a> <i class="fa fa-caret-right"></i></span><a href="[field:arcurl/]"  target="_ablank" >[field:title/]</a></h2>
+      <div class="clear"></div>
+      
+      <div class='viewimg'> <a href='[field:arcurl/]' title="[field:title/]" target='_ablank' class='ipic'> <img src="[field:litpic/]" class='thumbnail' /><span class='shine' style='background-position: 160px 50%;'> </span></a> </div>
+      
+      <div class="preview"> <p>[field:description function='cn_substr(@me,250)'/]...</p> </div>
+      <div class="preem"> <span><i class="fa fa-clock-o"></i> 日期：[field:pubdate function='strftime("%Y-%m-%d",@me)'/] </span><span><i class="fa fa-comment-o"></i> <a href="[field:arcurl/]" class="ds-thread-count" data-thread-key="156">暂无评论</a> </span><span><i class="fa fa-eye"></i> [field:click/] </span><span> </span><span class="more"><a href="[field:arcurl/]" title="[field:title/]">阅读详情</a></span> </div>
+    </div>
+{/dede:list}
+
+    <div class="pagess">
+    <ul>
+     {dede:pagelist listitem="index,end,pre,next,pageno" listsize="3"/}
+    </ul>
+    </div>
+  </div>
+</div>
+  {dede:include filename="right.htm"/}
+﻿{dede:include filename="foot.htm"/}
+</body>
+</html>

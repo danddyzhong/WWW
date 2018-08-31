@@ -1,0 +1,760 @@
+body {
+	margin: 0px; padding: 0px;
+}
+div {
+	margin: 0px; padding: 0px;
+}
+dl {
+	margin: 0px; padding: 0px;
+}
+dt {
+	margin: 0px; padding: 0px;
+}
+dd {
+	margin: 0px; padding: 0px;
+}
+ul {
+	margin: 0px; padding: 0px;
+}
+ol {
+	margin: 0px; padding: 0px;
+}
+li {
+	margin: 0px; padding: 0px;
+}
+h1 {
+	margin: 0px; padding: 0px;
+}
+h2 {
+	margin: 0px; padding: 0px;
+}
+h3 {
+	margin: 0px; padding: 0px;
+}
+h4 {
+	margin: 0px; padding: 0px;
+}
+h5 {
+	margin: 0px; padding: 0px;
+}
+h6 {
+	margin: 0px; padding: 0px;
+}
+pre {
+	margin: 0px; padding: 0px;
+}
+form {
+	margin: 0px; padding: 0px;
+}
+fieldset {
+	margin: 0px; padding: 0px;
+}
+input {
+	margin: 0px; padding: 0px;
+}
+textarea {
+	margin: 0px; padding: 0px;
+}
+p {
+	margin: 0px; padding: 0px;
+}
+blockquote {
+	margin: 0px; padding: 0px;
+}
+th {
+	margin: 0px; padding: 0px;
+}
+td {
+	margin: 0px; padding: 0px;
+}
+fieldset {
+	border: 0px currentColor;
+}
+img {
+	border: 0px currentColor;
+}
+address {
+	font-style: normal; font-weight: normal;
+}
+caption {
+	font-style: normal; font-weight: normal;
+}
+cite {
+	font-style: normal; font-weight: normal;
+}
+code {
+	font-style: normal; font-weight: normal;
+}
+dfn {
+	font-style: normal; font-weight: normal;
+}
+em {
+	font-style: normal; font-weight: normal;
+}
+th {
+	font-style: normal; font-weight: normal;
+}
+var {
+	font-style: normal; font-weight: normal;
+}
+ol {
+	list-style: none;
+}
+ul {
+	list-style: none;
+}
+li {
+	list-style: none;
+}
+caption {
+	text-align: left;
+}
+th {
+	text-align: left;
+}
+h1 {
+	font-size: 100%; font-weight: normal;
+}
+h2 {
+	font-size: 100%; font-weight: normal;
+}
+h3 {
+	font-size: 100%; font-weight: normal;
+}
+h4 {
+	font-size: 100%; font-weight: normal;
+}
+h5 {
+	font-size: 100%; font-weight: normal;
+}
+h6 {
+	font-size: 100%; font-weight: normal;
+}
+q::before {
+	content: "";
+}
+q::after {
+	content: "";
+}
+abbr {
+	border: 0px currentColor;
+}
+acronym {
+	border: 0px currentColor;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none !important;
+}
+.FL {
+	overflow: hidden; float: left; display: inline;
+}
+.FR {
+	overflow: hidden; float: right; display: inline;
+}
+.clear {
+	clear: both;
+}
+.Mubanzhijia_Com {
+	background: url("images/bg1.jpg") repeat-y top rgb(242, 242, 242); font-family: "微软雅黑"; font-size: 12px;
+}
+.Top {
+	background: url("images/bg2.gif") repeat-x 0px 0px; width: 100%; height: 70px; position: relative; z-index: 0;
+}
+.Top_Box {
+	background: url("images/bg3.jpg") no-repeat; margin: 0px auto; width: 980px; height: 70px; position: relative;
+}
+.Top_L {
+	background: url("images/bg2.gif") no-repeat 0px -140px; left: -74px; top: 0px; width: 75px; height: 70px; position: absolute; z-index: -5;
+}
+.Top_R {
+	background: url("images/bg2.gif") repeat-x 0px -70px; top: 0px; width: 50%; height: 70px; right: 0px; position: absolute; z-index: -5;
+}
+.Logo {
+	height: 70px;
+}
+.Top .Info {
+	padding: 19px 30px 0px 0px; width: 260px; height: 15px; text-align: right; color: rgb(115, 172, 230); line-height: 15px; font-size: 14px; position: relative;
+}
+.Top .Info a {
+	padding: 0px 10px; text-align: center; color: rgb(255, 255, 255);
+}
+.Top .Info span a {
+	background: url("images/bg2.gif") no-repeat 0px -227px; padding: 0px; top: 19px; width: 15px; height: 15px; right: 5px; text-indent: 999em; overflow: hidden; position: absolute;
+}
+.Nav {
+	background: url("images/bg2.gif") repeat-x 0px -265px; margin: 0px auto; width: 980px; height: 53px; position: relative;
+}
+.Nav ul {
+	height: 53px; float: left;
+}
+.Nav li {
+	padding: 0px 5px; font-size: 14px; font-weight: bold; float: left;
+}
+.Nav li a {
+	margin: 0px 3px; padding: 15px 5px 0px; height: 23px; text-align: center; color: rgb(51, 51, 51); float: left;
+}
+.Nav li a:hover {
+	color: rgb(51, 153, 51);
+}
+.Nav .thisclass {
+	color: rgb(51, 51, 51);
+}
+.Nav li a:hover {
+	text-decoration: none; border-bottom-color: rgb(51, 153, 51); border-bottom-width: 4px; border-bottom-style: solid;
+}
+.Nav .thisclass {
+	text-decoration: none; border-bottom-color: rgb(51, 153, 51); border-bottom-width: 4px; border-bottom-style: solid;
+}
+.Nav .so {
+	background: url("images/bg5.jpg") no-repeat 0px 8px; padding: 8px 5px 0px 0px; width: 234px; height: 34px;
+}
+.Nav .search-keyword {
+	border: currentColor; width: 190px; height: 34px; color: rgb(69, 69, 69); line-height: 34px; padding-left: 6px; font-size: 14px;
+}
+.Nav .search-submit {
+	border: currentColor; width: 38px; height: 34px; line-height: 34px; text-indent: 999em;
+}
+.N_L {
+	background: url("images/bg4.gif") no-repeat; top: 0px; width: 105px; height: 53px; position: absolute;
+}
+.N_R {
+	background: url("images/bg4.gif") no-repeat; top: 0px; width: 105px; height: 53px; position: absolute;
+}
+.N_L {
+	left: -105px;
+}
+.N_R {
+	background-position: 0px -53px; right: -105px;
+}
+.Main1 {
+	margin: 20px auto 0px; width: 980px; border-bottom-color: rgb(222, 222, 222); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.m_Left1 {
+	padding: 0px 20px; width: 610px; border-right-color: rgb(222, 222, 222); border-right-width: 1px; border-right-style: solid;
+}
+.m_Right1 {
+	width: 310px;
+}
+.m_T1 {
+	width: 100%; position: relative;
+}
+.m_T1 h2 {
+	line-height: 21px;
+}
+.m_T1 h2 span {
+	width: 71px; height: 21px; padding-right: 10px; float: left;
+}
+.m_T1 h2 span a {
+	background: url("images/bg2.gif") no-repeat 0px -346px; padding: 0px 8px 0px 0px; width: 63px; height: 21px; text-align: center; color: rgb(255, 255, 255); font-size: 14px; font-weight: normal; float: left;
+}
+.m_T1 h2 span a:hover {
+	background: url("images/bg2.gif") no-repeat 0px -367px; color: rgb(255, 255, 255); text-decoration: none;
+}
+.m_T1 h2 a {
+	color: rgb(2, 2, 2); font-size: 20px; font-weight: bold;
+}
+.m_T1 h2 a:hover {
+	color: rgb(19, 154, 0);
+}
+.m_T1 p {
+	padding: 10px 0px 15px; color: rgb(64, 63, 63); line-height: 22px; font-size: 14px;
+}
+.m_T1 p span {
+	background: url("images/bg2.gif") no-repeat; padding: 0px 15px 0px 17px;
+}
+.m_T2 {
+	width: 100%;
+}
+.m_T3 {
+	background: url("images/bg8.gif") no-repeat; width: 290px; height: 38px; line-height: 38px; font-size: 18px;
+}
+.m_T3 h3 {
+	text-indent: 1em; font-weight: bold;
+}
+.m_T4 {
+	width: 100%; height: 30px; border-bottom-color: rgb(226, 226, 226); border-bottom-width: 1px; border-bottom-style: solid; position: relative;
+}
+.m_T4 h3 {
+	padding: 0px 5px; height: 30px; color: rgb(101, 101, 101); line-height: 30px; font-size: 14px; font-weight: bold; border-bottom-color: rgb(51, 153, 51); border-bottom-width: 1px; border-bottom-style: solid; position: absolute;
+}
+.m_Grid1 {
+	width: 100%;
+}
+.m_Grid2 {
+	width: 100%;
+}
+.m_Grid2 {
+	padding-bottom: 2px; margin-bottom: 15px; border-bottom-color: rgb(228, 228, 228); border-bottom-width: 1px; border-bottom-style: solid; position: relative;
+}
+.m_Grid3 {
+	background: url("images/bg9.jpg");
+}
+.m_Grid3 h2 {
+	background: url("images/bg9.jpg");
+}
+.m_Grid3 span {
+	background: url("images/bg9.jpg");
+}
+.m_Grid3 {
+	background-position: -1190px 0px; width: 610px; margin-bottom: 15px; background-repeat: repeat-y;
+}
+.m_Grid3 h2 {
+	background-position: -580px -5px; padding: 20px 0px 10px 20px; color: rgb(51, 51, 51); font-size: 18px; font-weight: bold; background-repeat: no-repeat;
+}
+.m_Grid3 span {
+	background-position: -580px -5px; padding: 20px 0px 10px 20px; color: rgb(51, 51, 51); font-size: 18px; font-weight: bold; background-repeat: no-repeat;
+}
+.m_Grid3 span {
+	padding: 20px 0px 0px; display: block;
+}
+.m_Grid3 p {
+	background: url("images/bg11.jpg") no-repeat left bottom; padding: 0px 20px 20px; color: rgb(51, 51, 51); line-height: 22px; font-size: 14px;
+}
+.m_Box1 {
+	width: 100%; height: 114px; color: rgb(82, 81, 81); line-height: 22px; font-size: 14px;
+}
+.m_Box1 img {
+	background: url("images/bg6.gif") no-repeat 0px 0px rgb(255, 255, 255); padding: 5px 8px 9px 5px; margin-right: 10px; float: left;
+}
+.m_Box2 {
+	background: url("images/bg2.gif") repeat-x 0px -565px; width: 290px; height: 42px; margin-bottom: 15px; position: relative;
+}
+.m_Box2 span {
+	background: url("images/bg2.gif") no-repeat; float: left;
+}
+.m_Box3 {
+	width: 290px; height: 91px; margin-bottom: 15px;
+}
+.m_Box4 {
+	width: 290px; margin-bottom: 15px;
+}
+.m_Box4 a {
+	margin: 7px 0px 0px; padding: 0px 10px; border: 1px solid rgb(222, 222, 222); width: 268px; color: rgb(64, 64, 64); line-height: 36px; overflow: hidden; font-size: 14px; float: left; white-space: nowrap; text-overflow: ellipsis;
+}
+.m_Box4 a:hover {
+	background: rgb(109, 179, 37); border: 1px solid rgb(109, 179, 37); color: rgb(255, 255, 255); text-decoration: none;
+}
+.m_Box5 {
+	padding: 10px 0px; width: 290px; height: 200px;
+}
+.m_Box5 li {
+	padding: 0px 7px; width: 130px; text-align: center; float: left;
+}
+.m_Box5 li img {
+	padding-bottom: 5px; display: block;
+}
+.m_Box5 li a {
+	border: 5px solid rgb(255, 255, 255); width: 120px; height: 190px; color: rgb(64, 64, 64); overflow: hidden; float: left; white-space: nowrap; text-overflow: ellipsis;
+}
+.m_Box5 li a:hover {
+	border: 5px solid rgb(109, 179, 37); color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(109, 179, 37);
+}
+.m_Box6 {
+	background: url("images/bg2.gif") no-repeat -60px -611px; padding: 8px 0px 15px; width: 270px; margin-left: 10px; border-top-color: rgb(187, 187, 187); border-top-width: 1px; border-top-style: dotted;
+}
+.m_Box6 li {
+	width: 250px; line-height: 26px; overflow: hidden; padding-left: 20px; white-space: nowrap; text-overflow: ellipsis;
+}
+.m_Box6 li a {
+	color: rgb(64, 64, 64);
+}
+.m_Box6 li a:hover {
+	color: rgb(109, 179, 37);
+}
+.m_Box7 {
+	background: url("images/bg2.gif") no-repeat -50px -765px; margin: 8px 0px 10px; width: 290px;
+}
+.m_Box7 li {
+	width: 260px; line-height: 30px; overflow: hidden; padding-left: 30px; font-size: 14px; white-space: nowrap; text-overflow: ellipsis;
+}
+.m_Box7 li a {
+	color: rgb(43, 42, 42);
+}
+.m_Box7 li a:hover {
+	color: rgb(110, 179, 37);
+}
+.m_Box8 {
+	padding: 10px 0px; width: 290px;
+}
+.m_Box9 {
+	background: url("images/bg9.jpg") repeat-y -290px 0px; width: 290px; margin-bottom: 15px;
+}
+.m_Box10 {
+	background: url("images/bg4.gif") no-repeat 11px -115px; padding: 15px 0px 15px 86px; width: 894px; height: 62px; margin-top: 15px; border-top-color: rgb(219, 219, 219); border-top-width: 1px; border-top-style: solid;
+}
+.m_Box10 a {
+	width: 137px; height: 62px; overflow: hidden; padding-right: 10px; float: left;
+}
+.m_Box10 img {
+	border: 1px solid rgb(204, 204, 204); width: 135px; height: 60px;
+}
+.m_Box11 {
+	padding: 0px 0px 10px; width: 100%; color: rgb(51, 51, 51); margin-bottom: 15px; border-bottom-color: rgb(184, 184, 184); border-bottom-width: 1px; border-bottom-style: dashed;
+}
+.m_Box11 strong {
+	color: rgb(255, 0, 0);
+}
+.m_Box11 a {
+	color: rgb(51, 51, 51);
+}
+.m_Box12 {
+	padding: 0px; color: rgb(64, 63, 63); line-height: 28px; font-size: 14px;
+}
+.m_Box12 p {
+	padding: 20px 0px 0px; text-indent: 2em;
+}
+.m_Box13 {
+	padding: 0px 0px 15px 240px;
+}
+.m_Box14 {
+	padding: 20px 0px 15px; color: rgb(101, 101, 101); font-size: 14px; border-top-color: rgb(199, 208, 213); border-bottom-color: rgb(199, 208, 213); border-top-width: 1px; border-bottom-width: 1px; border-top-style: dashed; border-bottom-style: dashed;
+}
+.m_Box14 span {
+	float: right;
+}
+.m_Box14 a {
+	padding: 0px 5px; color: rgb(101, 101, 101); display: inline-block;
+}
+.m_Box14 a:hover {
+	color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(97, 178, 0);
+}
+.m_Box15 {
+	padding: 10px 0px; height: 40px; border-bottom-color: rgb(199, 208, 213); border-bottom-width: 1px; border-bottom-style: dashed;
+}
+.m_Box16 {
+	padding: 15px 0px; line-height: 28px; font-size: 14px;
+}
+.m_Box16 h3 {
+	color: rgb(101, 101, 101); font-weight: bold;
+}
+.m_Box16 ul {
+	color: rgb(186, 186, 186);
+}
+.m_Box16 li {
+	background: url("images/bg2.gif") no-repeat -58px -1071px; padding-left: 13px;
+}
+.m_Box16 li a {
+	color: rgb(49, 49, 49); padding-right: 20px;
+}
+.m_Box16 li a:hover {
+	color: rgb(110, 179, 37);
+}
+.m_Box17 {
+	background: url("images/bg4.gif") no-repeat -84px -190px; padding: 10px 0px 0px; width: 290px; margin-bottom: 15px;
+}
+.m_Box17 li {
+	width: 260px; line-height: 35px; overflow: hidden; padding-left: 30px; font-size: 14px; border-bottom-color: rgb(203, 203, 203); border-bottom-width: 1px; border-bottom-style: dotted; white-space: nowrap; text-overflow: ellipsis;
+}
+.m_Box17 li a {
+	color: rgb(89, 89, 89);
+}
+.m_Box17 li a:hover {
+	color: rgb(98, 176, 1);
+}
+.m_Box18 {
+	padding: 5px 0px 10px; width: 300px;
+}
+.m_Box18 li {
+	padding: 10px 9px 0px 0px; width: 141px; height: 125px; float: left;
+}
+.m_Box18 li img {
+	padding: 3px 0px 5px; display: block;
+}
+.m_Box18 li a {
+	background: url("images/bg12.gif") no-repeat 0px 0px rgb(255, 255, 255); padding: 0px 3px; width: 135px; height: 125px; text-align: center; color: rgb(75, 75, 75); overflow: hidden; float: left; white-space: nowrap; text-overflow: ellipsis;
+}
+.m_Box18 li a:hover {
+	background: rgb(109, 179, 37); color: rgb(255, 255, 255);
+}
+.m_Box19 {
+	padding: 0px 0px 15px;
+}
+.m_Box19 dl dt {
+	background: url("images/bg13.gif") no-repeat 0px 0px; margin: 20px 0px; color: rgb(255, 255, 255); line-height: 27px; padding-left: 20px; font-size: 14px; font-weight: bold;
+}
+.m_Box19 dl dd a {
+	padding: 0px 5px; color: rgb(102, 102, 102); line-height: 30px; display: inline-block;
+}
+.m_Box20 {
+	padding: 0px 0px 15px;
+}
+.a1 {
+	padding: 15px 0px 15px 20px; width: 270px; border-bottom-color: rgb(226, 226, 226); border-bottom-width: 1px; border-bottom-style: solid; float: left;
+}
+.a2 {
+	padding: 15px 0px 15px 20px; width: 270px; border-bottom-color: rgb(226, 226, 226); border-bottom-width: 1px; border-bottom-style: solid; float: left;
+}
+.a3 {
+	padding: 15px 0px 15px 20px; width: 270px; border-bottom-color: rgb(226, 226, 226); border-bottom-width: 1px; border-bottom-style: solid; float: left;
+}
+.a1 {
+	background: url("images/bg9.jpg") no-repeat 0px -5px;
+}
+.a3 {
+	background: url("images/bg9.jpg") no-repeat 0px 73px; border-bottom-color: currentColor; border-bottom-width: medium; border-bottom-style: none;
+}
+.d1 a:hover {
+	color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(110, 179, 37);
+}
+.p1 {
+	padding: 8px 0px; color: rgb(64, 63, 63); line-height: 26px; font-size: 16px;
+}
+.p2 {
+	height: 30px; color: rgb(149, 147, 147); font-size: 14px;
+}
+.p2 span {
+	height: 30px; line-height: 30px; float: left;
+}
+.p2 a {
+	background: rgb(217, 130, 130); margin: 5px 10px; padding: 0px 10px; height: 20px; color: rgb(255, 255, 255); line-height: 20px; float: left;
+}
+.p2 a:hover {
+	background: rgb(200, 96, 96); color: rgb(255, 255, 255); text-decoration: none;
+}
+.p3 {
+	padding: 10px 0px 25px; width: 100%; text-align: center;
+}
+.p3 a {
+	width: 100%; height: 30px; text-align: center; color: rgb(255, 255, 255); line-height: 30px; font-size: 14px; display: block; background-color: rgb(161, 195, 230);
+}
+.p3 a:hover {
+	background: rgb(130, 171, 218); color: rgb(255, 255, 255);
+}
+.p4 a {
+	color: rgb(18, 18, 18); line-height: 20px; font-size: 20px;
+}
+.p4 a:hover {
+	color: rgb(19, 154, 0); text-decoration: underline;
+}
+.d1 {
+	padding: 8px 0px; height: 22px; color: rgb(113, 112, 112); line-height: 22px;
+}
+.p5 {
+	padding: 8px 0px; height: 22px; color: rgb(113, 112, 112); line-height: 22px;
+}
+.d1 span {
+	background: url("images/bg2.gif") no-repeat; padding: 0px 15px; height: 22px; float: left;
+}
+.p5 span {
+	background: url("images/bg2.gif") no-repeat; padding: 0px 15px; height: 22px; float: left;
+}
+.d1 a {
+	color: rgb(113, 112, 112);
+}
+.p5 a {
+	color: rgb(113, 112, 112);
+}
+.p5 a:hover {
+	color: rgb(110, 179, 37);
+}
+.d2 {
+	margin-top: 15px;
+}
+.p6 {
+	color: rgb(115, 172, 230);
+}
+.p7 {
+	font-size: 12px !important;
+}
+.c1 {
+	background-position: -62px -324px !important;
+}
+.c2 {
+	background-position: -62px -397px !important;
+}
+.c3 {
+	background: url("images/bg2.gif") 0px -389px; top: 10px; width: 55px; height: 31px; text-align: center; right: 0px; color: rgb(255, 255, 255); line-height: 24px; position: absolute;
+}
+.c4 {
+	background-position: -62px -415px !important;
+}
+.c5 {
+	background-position: -62px -437px !important;
+}
+.c6 {
+	background-position: -62px -457px !important;
+}
+.c7 {
+	background-position: -62px -475px !important;
+}
+.c8 {
+	background-position: -62px -494px !important;
+}
+.c9 {
+	width: 87px; height: 31px; right: 0px; bottom: 8px; color: rgb(255, 255, 255); line-height: 30px; font-size: 12px; position: absolute;
+}
+.c9 a {
+	background: url("images/bg2.gif") no-repeat 62px -427px rgb(91, 176, 3); width: 78px; height: 31px; color: rgb(255, 255, 255); padding-left: 9px; float: left;
+}
+.c9 a:hover {
+	background: url("images/bg2.gif") no-repeat 62px -427px rgb(19, 154, 0);
+}
+.c10 {
+	background-position: -70px -523px !important; padding: 10px 0px 10px 30px; width: 136px; height: 22px; overflow: hidden; border-right-color: rgb(201, 199, 199); border-right-width: 1px; border-right-style: solid;
+}
+.c11 {
+	background-position: 118px -523px !important; width: 123px;
+}
+.c12 {
+	background-position: -60px -1013px !important;
+}
+.c13 {
+	background-position: -60px -1046px !important;
+}
+#slides {
+	margin: 15px auto 0px; width: 980px;
+}
+.slides_container {
+	width: 980px; height: 200px; display: none;
+}
+.slides_container div.slide {
+	width: 980px; height: 200px; display: block;
+}
+.item {
+	padding: 0px 0px 0px 20px; width: 300px; height: 200px; float: left; position: relative;
+}
+.item p {
+	background: rgb(0, 0, 0); left: 20px; width: 300px; height: 25px; text-align: center; bottom: 0px; color: rgb(255, 255, 255); line-height: 25px; overflow: hidden; font-size: 14px; white-space: nowrap; filter: alpha(opacity=60); position: absolute; text-overflow: ellipsis; opacity: 0.6; -moz-opacity: 0.6; -khtml-opacity: 0.6;
+}
+.item a {
+	color: rgb(255, 255, 255);
+}
+.item a:hover {
+	color: rgb(255, 255, 255);
+}
+.prev {
+	display: none;
+}
+.next {
+	display: none;
+}
+.pagination {
+	list-style: none; margin: 0px 20px; padding: 15px 0px 15px 440px; height: 12px; line-height: 12px; border-bottom-color: rgb(222, 222, 222); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.pagination li {
+	background: url("images/bg2.gif") no-repeat 0px -320px; margin: 0px 3px; width: 12px; height: 12px; text-indent: 999em; overflow: hidden; float: left;
+}
+.pagination li a {
+	float: left;
+}
+.pagination .current {
+	background: url("images/bg2.gif") no-repeat 0px -332px;
+}
+#weixin {
+	background: url("images/bg2.gif") no-repeat 118px -523px; padding: 10px 0px; width: 123px; height: 22px; text-align: center; float: left;
+}
+.new-weixin2DC {
+	background: rgb(255, 255, 255); top: 43px; right: 0px; position: absolute;
+}
+.new-weixin2DC img {
+	border: 5px solid rgb(0, 0, 0);
+}
+.weixin2 {
+	padding: 1px; border: 1px solid rgb(224, 224, 224); width: 286px; margin-bottom: 15px;
+}
+.rssbook {
+	background: url("images/bg7.gif") no-repeat !important; padding: 45px 0px 13px 19px !important; border: currentColor !important; width: 271px !important; height: 33px !important;
+}
+.mailInput {
+	margin-top: 0px !important;
+}
+.rssbook .info {
+	display: none !important;
+}
+.rssbutton {
+	border: currentColor !important; width: 72px !important; height: 33px !important; overflow: hidden; margin-left: 10px; float: left;
+}
+.rssbutton input {
+	border: currentColor !important; width: 72px !important; height: 33px !important; line-height: 33px !important; text-indent: 999em;
+}
+input.rsstxt {
+	padding: 0px 3px !important; border: currentColor !important; width: 165px !important; height: 33px !important; color: rgb(51, 51, 51); line-height: 33px; font-size: 14px; float: left;
+}
+#KinSlideshow {
+	margin: 15px 0px; width: 300px; height: 200px;
+}
+.KSS_btnBox ul li {
+	width: 15px !important; height: 9px !important; line-height: 9px !important; text-indent: 999em; overflow: hidden;
+}
+.KSS_titleBox .title {
+	margin: 0px 0px 0px 6px !important; line-height: 27px;
+}
+.Ad_300 {
+	width: 300px; margin-bottom: 15px;
+}
+.Link {
+	margin: 15px auto; padding: 0px 11px; width: 958px;
+}
+.Link h4 {
+	color: rgb(51, 51, 51); font-size: 16px; font-weight: bold;
+}
+.Link ul {
+	padding: 10px 0px 0px; width: 100%;
+}
+.Link li {
+	padding: 0px 20px 0px 0px; line-height: 26px; font-size: 14px; display: inline;
+}
+.Link li a {
+	color: rgb(102, 102, 102);
+}
+.Link li a:hover {
+	color: rgb(51, 51, 51);
+}
+.Footer {
+	background: url("images/bg10.jpg") repeat-x; width: 100%; height: 130px; text-align: center; color: rgb(255, 255, 255); line-height: 26px; padding-top: 24px; font-size: 12px;
+}
+.Footer a {
+	margin: 0px 4px; color: rgb(255, 255, 255); display: inline-block;
+}
+.dede_pages {
+	padding: 5px 0px 20px; width: 100%; text-align: center;
+}
+.pagelist {
+	margin: 0px auto; text-align: center; float: none;
+}
+.dede_pages a {
+	padding: 0px 10px 0px 0px; height: 30px; color: rgb(51, 51, 51); line-height: 30px; font-size: 14px; display: inline-block;
+}
+.dede_pages a i {
+	background: url("images/bg4.gif") no-repeat 0px 500px; width: 10px; height: 30px; float: left;
+}
+.dede_pages a:hover {
+	background: url("images/bg4.gif") no-repeat right -526px; color: rgb(255, 255, 255); text-decoration: none;
+}
+.dede_pages a:hover i {
+	background: url("images/bg4.gif") no-repeat 0px -526px;
+}
+.dede_pages strong {
+	background: url("images/bg4.gif") no-repeat right -491px; padding: 0px 10px 0px 0px; height: 30px; color: rgb(255, 255, 255); line-height: 30px; font-size: 14px; display: inline-block;
+}
+.dede_pages strong i {
+	background: url("images/bg4.gif") no-repeat 0px -491px; width: 10px; height: 30px; float: left;
+}
+.pageinfo strong {
+	border: currentColor; color: rgb(51, 51, 51);
+}
+.dede_pagess strong {
+	padding: 0px !important;
+}
+.dede_pagess strong a {
+	color: rgb(255, 255, 255) !important;
+}
+.dede_pages_so {
+	padding: 10px 0px 15px;
+}
+.dede_pages_so a {
+	color: rgb(51, 51, 51);
+}
+#totop {
+	width: 71px; right: 10px; bottom: 40px; display: none; position: fixed; z-index: 999; cursor: pointer;
+}
+#totop a {
+	background: url("images/go_top.png") no-repeat; width: 71px; height: 24px; line-height: 24px; text-indent: 999em; overflow: hidden; padding-top: 48px; display: block;
+}
+#totop a.cur {
+	color: rgb(51, 170, 153); text-decoration: none;
+}
+

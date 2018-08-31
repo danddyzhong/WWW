@@ -1,0 +1,61 @@
+
+      <div id="sidebar" class="clr"> 
+  <!--广告 开始-->
+  <div  class="widget widget_text enhanced-text-widget"> <a href="http://www.baidu.com" title="百度一下">
+					<img src="{dede:global.cfg_templets_skin/}/skin/ad03.jpg" alt="百度一下"></a> </div>
+  <!--广告 结束-->
+  <div id="tintabs-4" class="widget widget_tin_tabs">
+    <ul class="tin-tabs-nav group tab-count-3">
+
+      <li class="tin-tab tab-recent"> <a href="#tab-recent" title="近期文章"><i class="fa fa-clock-o"></i> <span>近期文章</span></a> </li>
+      <li class="tin-tab tab-popular"> <a href="#tab-popular" title="热门文章"><i class="fa fa-star"></i> <span>热门文章</span></a> </li>
+      <li class="tin-tab tab-comments"> <a href="#tab-popular2" title="猜你喜欢"><i class="fa fa-heart"></i> <span>猜你喜欢</span></a></li>
+    </ul>
+    <div class="tin-tabs-container">
+      <ul id="tab-recent" class="tin-tab group thumbs-enabled">
+        <!--全站最新带图文档  开始--> 
+        {dede:arclist row='10' orderby='pubdate' }
+        <li>
+          <div class="tab-item-thumbnail"> <a href="[field:arcurl/]" title="[field:title/]">
+            <div class="thumb-img"> <img src="[field:picname/]" /> <span><i class="fa fa-plus"></i></span> </div>
+            </a> </div>
+          <div class="tab-item-inner group">
+            <p class="tab-item-title"><a href="[field:arcurl/]"  title="[field:title/]">[field:title/]</a></p>
+            <span class="tab-item-date">[field:pubdate function='strftime("%Y-%m-%d",@me)'] </span>&nbsp; <span class="tab-item-category"><a href="[field:typeurl/]" >[field:typename/]</a></span> </div>
+        </li>
+        {/dede:arclist}
+        <!--全站最新带图文档  结束-->
+      </ul>
+      <ul id="tab-popular" class="tin-tab group thumbs-enabled">
+        <!--全站热门带图文档  开始--> 
+         {dede:arclist row='10' orderby='click' flag='c' }
+        <li>
+          <div class="tab-item-thumbnail"> <a href="[field:arcurl/]" title="[field:title/]">
+            <div class="thumb-img"> <img src="[field:picname/]" /> <span><i class="fa fa-plus"></i></span> </div>
+            </a> </div>
+          <div class="tab-item-inner group">
+            <p class="tab-item-title"><a href="[field:arcurl/]"  title="[field:title/]">[field:title/]</a></p>
+            <span class="tab-item-date">[field:pubdate function='strftime("%Y-%m-%d",@me)'] </span>&nbsp; <span class="tab-item-category"><a href="[field:typeurl/]" >[field:typename/]</a></span> </div>
+        </li>
+         {/dede:arclist}
+        <!--全站热门带图文档  结束-->
+      </ul>
+      <ul id="tab-popular2" class="tin-tab group thumbs-enabled">
+        <!--全站随机带图文档  开始-->
+        {dede:arclist orderby='rand' row='9' } 
+        <li>
+          <div class="tab-item-thumbnail"> <a href="[field:arcurl/]" title="[field:title/]">
+            <div class="thumb-img"> <img src="[field:picname/]" /> <span><i class="fa fa-plus"></i></span> </div>
+            </a> </div>
+          <div class="tab-item-inner group">
+            <p class="tab-item-title"><a href="[field:arcurl/]"  title="[field:title/]">[field:title/]</a></p>
+            <span class="tab-item-date">[field:pubdate function='strftime("%Y-%m-%d",@me)'/] </span>&nbsp; <span class="tab-item-category"><a href="[field:typeurl/]" >[field:typename/]</a></span> </div>
+        </li>
+        {/dede:arclist}
+        <!--全站随机带图文档  结束-->
+      </ul>
+    </div>
+  </div>
+  <div class="floatwidget-container"> </div>
+</div>
+ 

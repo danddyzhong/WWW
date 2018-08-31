@@ -1,0 +1,87 @@
+
+<!--加载进度条--> 
+<script type="text/javascript">
+jQuery(function(){
+jQuery('#loading-one').empty().append('页面载入完毕.').parent().fadeOut('slow');
+});
+</script>
+<div id="main_loading"  onclick="javascript:turnoff('loading')">
+  <p id="loading-one" onclick="javascript:turnoff('loading')">页面载入中...</p>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+function turnoff(obj){
+document.getElementById(obj).style.display="none";
+}
+//]]&gt;
+</script> 
+<!--加载进度条--> 
+<!--head--> 
+
+<!-- <div id="head" class="row">
+  <div class="mainbar row">
+    <div class="container">
+      <div id="topbar">
+        <ul id="toolbar" class="menu">
+          <li class="menu-item">  </li>
+        </ul>
+      </div>
+      <div id="rss">
+        <ul>
+          <li><a href="#" target="_blank" class="icon1" title="欢迎订阅"></a></li>
+          <li><a href="#" target="_blank" class="icon3" title="官方新浪微博" rel="nofollow"></a></li>
+          <li><a href="http://wpa.qq.com/msgrd?v=3&uin=123456789&site=qq&menu=yes" target="_blank" class="icon4" title="在线QQ客服" rel="nofollow"></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="container">
+    <div id="blogname" class="third"> <a href="/" title="响应式新闻资讯技术博客织梦模板(自适应手机端)">
+      <h1>响应式新闻资讯技术博客织梦模板(自适应手机端)</h1>
+      <img src="/skin/logo.png" alt="响应式新闻资讯技术博客织梦模板(自适应手机端)" /></a> </div>
+
+    <div class="banner push-right">    <a href="" title="百度广告位www.baidu.com">            
+	<img src="/skin/ad01.jpg"  /></a> </div>
+	</div>
+  <div class="clear"></div>
+</div> -->
+<div class="mainmenus container">
+  <div class="mainmenu">
+    <div class="topnav"> <a   class='home' href="/" title="首页" class="home_none">首页</a>
+      <div class="menu-button"><i class="menu-ico"></i></div>
+      <!--导航-->
+      <ul class="menu">
+      	 {dede:channelartlist typeid='12,18,14,15'  currentstyle="current-menu-item"}
+        <li class="menu-item {dede:field.currentstyle/}"> <a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+          <ul class='{dede:field name=typeid runphp="yes"}
+global $dsql;
+$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+$row = $dsql->GetOne($sql);
+@me=is_array($row)?'class="sub-menu"':'style="display:none"';
+{/dede:field}'>
+{dede:channel type='son'}   
+            <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+{/dede:channel} 
+          </ul>
+        </li>
+        {/dede:channelartlist}
+      </ul>
+      <!--导航 end-->
+      <ul class="menu-right">
+        <li class="menu-search"> <a href="#" id="menu-search" title="搜索"></a>
+          <div class="menu-search-form ">
+            <form action=" /plus/search.php" method="get" target="_blank">
+              <input name="q" type="text" id="search" value="" maxlength="150" placeholder="请输入搜索内容" x-webkit-speech style="width:135px">
+              <input type="submit" value="搜索" class="button"/>
+            </form>
+          </div>
+        </li>
+      </ul>
+      <!-- menus END --> 
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+ 
+<!--head end-->

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>{dede:global.cfg_webname/}</title>
+		<meta name="description" content="{dede:global.cfg_description/}" />
+		<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+		<meta name="author" content="order by {dede:global.cfg_webname/}" />
+
+		<link href="{dede:global.cfg_templets_skin/}/skin/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/skin/css/common.css" />
+		<link href="logo.ico" rel="shortcut icon" />
+		<script src="{dede:global.cfg_templets_skin/}/skin/js/jquery.min.js"></script>
+		<script src="{dede:global.cfg_templets_skin/}/skin/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		{dede:include filename='head.htm'/}
+		<div class="w_container">
+			<div class="container">
+				<div class="row w_main_row">
+					<ol class="breadcrumb w_breadcrumb">
+					  <li><a href="/">首页</a></li>
+					  <li class="active">关键词：{dede:global name='keyword' function='RemoveXSS(@me)'/} 的信息</li>
+					</ol>
+					<div class="col-lg-9 col-md-9 w_main_left">
+						<div class="panel panel-default">
+
+							<div class="panel-body  contentList">
+								<!--文章列表开始-->
+								{dede:list orderby='pubdate' row='10' }
+								<div class="panel panel-default w_article_item">
+									<div class="panel-body ">
+										<div class="row">
+										  <div class="col-xs-6 col-md-3">
+										    <a href="#" class="thumbnail w_thumbnail">
+										      <img src="[field:picname/]" alt="[field:title/]">
+										    </a>
+										  </div>
+										  <h4 class="media-heading">
+										  	<a class="title" href="[field:arcurl/]">[field:title/]</a>
+										  </h4>
+										  <p></p>
+										  <p class="w_list_overview overView">[field:description function='cn_substr(@me,220)'/]。。。</p>
+										  <p class="count_r"><span class="count"><i class="glyphicon glyphicon-user"></i><a href="#">[field:writer/]</a></span> <span class="count"><i class="glyphicon glyphicon-eye-open"></i>阅读:[field:click/]</span><span class="count"><i class="glyphicon glyphicon-time"></i>[field:pubdate function='strftime("%Y-%m-%d",@me)'/]</span></p>
+										</div>
+									</div>
+								</div>
+								{/dede:list}
+								<!--文章列表结束-->
+								<div id="page">
+									{dede:pagelist listitem="index,end,pre,next,pageno" listsize="3"/}
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--左侧开始-->
+{dede:include filename='right.htm'/}
+					<!--左侧结束-->
+					
+				</div>
+			</div>
+		</div>
+		{dede:include filename="foot.htm"/}
+	</body>
+	<script type="text/javascript">
+		var $backToTopEle = $('<a href="javascript:void(0)" class="Hui-iconfont toTop" title="返回顶部" alt="返回顶部" style="display:none">^</a>').appendTo($("body")).click(function() {
+			$("html, body").animate({ scrollTop: 0 }, 120);
+		});
+		var backToTopFun = function() {
+			var st = $(document).scrollTop(),
+				winh = $(window).height();
+			(st > 0) ? $backToTopEle.show(): $backToTopEle.hide();
+			/*IE6下的定位*/
+			if(!window.XMLHttpRequest) {
+				$backToTopEle.css("top", st + winh - 166);
+			}
+		};
+
+		$(function() {
+			$(window).on("scroll", backToTopFun);
+			backToTopFun();
+		});
+	</script>
+
+</html>

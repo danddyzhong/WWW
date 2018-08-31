@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>{dede:global.cfg_webname/}</title>
+		<meta name="description" content="{dede:global.cfg_description/}" />
+		<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+		<meta name="author" content="order by {dede:global.cfg_webname/}" />
+
+		<link href="{dede:global.cfg_templets_skin/}/skin/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/skin/css/common.css" />
+		<link href="logo.ico" rel="shortcut icon" />
+		<script src="{dede:global.cfg_templets_skin/}/skin/js/jquery.min.js"></script>
+		<script src="{dede:global.cfg_templets_skin/}/skin/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		{dede:include filename='head.htm'/}
+		<div class="w_container">
+			<div class="container">
+				<div class="row w_main_row">
+					<ol class="breadcrumb w_breadcrumb">
+					  <li class="active"><a href="/">首页</a>&nbsp;&gt;&nbsp;<a href="{dede:field.typeurl/}">{dede:field.typename/}</a>&gt;{dede:field.title/}</li>
+					</ol>
+					<div class="col-lg-9 col-md-9 w_main_left">
+						<div class="panel panel-default">
+
+
+							<div class="panel-body">
+							<h2 class="c_titile">{dede:field.title/}</h2>
+							<p class="box_c"><span class="d_time">发布时间：{dede:field.pubdate function='strftime("%Y-%m-%d",@me)'/}</span><span>编辑：{dede:field.writer/}</span><span>阅读（{dede:field.click/}）</span></p>
+							<ul class="infos">
+								{dede:field.body/}
+							</ul>
+															
+							<div class="keybq">
+						    	<p></p>    
+						    </div>
+							
+							
+							
+							<div class="nextinfo">
+								<p class="last">{dede:prenext get='pre'/}</p>
+								<p class="next">{dede:prenext get='next'/}</p>
+						    </div>
+							
+						</div>
+
+
+							
+						</div>
+					</div>
+
+					<!--左侧开始-->
+{dede:include filename='right.htm'/}
+					<!--左侧结束-->
+					
+				</div>
+			</div>
+		</div>
+		{dede:include filename="foot.htm"/}
+	</body>
+	<script type="text/javascript">
+		var $backToTopEle = $('<a href="javascript:void(0)" class="Hui-iconfont toTop" title="返回顶部" alt="返回顶部" style="display:none">^</a>').appendTo($("body")).click(function() {
+			$("html, body").animate({ scrollTop: 0 }, 120);
+		});
+		var backToTopFun = function() {
+			var st = $(document).scrollTop(),
+				winh = $(window).height();
+			(st > 0) ? $backToTopEle.show(): $backToTopEle.hide();
+			/*IE6下的定位*/
+			if(!window.XMLHttpRequest) {
+				$backToTopEle.css("top", st + winh - 166);
+			}
+		};
+
+		$(function() {
+			$(window).on("scroll", backToTopFun);
+			backToTopFun();
+		});
+	</script>
+
+</html>

@@ -1,0 +1,59 @@
+<div class="Top">
+	<div class="Top_Box">
+    	<div class="Logo FL"><h1><a href="/">赚钱网</a></h1></div>
+    	<div class="Top_L"></div>
+    	<ul class='navul3'>
+        	<li><i class="icon-menu"></i></li>
+       </ul>
+    </div>
+    <div class="Top_R">
+    	
+    </div>
+</div>
+<div class="Nav">
+    	<ul class="navul1">
+      	<li><a href='/'><span>主页</span></a></li>
+      	{dede:channel type='top' row='8' currentstyle="<li class='hover'><a href='~typelink~' ~rel~><span>~typename~</span></a></li>"}
+      	<li><a href='[field:typeurl/]' [field:rel/]><span>[field:typename/]</span></a></li>
+      	{/dede:channel}
+    	</ul>
+    <ul class='navul2'>
+        <li><i class="icon-menu"></i></li>
+       </ul>
+    <div class="so FR">
+    	<form action="/plus/search.php" name="formsearch">
+           <input type="hidden" name="kwtype" value="0" />
+           <input name="keyword" type="text" class="search-keyword FL" id="search-keyword FL" value="" onfocus="if(this.value==''){this.value='';}"  onblur="if(this.value==''){this.value='';}"/>
+          <button type="submit" class="search-submit FL">搜索</button>
+        </form>
+    </div>
+    <div class="N_L"></div>
+    <div class="N_R"></div>
+</div>
+<div class="mobile_navlist">
+		<ul>
+    	<li><a href="{dede:global.cfg_cmsurl/}/" class="home">首页</a></li>
+        {dede:channel type='top' row='10' currentstyle="<li><a href='~typelink~' ~rel~ class='on'>~typename~</a></li>"}
+      	<li><a href='[field:typeurl/]' [field:rel/]>[field:typename/]</a></li>
+      	{/dede:channel}
+    </ul>
+</div>
+<script>
+$(function(){
+	$(".mobile_navlist ul li a").hover(
+			function(){
+				$(this).addClass('home').css({'text-decoration':'none'});
+				$(this).parent().siblings().children().removeClass('home');
+			},
+			function(){
+				$(this).removeClass('home');
+			}
+	)
+	$(".navul2 li").click(function(){
+		$('.mobile_navlist').toggle();
+	});
+	$(".navul3 li").click(function(){
+		$('.mobile_navlist').toggle();
+	});
+})
+</script>   

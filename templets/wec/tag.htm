@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>TAG标签_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/wecskin/style.css" type="text/css" />
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/wecskin/js/jquery.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/wecskin/js/gotop.js"></script>
+<link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/wecskin/fontello.css" type="text/css" />
+<!--[if IE 7]><link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/wecskin/fontello-ie7.css" type="text/css" /><![endif]-->
+<style>.home{background:#008d49;}</style>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="weizhi">您的当前位置：<a href="{dede:global.cfg_cmsurl/}/">主页</a> &gt; <a href='tags.php'>TAG标签</a> </div>
+<div class="main1">
+	<div class="left_1">
+    	<div class="g_list">
+            <div class="t_4"><h3>TAG标签</h3></div>
+            <dl class="g_tag">
+                <dt><span>最新标签</span></dt>
+                <dd>
+                    {dede:tag row='100' sort='new'}
+                    <a href='[field:link/]'>[field:tag /]</a>
+                    {/dede:tag}
+                    <div class="clear"></div>
+                </dd>
+                <dt><span>热门标签</span></dt>
+                <dd>
+                    {dede:tag row='100' sort='month'}
+                    <a href='[field:link/]'>[field:tag /]</a>
+                    {/dede:tag}
+                    <div class="clear"></div>
+                </dd>
+                <dt><span>随机标签</span></dt>
+                <dd>
+                    {dede:tag row='200' sort='rand'}
+                    <a href='[field:link/]'>[field:tag /]</a>
+                    {/dede:tag}
+                    <div class="clear"></div>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <div class="right_1">
+        <div class="g_box2 u_2">
+        	<div class="t_1">最新文章</div>
+            <ul class="b_box3 u_1">
+            	{dede:arclist row=8 titlelen=50}
+                <li><a href="[field:arcurl/]">[field:title/]</a></li>
+                {/dede:arclist}
+            </ul>
+        </div>
+    	<div class="ban_251"><img src="{dede:global.cfg_cmsurl/}/wecskin/images/ad2.jpg" width="250" height="250" /></div>
+        <div class="g_box2 u_2">
+        	<div class="t_1">热门文章</div>
+            <ul class="b_box1">
+            	{dede:arclist row=10 titlelen=50 orderby='click'}
+                <li><a href="[field:arcurl/]">[field:title/]</a></li>
+                {/dede:arclist}
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

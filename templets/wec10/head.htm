@@ -1,0 +1,46 @@
+<div id="Header">
+    <div class="header">
+        <h1 class="test"></h1>
+        <div class="logo" style="width:144px;"><a href="http://www.Baidu.com/" target="_blank"><img src="{dede:global.cfg_templets_skin/}/skin/images/logo2.png" style="height:30px"/></a></div>
+        <div class="menulist large" style="margin:0 144px">
+            <ul></ul>
+        </div>
+        <div class="menulist medium" style="margin:0 144px">
+            <ul></ul>
+        </div>
+        <div class="headerSearch">
+            <form  name="formsearch" action="/plus/search.php">
+                <input type="hidden" name="kwtype" value="0" />
+                <p class="searchbar">
+                    <a href="javascript:;" class="searchA"><i class="i"></i></a>
+                    <i class="txt"><i class="i nodis"></i><input name="q" type="text" class="nodis"></i>
+                </p>
+                <button type="submit" class="search-submit" style="display: none">搜索</button>
+            </form>
+            <p class="sub-menu"><i class="icon-submenu"></i></p>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        var menu = [];
+        menu.push({
+            'name': '首页',
+            'enname': '',
+            'url': '/',
+            'list': []
+        });
+    </script>
+        {dede:channelartlist typeid='12,18,14'  currentstyle="current-menu-item"}
+            <script type="text/javascript">
+                menu.push({
+                    'name': '{dede:field name="typename"/}',
+                    'enname': '',
+                    'url': '{dede:field name="typeurl"/}',
+                    'list': []
+                });
+            </script>
+        {/dede:channelartlist}
+    <script type="text/javascript">
+        serverData.menu = menu;
+    </script>
+</div>

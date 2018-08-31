@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<link rel="shortcut icon" type="images/x-icon" href="{dede:global.cfg_basehost/}/favicon.ico">
+<script type="text/javascript" src="/skin/js/lib.js"></script>
+<script type="text/javascript" src="/skin/js/plugins.js"></script>
+<style>
+.post [rel="gallery"]:after {
+	background: #666666;
+}
+.post [rel="gallery"]:after {
+	background: #666666;
+	background: -moz-linear-gradient(top, #666666 0%, #666666 100%);
+	background: -webkit-gradient(linear, top center, bottom center, color-stop(0%, #666666), color-stop(100%, #666666));
+	background: -webkit-linear-gradient(top, #666666 0%, #666666 100%);
+	background: -o-linear-gradient(top, #666666 0%, #666666 100%);
+	background: -ms-linear-gradient(top, #666666 0%, #666666 100%);
+	background: linear-gradient(to bottom, #666666 0%, #666666 100%);
+}
+.wpcf7-text:focus, .wpcf7-number:focus, .wpcf7-select:focus, .wpcf7-textarea:focus, .text-input:focus {
+	border-color: #666666;
+}
+[id="submit"], .wpcf7-submit, .btn--primary {
+background: #666666;
+}
+.post-status {
+	color: #666666;
+}
+a {
+	color: #666666;
+}
+</style>
+<link rel='stylesheet' id='hermit-css'  href='/skin/css/hermit.css' type='text/css' media='all' />
+<link rel='stylesheet' id='style-css'  href='/skin/css/style.css' type='text/css' media='all' />
+
+</head>
+<body class="home blog fancy-captions round-avatars">
+<header> <a id="logo" href="/" title="{dede:global.cfg_webname/}"> <img src="/skin/img/logo-1.png" alt="{dede:global.cfg_webname/}" /></a> <a id="nav-toggle" href="#"><span></span></a>
+  <nav>
+    <div class="menu-top-container">
+      <ul id="menu-top" class="menu">
+      {dede:channel type='top'}
+        <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+      {/dede:channel}  
+      </ul>
+    </div>
+  </nav>
+  <i class=" js-toggle-search iconfont"></i> </header>
+<div class="m-header ">
+  <section id="hero1" class="hero">
+    <div class="inner"> </div>
+  </section>
+  <figure class="top-image" style="background-image: url(
+	/skin/img/pic6.jpg );"></figure>
+  <canvas height="550" width="1585" id="wave-canvas"></canvas>
+  <canvas id="wave-canvas"></canvas>
+</div>
+<div class="wrapper">
+  <ul class="posts-list mb+ js-posts">
+    <i class="post-status iconfont"></i>
+    {dede:freelist/}
+  </ul>
+  <div class="pagination mb+ js-pagination">
+    <div class="js-next pagination__load"> {dede:pagelist listitem="next" listsize="5"/}<i class="iconfont"></i></a> </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+<div id="fb-root"> </div>
+</body>
+</html>

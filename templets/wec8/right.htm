@@ -1,0 +1,42 @@
+<div id="sidebar">
+  <div class="widget box row">
+    <h3>最新文章</h3>
+    <ul>
+      {dede:arclist orderby='pubdate' row='8'}
+      <li> <a href="[field:arcurl/]">[field:title/]</a> </li>
+      {/dede:arclist}
+
+    </ul>
+  </div>
+  <div class="search box row">
+    <div class="search_site">
+      <form id="searchform" method="get" action="/plus/search.php" target="_blank">
+        <input type="submit" value="" id="searchsubmit" class="button"/>
+        <label><span>请输入搜索内容</span>
+          <input type="text" class="search-s" name="q"  x-webkit-speech />
+        </label>
+      </form>
+    </div>
+  </div>
+  <!--ad-->
+  <!--ad end-->
+  <div class="widget box row">
+    <h3>推荐图文</h3>
+    <div class="siderbar-list">
+      <ul class="imglist clear">
+        {dede:arclist  flag='c' row='6'}
+        <li class="post"> <a href="[field:arcurl/]" title="[field:title/]"> <img src="[field:picname/]"  alt="[field:title/]">
+          <h4>[field:title/]</h4>
+          </a> </li>
+        {/dede:arclist}
+      </ul>
+    </div>
+  </div>
+  <div class="widget box row">
+    <h3>HOT TAGS</h3>
+    <ul class='xoxo blogroll'>
+    </ul>
+  </div>
+  <div id="sidebar-follow"> </div>
+</div>
+ 

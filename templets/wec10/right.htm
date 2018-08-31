@@ -1,0 +1,38 @@
+
+<div class="right">
+    <div class="ap">
+        <div class="apt">
+            <h4>随机看看</h4>
+            <p class="entit"><span>NEW ARTICLE</span></p>
+        </div>
+        <div class="apc">
+            <ul class="ulist">
+{dede:arclist row='10'}
+			<li>
+                    <span class="num top3">[field:global.autoindex/]</span>
+                    <a href="[field:arcur/]" title="[field:title/]">[field:title/]</a>
+                    <span class="tm">[field:pubdate function='strftime("%m-%d",@me)'/]</span>
+                </li>
+{/dede:arclist}
+            </ul>
+        </div>
+    </div>
+    <div class="ap apRecommend">
+        <div class="apt">
+            <h4>热门文章</h4>
+
+            <p class="entit"><span>HOT ARTICLE</span></p>
+        </div>
+        <div class="apc">
+            <ul class="ulist">
+            {dede:arclist row='10' orderby='click' }
+			<li>
+                    <span class="num top3">[field:global.autoindex/]</span>
+                    <a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a>
+                    <span class="tm">[field:pubdate function='strftime("%m月%d日",@me)'/]</span>
+                </li>
+            {/dede:arclist}
+            </ul>
+        </div>
+    </div>
+</div>

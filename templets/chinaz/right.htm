@@ -1,0 +1,29 @@
+<div class="top">
+  <div class="tit"><h3>推荐阅读</h3></div>
+     <ul class="hot-comments-list">
+    {dede:arclist titlelen='35' row='5' flag='c' typeid='all'}
+       <li><em class="n[field:global name=autoindex/]">[field:global name=autoindex/] </em>
+       <a href="[field:arcurl/]" title="[field:title /]" class="commentimg" target="_blank"><img width="80" height="60" src="[field:litpic/]" alt="[field:title /]"></a>
+       <h4><a href="[field:arcurl/]" title="[field:title /]" target="_blank">[field:title /]</a></h4>
+       <span>[field:description function="cn_substr(@me,120)"/]..</span>
+      </li>
+     {/dede:arclist}
+  </ul>
+
+ <div class="tit"><h3>创业故事</h3></div>
+  <div class="dreamer"> 
+   <ul>
+    {dede:arclist titlelen='35' row='4' typeid='3'}
+     <li>
+      <h4><a href="[field:arcurl/]" title="[field:title /]" target="_blank">[field:title /]</a></h4>
+       <div class="wiget">
+        <a href="[field:arcurl/]" > <img width="120" height="90" class="dream-img" src="[field:litpic/]" alt="[field:title /]"></a>    
+       <div class="dreamer-info"><p>[field:description function="cn_substr(@me,120)"/]..</p></div>
+       </div>
+      </li>    
+     {/dede:arclist}   
+     </ul>
+   </div>
+   <div class="tit"><h3>友情链接</h3></div>
+   <div class="link">{dede:flink row='24' type='text' titlelen='26' linktype = '2'}[field:link /]{/dede:flink}</div>
+  </div>

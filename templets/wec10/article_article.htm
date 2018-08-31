@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>
+        var serverData = {
+            logowidth: '144',
+            logoheight: '30',
+            coverlogoheight: '50',
+            menuCount: 4,
+            terms: '',
+            menu: [],
+            channelname: '',
+            device: 'pc'
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/skin/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/skin/css/art.css"/>
+</head>
+<body>
+<style>
+    body {
+        padding-top: 0
+    }
+    #Header {
+        position: relative;
+    }
+</style>
+<div class="wrap">
+{dede:include filename='head.htm'/}
+<div id="Body">
+<div class="body">
+<div class="left">
+<div id="banners">
+    <h1 class="page-title"> <a href="/">主页</a> &gt; <a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a> &gt; 正文 </h1>
+
+        <div class="hclc">
+            <article>
+                <h1>{dede:field name="title"/}</h1>
+                <div class="contInfo"><div class="floatL"><span id="pubtime_baidu">{dede:field name='pubdate' function='strftime("%Y年%m月%d日")' /}</span><span id="“source_baidu”">栏目：<a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a></span></div><div class="floatR"><style type="text/css">.bshare-custom{font-size:12px!important;}.bshare-custom a{margin:0 3px!important;line-height:16px;}#bsLogoList li{padding-left:0;background:none;}.b-drag{border-radius:0!important;}.b-drag-arrow{left:0!important;}</style><div class="bshare-custom"><div class="bsPromo bsPromo2"></div></div>
+                </div></div>
+                <p style="margin: 20px 0px 0px; padding: 0px; font-family: 'Microsoft Yahei', sans-serif; border: 0px; font-size: 16px; line-height: 1.7; color: rgb(51, 51, 51);"></p>
+                {dede:field name="body"/}
+            </article>
+        </div>
+ <div id="nav-below" class="navigation">
+    <div class="nav-previous"> {dede:prenext get='pre'/} </div>
+    <div class="nav-next">{dede:prenext get='next'/}</div>
+</div>       
+</div>
+
+</div>
+{dede:include filename='right.htm'/}
+
+</div>
+</div>
+{dede:include filename='foot.htm'/}
+
+</body>
+</html>

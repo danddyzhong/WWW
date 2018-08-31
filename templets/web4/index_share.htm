@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:field.seotitle /}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description'  function='html2text(@me)'/}" />
+<link href="/style/css/base.css" rel="stylesheet">
+<link href="/style/css/index.css" rel="stylesheet">
+<link href="/style/css/style.css" rel="stylesheet">
+<link href="/style/css/media.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<!--[if lt IE 9]>
+<script src="/style/js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="ibody"> {dede:include filename='head.htm'/}
+  <article>
+    <h2 class="about_h">您现在的位置是：{dede:field name='position'/} </h2>
+    <div class="template">
+      <h3>
+        <p><span>个人博客</span>模板</p>
+        {dede:type typeid='5'}<a href="[field:typelink /]" class="more">更多>></a>{/dede:type}</h3>
+      <ul>
+        {dede:arclist typeid='5' row='12' orderby='pubdate' type='image'}
+        <li><a href="[field:arcurl/]"  target="_blank">[field:image/]</a><span>[field:title/]</span></li>
+        {/dede:arclist}
+      </ul>
+      <h3>
+        <p><span>企业</span>网站模板</p>
+        {dede:type typeid='6'}<a href="[field:typelink /]" class="more">更多>></a>{/dede:type}</h3>
+      <ul>
+        {dede:arclist typeid='6' row='12' orderby='pubdate' type='image'}
+        <li><a href="[field:arcurl/]"  target="_blank">[field:image/]</a><span>[field:title/]</span></li>
+        {/dede:arclist}
+      </ul>
+      <h3>
+        <p>个人<span>作品</span></p>
+        {dede:type typeid='8'}<a href="[field:typelink /]" class="more">更多>></a>{/dede:type}</h3>
+      <ul>
+        {dede:arclist typeid='8' row='12' orderby='pubdate' type='image'}
+        <li><a href="[field:arcurl/]"  target="_blank">[field:image/]</a><span>[field:title/]</span></li>
+        {/dede:arclist}
+      </ul>
+      <h3>
+        <p><span>国外</span>Html5模板</p>
+        {dede:type typeid='9'}<a href="[field:typelink /]" class="more">更多>></a>{/dede:type}</h3>
+      <ul>
+        {dede:arclist typeid='9' row='12' orderby='pubdate' type='image'}
+        <li><a href="[field:arcurl/]"  target="_blank">[field:image/]</a><span>[field:title/]</span></li>
+        {/dede:arclist}
+      </ul>
+    </div>
+  </article>
+  {dede:include filename='right.htm'/} 
+  <script src="/style/js/silder.js"></script>
+  <div class="clear"></div>
+  <!-- 清除浮动 --> 
+</div>
+</body>
+</html>

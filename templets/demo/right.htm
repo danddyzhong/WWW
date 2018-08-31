@@ -1,0 +1,36 @@
+<aside class="sidebar">
+    <section class="widget" id="divSearchPanel">
+      <h3><i class="icon-th-list"></i> 搜索</h3>
+      <div>
+        <form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+          <input type="text" name="q" size="11" />
+          <input type="submit" value="搜索" />
+        </form>
+      </div>
+    </section>
+    <section class="widget" id="scroll">
+      <h3><i class="icon-th-list"></i> 热门文章</h3>
+      <ul class="hot-post">
+        {dede:arclist row='5' titlelen='60' orderby='rand' typeid='top' channelid='1'}
+        <li>
+          <div class="thumb"><a href="[field:arcurl/]" title="[field:title/]"><img src="[field:litpic/]" alt="[field:title/]"/></a></div>
+          <div class="hot-title"><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></div>
+          <div class="hot-time"><i class="icon-time"></i> [field:pubdate function='strftime("%Y-%m-%d",@me)'/]</div>
+        </li>
+        {/dede:arclist}
+      </ul>
+    </section>
+    <section class="widget">
+      <h3><i class="icon-th-list"></i> 热评文章</h3>
+      <ul class="hot-post">
+        {dede:arclist row='5' titlelen='60' typeid='top' channelid='1'}
+        <li>
+          <div class="thumb"><a href="[field:arcurl/]" title="[field:title/]"><img src="[field:litpic/]" alt="[field:title/]"/></a></div>
+          <div class="hot-title"><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></div>
+          <div class="hot-time"><i class="icon-time"></i> [field:pubdate function='strftime("%Y-%m-%d",@me)'/]</div>
+        </li>
+        {/dede:arclist}
+      </ul>
+    </section>
+    
+  </aside>

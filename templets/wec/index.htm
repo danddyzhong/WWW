@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/index.php">
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="{dede:global.cfg_mobileurl/}/index.php";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/wecskin/style.css" type="text/css" />
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/wecskin/js/jquery.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/wecskin/js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/wecskin/js/gotop.js"></script>
+<link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/wecskin/fontello.css" type="text/css" />
+<!--[if IE 7]><link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/wecskin/fontello-ie7.css" type="text/css" /><![endif]-->
+<style>.home{background:#008d49;}</style>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="main1">
+	<div class="g_box6 fl">
+    	<div id="slideBox" class="slideBox">
+            <div class="hd">
+                <ul>
+                    {dede:arclist row=5 flag='f'}
+                    <li></li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    {dede:arclist row=5 titlelen=60 flag='f'}
+                    <li>
+                        <div class="pic"><a href="[field:arcurl/]"><img src="[field:picname/]" alt="[field:fulltitle/]" /></a></div>
+                        <div class="tit"><a href="[field:arcurl/]">[field:title/]</a></div>
+                        <div class="bg"></div>
+                    </li>
+                    {/dede:arclist}
+                </ul>
+            </div>
+        </div>
+        <script type="text/javascript">
+            jQuery("#slideBox").slide({ mainCell:".bd ul",autoPlay:true,effect:"left",
+                endFun:function(i,c){
+                    jQuery("#slideBox .tit").css({"bottom":-40}).eq(i).animate({"bottom":0});
+                    jQuery("#slideBox .bg").css({"bottom":-40}).eq(i).animate({"bottom":0});
+                }
+            });
+        </script>
+        <div class="g_box2">
+        	<div class="t_1">编辑推荐</div>
+            <ul class="b_box3">
+            	{dede:arclist row=10 titlelen=100 flag='c'}
+                <li><a href="[field:arcurl/]">[field:title/]</a></li>
+                {/dede:arclist}
+            </ul>
+        </div>
+    </div>
+    <div class="g_box1 fl">
+    	<div class="t_1">最新文章</div>
+        {dede:arclist limit='0,1' titlelen=50 flag='h'}
+        <h1><a href="[field:arcurl/]">[field:title/]</a></h1>
+		<p>[field:description function="cn_substr(@me,120)"/]……</p>
+        {/dede:arclist}
+        <ul>
+        	{dede:arclist limit='0,6' titlelen=30 noflag='h'}
+        	<li><a href="[field:arcurl/]">[field:title/]</a></li>
+        	{/dede:arclist}
+            <div class="clear"></div>
+        </ul>
+        {dede:arclist limit='1,1' titlelen=50 flag='h'}
+        <h1><a href="[field:arcurl/]">[field:title/]</a></h1>
+		<p>[field:description function="cn_substr(@me,120)"/]……</p>
+        {/dede:arclist}
+        <ul>
+        	{dede:arclist limit='8,6' titlelen=30 noflag='h'}
+        	<li><a href="[field:arcurl/]">[field:title/]</a></li>
+        	{/dede:arclist}
+            <div class="clear"></div>
+        </ul>
+        {dede:arclist limit='2,1' titlelen=50 flag='h'}
+        <h1><a href="[field:arcurl/]">[field:title/]</a></h1>
+		<p>[field:description function="cn_substr(@me,120)"/]……</p>
+        {/dede:arclist}
+        <ul>
+        	{dede:arclist limit='16,6' titlelen=30 noflag='h'}
+        	<li><a href="[field:arcurl/]">[field:title/]</a></li>
+        	{/dede:arclist}
+            <div class="clear"></div>
+        </ul>
+    </div>
+    <div class="right_1 fr">
+    	<!--  <div class="ban_251"><a href="http://www.mobantianxia.com/" target="_blank"></a></div> -->
+        <div class="g_box2">
+        	<div class="t_1">热门文章</div>
+            <ul class="b_box1">
+            	{dede:arclist row=10 titlelen=100 orderby='click'}
+                <li><a href="[field:arcurl/]">[field:title/]</a></li>
+                {/dede:arclist}
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div class="ban_1001"><a href="http://www.mobantianxia.com/" target="_blank"></a></div>
+{dede:channelartlist row='2'}
+<div class="main2">
+	<div class="t_2">
+    	<span>
+        	{dede:channel type='son'}<a href='[field:typeurl/]'>[field:typename/]</a>|{/dede:channel}
+           	<a href="{dede:field name='typeurl'/}">更多>></a> 
+        </span>
+    	<h3><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a></h3>
+    </div>
+    <div class="g_box3 fl">
+        <ul class="b_box2">
+        	{dede:arclist limit='0,2' titlelen=50 orderby='pubdate'}
+        	<li>
+            	<a href="[field:arcurl/]">[field:title/]</a>
+                [field:description function="cn_substr(@me,70)"/]...
+            </li>
+        	{/dede:arclist}
+        </ul>
+        <ul class="b_box3">
+        	{dede:arclist limit='2,6' titlelen=50 orderby='pubdate'}
+			<li><a href="[field:arcurl/]">[field:title/]</a></li>
+			{/dede:arclist}
+        </ul>
+    </div>
+    <div class="g_box4 fl">
+    	{dede:arclist row=1 titlelen=50 flag='a'}
+        <h3><a href="[field:arcurl/]">[field:title/]</a></h3>
+		<p>[field:description function="cn_substr(@me,130)"/]……</p>
+        {/dede:arclist}
+        <ul class="b_box8">
+        	{dede:arclist row=3 titlelen=100 flag='c'}
+			<li>
+                <a href="[field:arcurl/]"><img src="[field:picname/]" alt="[field:fulltitle/]" /></a>
+                <h4><em>【推荐】</em><a href="[field:arcurl/]">[field:fulltitle/]</a></h4>
+                <p>[field:description function="cn_substr(@me,100)"/]...</p>
+            </li>
+			{/dede:arclist}
+        </ul>
+    </div>
+    <div class="g_box3 fl">
+    	<div class="t_3">热门文章</div>
+        <ul class="b_box4">
+        	{dede:arclist row=10 titlelen=100 orderby='click'}
+			<li><a href="[field:arcurl/]">[field:title/]</a></li>
+			{/dede:arclist}
+        </ul>
+    </div>
+    <div class="clear"></div>
+</div>
+{/dede:channelartlist}
+<div class="ban_1001"><a href="http://www.mobantianxia.com/" target="_blank"></a></div>
+<div class="main2">
+	<div class="t_2">
+    	<span>
+        	{dede:channel type='son' typeid="栏目ID"}<a href='[field:typeurl/]'>[field:typename/]</a>|{/dede:channel}
+           	<a href="#">更多>></a> 
+        </span>
+    	<h3><a href="#">图片</a></h3>
+    </div>
+    <ul class="b_box9">
+    	{dede:arclist row=10 typeid="栏目ID"}
+        <li><a href="[field:arcurl/]"><img src="[field:picname/]" alt="[field:fulltitle/]" /><p>[field:fulltitle/]</p></a></li>
+        {/dede:arclist}
+        <div class="clear"></div>
+    </ul>
+</div>
+<div class="link">
+	<h3>友情链接</h3>
+    <p>
+    {dede:flink row='100' type='text' typeid="0"}
+    [field:link /]
+    {/dede:flink}
+    </p> 
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

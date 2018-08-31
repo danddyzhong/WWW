@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="viewport" content="width=device-width , initial-scale=1.0 , user-scalable=0 , minimum-scale=1.0 , maximum-scale=1.0">
+<meta name="author" content="order by {dede:global.cfg_basehost/}" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/skin/jquery.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/skin/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/skin/frontopen.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="{dede:global.cfg_templets_skin/}/skin/style.css">
+<link rel="stylesheet" type="text/css" media="all" href="{dede:global.cfg_templets_skin/}/skin/mobile.css">
+<link rel="stylesheet" type="text/css" media="all" href="{dede:global.cfg_templets_skin/}/skin/font-awesome.min.css">
+<style type="text/css">@media screen and (min-width:1366px){.c-con{height:140px;}}
+.entry-content p{text-indent: 2em;}.entry-content p iframe{margin-left:-2em;}.datetime , #wp-calendar td a , .form-submit input:hover , .car-yearmonth , #article-index{background:#ff7d00;}.entry-content a:hover , .logged-in-as a , .gonggao a:hover , .tit .h1 a:hover{color:#ff7d00}.navcon{background:#363636;}.navcon ul li{border-color:#363636;}.sub-menu , .sub-menu .menu-item{background:#363636;}.navcon ul li a:hover, .navcurrent{background:#ff7d00;}.navcon ul li a:hover, .navcurrent{color:#ffffff;}</style>
+<style type="text/css">body{max-width:1440px; _width:1440px; margin:auto;}@media screen and (max-width:960px){body{width:100%; margin:auto;}.post_box {width:100%; height:auto;}.main {width:100% !important;}.side {width:25%;} .page_php {width:72% !important;} #content {width: 75%;}}
+</style>
+<!--[if lt IE 9]><script src="{dede:global.cfg_templets_skin/}/skin/html5.js"></script><![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/skin/font-awesome-ie7.min.css">
+<![endif]-->
+<script type="text/javascript">(function(){mod_txt = '#text-9'; adminBar = "" || 0})();</script>
+</head>
+<body style="">
+<div class="web_bod">
+	<!--head开始-->
+{dede:include filename='head.htm'/}
+	<!--head结束-->
+<section class="conter marauto">
+<div class="main"> 
+	<h1 class="page-title">当前位置：&nbsp; <a href="/">主页</a> &gt; <a href="[{dede:field name='typelink'/}]">{dede:field name='typename'/}</a> &gt;  </h1>
+  <div class="top_box">
+  </div>
+  <!--列表开始-->
+  {dede:list pagesize ='6'}
+<article class="post_box">
+    <div class="c-top" id="post-8339">
+        <div class="datetime">[field:pubdate function='strftime("%Y年%m月%d日",@me)'/]</div>	
+            <header class="tit">
+                <h2 class="h1">
+                	<a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h2>
+                <aside class="iititle">
+                	<span><i class="icon-folder-open icon-large"></i> <a href="[field:typeurl/]" title="[field:typename/]" rel="category">[field:typename/]</a></span>
+                	<span><i class="icon-eye-open icon-large"></i> 围观[field:click/] 次</span>
+                	</aside>
+            </header>
+    </div>
+    <div class="c-con">    
+    	<a href="[field:arcurl/]" class="disp_a" title="[field:title/]">	
+    		<img src="[field:picname/]" alt="[field:title/]">[field:description function="cn_substr(@me,220)"/]...</a>
+    		<a href="[field:arcurl/]" class="more-link" style="width: 15%;">阅读更多</a><div class="cls"></div>
+    </div>
+    <div class="c-bot">
+    <aside class="cb_bq"><!-- <i class="icon-tag icon-large"></i> --></aside>
+        <div class="cls"></div>
+    </div>
+</article>
+{/dede:list}
+
+ <!--列表结束-->
+	<div class="cls"></div>
+	<div class="badoo">
+		{dede:pagelist listitem="index,end,pre,next,pageno" listsize="3"/}
+</div>
+</div>
+
+ {dede:include filename='right.htm'/}
+<div class="cls"></div>
+</section>
+<div class="cls"></div>
+<!--footer开始-->
+{dede:include filename='foot.htm'/}
+<!--footer结束-->
+</div>
+</body></html>

@@ -1,0 +1,43 @@
+<header id="header" class="header">
+  <div class="container-inner">
+    <div class="yusi-logo"><a href="/">
+      <h1><span class="yusi-mono">{dede:global.cfg_webname/}</span> <!--<span class="yusi-bloger"> --> </span></h1>
+      </a> </div>
+  </div>
+  <div id="nav-header" class="navbar">
+    <ul class="nav">
+      <li  class="menu-item menu-item-type-custom menu-item-object-custom {dede:field name=typeid runphp='yes'}(@me=='')? @me='current-menu-parent a':@me='';{/dede:field}" ><a href="/" title="{dede:global.cfg_webname/}">首页</a></li>
+
+
+      {dede:channelartlist typeid='12,18,14,15'  currentstyle="current-menu-parent a"}
+      <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu {dede:field.currentstyle/}"><a  id="[field:global.autoindex/]"  href="{dede:field name='typeurl'/}" >{dede:field name='typename'/}</a>
+        <ul {dede:field name=typeid runphp="yes"}
+global $dsql;
+$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+$row = $dsql->GetOne($sql);
+@me=is_array($row)?'class="sub-menu"':'style="display:none"';
+{/dede:field} >
+              {dede:channel type='son'}>
+          <li class="menu-item menu-item-type-taxonomy menu-item-object-category"><a href="[field:typeurl/]">[field:typename/]</a> </li>
+          {/dede:channel}
+        </ul>
+      </li>
+      {/dede:channelartlist}
+      <li style="float:right;">
+        <div class="toggle-search"><i class="fa fa-search"></i></div>
+        <div class="search-expand" style="display: none;">
+          <div class="search-expand-inner">
+            <form class="searchform themeform" action="/plus/search.php">
+              <div>
+                <input type="ext" class="search" name="q"  autofocus="" x-webkit-speech="" value="search...">
+              </div>
+            </form>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div class="screen-mini">
+      <button data-type="screen-nav" class="btn btn-inverse screen-nav"> <i class="fa fa-list"> </i> </button>
+    </div>
+  </div>
+</header>

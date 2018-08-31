@@ -1,0 +1,26 @@
+<div class="listpage-main-right">
+    <div class="czd-tool">
+      <h3>范文发表</h3>
+      <ul>
+        {dede:channel     type='son'        noself='yes'     }
+        <li><a title="[field:typename/]" href="[field:typelink/]" target="_blank"><span>[field:typename/]</span><em></em></a></li>
+        {/dede:channel}
+      </ul>
+    </div>
+    <div class="hot-work-paper">
+      <h3>最热范文</h3>
+      <ul>
+        {dede:arclist          orderby ='click'         titlelen='38'       row='10'   noself='yes'   }
+        <li> <a title="[field:typename/]" href="[field:typeurl/]" target="_blank" class="tit">[field:typename/]</a> <a title="[field:title/]" href="[field:arcurl/]" target="_blank" class="detial">[field:title/]</a> </li>
+        {/dede:arclist}
+      </ul>
+    </div>
+    <div class="hot-work-paper">
+      <h3>最新范文</h3>
+      <ul>
+        {dede:arclist          orderby ='pubdate'         titlelen='38'       row='10'   noself='yes'   }
+        <li> <a title="[field:typename/]" href="[field:typeurl/]" target="_blank" class="tit">[field:typename/]</a> <a title="[field:title/]" href="[field:arcurl/]" target="_blank" class="detial">[field:title/]</a> </li>
+        {/dede:arclist}
+      </ul>
+    </div>
+  </div>

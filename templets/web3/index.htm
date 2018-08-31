@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="order by adminbuy.cn" />
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/templets/cc/style/index.css" />
+<link href="{dede:global.cfg_templets_skin/}/images/hd.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/images/hd.js"></script>
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/templets/cc/style/tab.css" />
+</head>
+<body id="css_list">
+{dede:include filename="head.htm"/}
+<div id="xxx"></div>
+<div id="allbg">
+  <div id="all">
+    <div id="middle">
+      <div id="xgi">
+        <div id="hd">
+          <ul id="img">
+            <li>{dede:type typeid="1"}<a href="[field:typeurl/]">{/dede:type}<img src="{dede:global.cfg_templets_skin/}/images/4.jpg" width="645" height="280" /></a></li>
+            <li {dede:type typeid="2"}><a href="[field:typeurl/]">{/dede:type}<img src="{dede:global.cfg_templets_skin/}/images/3.jpg" width="645" height="280" /></a></li>
+            <li   {dede:type typeid="1"}><a href="[field:typeurl/]">{/dede:type}<img src="{dede:global.cfg_templets_skin/}/images/2.jpg" width="645" height="280" /></a></li>
+            <li>{dede:type typeid="3"}<a href="[field:typeurl/]"> {/dede:type}<img src="{dede:global.cfg_templets_skin/}/images/1.jpg" width="645" height="280" /></a></li>
+          </ul>
+          <ul id="num">
+            <li  class="hover">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+          </ul>
+        </div>
+        <script type="text/javascript">
+var img = document.getElementById("img");
+var num = document.getElementById("num");
+var ali = img.getElementsByTagName("li");
+var oli = num.getElementsByTagName("li");
+var time = null
+lanrenzhijiaing = document.getElementById("lanrenzhijia");
+img.style.width = ali.length * 645 + "px", inow = 0;
+for (var i = 0; i < oli.length; i++) {
+	oli[i].index = i
+	oli[i].onmouseover = function() {
+		inow = this.index;
+		tab();
+		window.clearInterval(time)
+	}
+	oli[i].onmouseout = function() {
+		time = window.setInterval(autoPlay, 4000)
+	}
+}
+function tab() {
+	for (var i = 0; i < oli.length; i++) {
+		oli[i].className = ""
+	}
+	oli[inow].className = "hover"
+	startMove(img, {
+		left: -inow * 645
+	}, 'buffer')
+}
+function autoPlay() {
+	inow++;
+	if (inow >= ali.length) {
+		inow = 0
+	}
+	tab();
+}
+time = window.setInterval(autoPlay, 4000)
+</script>
+        <div class="clear"></div>
+        <h6>本周热门精选</h6>
+        <dl class="joke">
+          <div id='tage1f2a3ed4f2f11397b7d486f9feeaaa9'> {dede:arclist row='10' typeid='1,2,3,4,5,6,7,8'}
+            <div class="one">
+              <dt><a href="[field:arcurl/]"><img alt="[field:title function='html2text(@me)'/]" src="[field:litpic/]" /></a></dt>
+              <dd><a href="[field:arcurl/]">[field:title/]</a>
+                <p>[field:description/]... <a href="[field:arcurl/]">[阅读全文]</a> <span>栏目：[field:typelink/]</span></p>
+              </dd>
+            </div>
+            {/dede:arclist} </div>
+        </dl>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="side1">
+      <h4>发型屋 最近更新</h4>
+      <ul>
+        {dede:arclist row=12 titlelen=32 typeid='1,2,3,4,5,6,7,8'}
+        <li><a href="[field:arcurl/]">[field:title/]</a></li>
+        {/dede:arclist}
+      </ul>
+      <div class="gg300"> <img src="{dede:global.cfg_templets_skin/}/templets/cc/style/g2.png"/></div>
+      <h4>热门排行 <img src="{dede:global.cfg_templets_skin/}/templets/cc/style/h.gif" /></h4>
+      <ul>
+        {dede:arclist row='12' orderby='rand'}
+        <li><a href="[field:arcurl/]">[field:title/]</</a></li>
+        {/dede:arclist}
+      </ul>
+      <div class="gg300"> <img src="{dede:global.cfg_templets_skin/}/templets/cc/style/g1.png"/> </div>
+      <div class="dlside">
+        <div id='taga40a75a862302d4c22e1874c9bd10068'> {dede:arclist row='6' orderby='hot' } <a href="[field:arcurl/]"><img src="[field:litpic/]" alt="[field:title/]" /></a> {/dede:arclist} </div>
+      </div>
+      <img src="{dede:global.cfg_templets_skin/}/ad/2w.png" alt="手机版" /> </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div style="clear:both"></div>
+<div id="z">
+
+ 
+  <div class="cleary"></div>
+ {dede:type typeid="1"} <h5><span class="more"><a href="[field:typeurl/]">查看更多>></a></span> <a href="[field:typeurl/]">[field:typename/]发型精选</a></h5>{/dede:type}
+  <ul style="overflow:hidden">
+    <div>
+    {dede:arclist row=5  typeid='1'}
+      <li><a href="[field:arcurl/]"><img src="[field:litpic/]" alt="[field:title/]" /><p>[field:title/]</p></a></li>
+     {/dede:arclist}
+   </div>
+  </ul>
+  
+  {dede:type typeid="2"}
+  <div class="cleary"></div>
+  <h5><span class="more"><a href="[field:typeurl/]">查看更多>></a></span> <a href="[field:typeurl/]">[field:typename/]发型精选</a>{/dede:type}</h5>
+  <ul>
+    <div id='tage79fe332659ec827a350f6e99d7a44f5'> {dede:arclist orderby='click' row=5  typeid='2'}
+      <li><a href="[field:arcurl/]"><img src="[field:litpic/]" alt="[field:title/]" />
+        <p>[field:title/]</p>
+        </a></li>
+      {/dede:arclist} </div>
+  </ul>
+  
+  {dede:type typeid="3"}
+  <div class="cleary"></div>
+  <h5><span class="more"><a href="[field:typeurl/]">查看更多>></a></span> <a href="[field:typeurl/]">[field:typename/]发型精选</a>{/dede:type}</h5>
+  <ul>
+    <div id='tage79fe332659ec827a350f6e99d7a44f4'> {dede:arclist orderby='click' row=5  typeid='3'}
+      <li><a href="[field:arcurl/]"><img src="[field:litpic/]" alt="[field:title/]" />
+        <p>[field:title/]</p>
+        </a></li>
+      {/dede:arclist} </div>
+  </ul>
+  {dede:type typeid="4"}
+  <div class="cleary"></div>
+  <h5><span class="more"><a href="[field:typeurl/]">查看更多>></a></span> <a href="[field:typeurl/]">[field:typename/]发型精选</a>{/dede:type}</h5>
+  <ul>
+    <div id='tage79fe332659ec827a350f6e99d7a44f3'> {dede:arclist orderby='click' row=5  typeid='4'}
+      <li><a href="[field:arcurl/]"><img src="[field:litpic/]" alt="[field:title/]" />
+        <p>[field:title/]</p>
+        </a></li>
+      {/dede:arclist} </div>
+  </ul>
+  {dede:type typeid="5"}
+  <div class="cleary"></div>
+  <h5><span class="more"><a href="[field:typeurl/]">查看更多>></a></span> <a href="[field:typeurl/]">[field:typename/]发型精选</a>{/dede:type}</h5>
+  <ul>
+    <div id='tage79fe332659ec827a350f6e99d7a44f2'> {dede:arclist orderby='click' row=5  typeid='5'}
+      <li><a href="[field:arcurl/]"><img src="[field:litpic/]" alt="[field:title/]" />
+        <p>[field:title/]</p>
+        </a></li>
+      {/dede:arclist} </div>
+  </ul>
+  {dede:type typeid="6"}
+  <div class="cleary"></div>
+  <h5><span class="more"><a href="[field:typeurl/]">查看更多>></a></span> <a href="[field:typeurl/]">[field:typename/]发型精选</a>{/dede:type}</h5>
+  <ul>
+    <div id='tage79fe332659ec827a350f6e99d7a44f'> {dede:arclist orderby='click' row=5  typeid='6'}
+      <li><a href="[field:arcurl/]"><img src="[field:litpic/]" alt="[field:title/]" />
+        <p>[field:title/]</p>
+        </a></li>
+      {/dede:arclist} </div>
+  </ul>
+  {dede:type typeid="7"}
+  <div class="cleary"></div>
+  <h5><span class="more"><a href="[field:typeurl/]">查看更多>></a></span> <a href="[field:typeurl/]">[field:typename/]发型精选</a>{/dede:type}</h5>
+  <ul>
+    <div id='tage79fe332659ec827a350f6e99d7a44f8'> {dede:arclist orderby='click' row=5  typeid='7'}
+      <li><a href="[field:arcurl/]"><img src="[field:litpic/]" alt="[field:title/]" />
+        <p>[field:title/]</p>
+        </a></li>
+      {/dede:arclist} </div>
+  </ul>
+  {dede:type typeid="8"}
+  <div class="cleary"></div>
+  <h5><span class="more"><a href="[field:typeurl/]">查看更多>></a> </span> <a href="[field:typeurl/]">刘海发型精选</</a> {/dede:type}</h5>
+  <ul>
+    <div id='tag616beb0068d927605c7598489c79b57e'> {dede:arclist orderby='click' row=5  typeid='8' }
+      <li><a href="[field:arcurl/]"><img src="[field:litpic/]" alt="[field:title/]" />
+        <p>[field:title/]</p>
+        </a></li>
+      {/dede:arclist} </div>
+  </ul>
+  <div class="cleary"></div>
+</div>
+<div id="link"><b>友情合作</b>
+{dede:flink titlelen='50' row='20' type='text'}
+       [field:link /]
+       {/dede:flink}</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

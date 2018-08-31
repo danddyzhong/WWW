@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css_dedemao/style.css" type="text/css" /> 
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/css_dedemao/js/jquery.min.js" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/css_dedemao/js/weiscript.js" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/css_dedemao/js/slides.jquery.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/css_dedemao/js/totop.js"></script>
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css_dedemao/fontello.css" type="text/css" />
+<!--[if IE 7]><link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css_dedemao/fontello-ie7.css" type="text/css" /><![endif]-->
+<script type="text/javascript">
+$(function (){
+	$(window).manhuatoTop({
+		showHeight : 100,
+		speed : 500
+	});
+});
+</script>
+<script type="text/javascript">
+	$(function(){
+		$('#slides').slides({
+		preload: true,
+		generateNextPrev: true
+		});
+	});
+</script>
+</head>
+<body class="Mubanzhijia_Com">
+
+{dede:include filename="head.htm"/}
+
+<div id="slides">
+	<div class="slides_container">
+	{dede:arclist flag='c' row='3' titlelen='40' orderby='rand' type='image.'}
+		<div class="slide">
+        	<div class="item">
+
+			
+<A href="[field:arcurl/]"><IMG alt="[field:title/]" src="[field:litpic/]" ></A><p><a href="[field:arcurl/]">[field:title/]</a>
+  
+
+			
+			</div>
+
+		</div>
+		{/dede:arclist}
+		</div>		
+		
+	</div>
+	<!-- 
+	 <div class="focus wow fadeIn">
+      <div class="flexslider">
+        <ul class="slides">
+        {dede:arclist titlelen='80' flag='f' row='3'}
+          <li> <a href="[field:arcurl/]" title="[field:title/]"> <img src="[field:picname/]" alt="[field:title/]"/>
+            <p class="flex-caption">[field:title/]</p>
+            </a> </li>
+        {/dede:arclist}  
+        </ul>
+      </div> 
+    </div>  -->
+</div>
+<div class="Main1">
+	<div class="m_Left1 FL">
+    	<div class="m_T1">
+        	<h2>
+				<span><a href="#">头条</a></span>
+							{dede:arclist row='1' titlelen='42' flag='h' type='image.'}
+  <A href="[field:arcurl/]" target="_blank">[field:title/]</A>
+ 	
+				
+            </h2>
+            <p><span class="c1">作者：[field:writer /]</span><span class="c2">[field:pubdate function="GetDateTimeMK(@me)"/]</span></p>
+            <div class="c3">[field:click/] ℃</div>
+        </div>
+        <div class="m_Grid1">
+        	<img src="[field:litpic/]" alt="[field:title/]" height="400" width="610" />
+            <p class="p1">[field:info  function="cn_substr(@me,360)"/] ...</p>
+            <p class="p2"><span>标签：</span>
+[field:id function=GetTags(@me)/]
+			</p>
+
+            <p class="p3"><a href="[field:arcurl/]" target="_blank">共[field:click/]人看过，阅读全文>></a></p>
+			
+{/dede:arclist}			
+ 
+        </div>
+
+  			{dede:arclist row='9' titlelen='42' orderby='sortrank'}      
+        <div class="m_Grid2">
+        	<div class="m_T2">
+
+            	<p class="p4"><a href="[field:arcurl/]"><b>[field:title/]</b></a></p>
+                <p class="p5">
+                	<span class="c4">[field:typelink/]</span>
+                    <span class="c5">[field:pubdate function=strftime('%Y.%m.%d',@me)/]</span>
+                    <span class="c6">[field:click/]次浏览</span>
+                </p>
+            </div>
+            <div class="m_Box1">
+            	<a href="[field:arcurl/]"><img src="[field:litpic/]" alt="[field:title/]" height="100" width="150" /></a>
+		[field:description/]...
+            </div>
+            <div class="d1">
+            	<span class="c7">作者：[field:writer /]</span>
+                <span class="c8">标签：
+                [field:id function=GetTags(@me)/]
+            	</span><div class="c9"><a title="[field:title function='htmlspecialchars(@me)'/]" href="[field:arcurl/]">阅读全文</a></div>
+            </div>
+            </div>{/dede:arclist}
+		<div >
+			<div >
+
+<p class="p3"><a href="#">更多精彩内容，下一页>></a></p>
+
+
+
+			</div>
+		</div>
+        
+    </div>
+    <div class="m_Right1 FR">
+    	
+        <div class="m_T3"><h3>热门排行</h3></div>
+        <div class="m_Box4">
+
+{dede:arclist orderby='click' titlelen='40' row='9'}
+<a title="[field:title function='htmlspecialchars(@me)'/]" href="[field:arcurl /]">[field:title /]</a>
+{/dede:arclist} 
+
+            <div class="clear"></div>
+        </div>
+        <div class="m_T3"><h3>随机推荐</h3></div>
+        <ul class="m_Box5">
+		{dede:arclist orderby='rand' titlelen='20' row='2' type='image.'}
+        	<li><a href="[field:arcurl/]"><img src="[field:litpic/]" alt="[field:title function='htmlspecialchars(@me)'/]" height="168" width="120" />[field:title /]</a></li>
+{/dede:arclist}
+
+        </ul>
+        <ul class="m_Box6">
+{dede:arclist orderby='rand' titlelen='40' row='5'}
+<li><a title="[field:title function='htmlspecialchars(@me)'/]" href="[field:arcurl /]">[field:title /]</a></li>
+{/dede:arclist} 
+
+        </ul>
+        <div class="Ad_300"><script src='/plus/ad_js.php?aid=21' language='javascript'></script></div>
+        <div class="m_T3"><h3>最新文章</h3></div>
+        <ul class="m_Box7">
+{dede:arclist orderby='pubdate' titlelen='40' row='8'}
+<li><a title="[field:title function='htmlspecialchars(@me)'/]" href="[field:arcurl /]">[field:title /]</a></li>
+{/dede:arclist} 
+
+        </ul>
+
+	</div>
+   
+    <div class="clear"></div>
+</div>
+<div class="Link">
+	<h4>友情链接</h4>
+    <ul>
+		 {dede:flink row='24' linktype=1/}
+        <div class="clear"></div> 
+    </ul>
+</div>
+
+{dede:include filename="footer.htm"/}
+
+</body>
+</html>

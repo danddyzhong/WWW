@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<TITLE>{dede:field.title/}-{dede:global.cfg_webname/}</TITLE>
+<META content="{dede:field name='keywords'/}" name=keywords>
+<META content="{dede:field name='description' function='html2text(@me)'/}" name=description>
+<link rel="Shortcut Icon" type=image/ico href="favicon.ico">
+<link href="/style/index.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/style/jquery.min.js"></script>
+<script src="/style/jquery.lazyload.js" type="text/javascript"></script> 
+<script type="text/javascript">
+jQuery(document).ready(
+function($){
+$("img").lazyload({
+placeholder:"/style/loading.gif", //加载图片前的占位图片
+effect:"fadeIn" //加载图片使用的效果(淡入)
+});
+});
+</script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="con">
+ <div class="nl l">
+  <div class="list">
+   <div class="arcurl"><h2>{dede:field name='position'/}</h2></div>
+   <div class="listc">
+    {dede:list pagesize='10'}
+    <dl>
+     <dt><img src="[field:litpic/]" alt="[field:title /]" /><h5>[field:pubdate function="MyDate('m-d',@me)"/] / 浏览量：[field:click/] 次</h5></dt>
+     <dd>
+      <h3><a href="[field:arcurl/]">[field:title /]</a></h3>
+      <span>[field:description function="cn_substr(@me,220)"/]......[详细]</span>
+      <h6>[field:id function=GetTags(@me)/]</h6>
+      <div class="jw">
+       <div class="bshare-custom"><div class="bsPromo bsPromo2"></div><a title="分享到QQ空间" class="bshare-qzone"></a><a title="分享到新浪微博" class="bshare-sinaminiblog"></a><a title="分享到人人网" class="bshare-renren"></a><a title="分享到腾讯微博" class="bshare-qqmb"></a><a title="分享到网易微博" class="bshare-neteasemb"></a><a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a></div><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&uuid=cefff51d-26d3-4436-a3f7-2ab64beca899&pophcol=3&lang=zh"></script><script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+      </div>
+     </dd>
+    </dl>
+   {/dede:list}
+   </div>
+   <div class="wx_page">
+    <div class="lmlpage">{dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}</div>
+   </div>
+  </div>
+ </div>
+
+ <div class="nr r">
+  {dede:include filename="right.htm"/}
+ </div>
+
+<div class="clear"></div>
+{dede:include filename="foot.htm"/}
+ 
+</div>
+
+
+</body>
+</html>
+

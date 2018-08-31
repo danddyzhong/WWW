@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>搜索{dede:global name='keyword' function='RemoveXSS(@me)'/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/wecskin/style.css" type="text/css" />
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/wecskin/js/jquery.min.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_cmsurl/}/wecskin/js/gotop.js"></script>
+<link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/wecskin/fontello.css" type="text/css" />
+<!--[if IE 7]><link rel="stylesheet" href="{dede:global.cfg_cmsurl/}/wecskin/fontello-ie7.css" type="text/css" /><![endif]-->
+<style>.home{background:#008d49;}</style>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="weizhi">您的当前位置：<a href="{dede:global.cfg_cmsurl/}/">首页</a>  >  {dede:global name='keyword' function='RemoveXSS(@me)'/}</div>
+<div class="main1">
+	<div class="left_1">
+    	<div class="g_list">
+            <div class="t_4"><h3>搜索 {dede:global name='keyword' function='RemoveXSS(@me)'/} 的结果</h3></div>
+            <ul class="list2">
+            	{dede:list pagesize='10'}
+                <li>
+                    <a href="[field:arcurl/]"><img src="[field:picname/]" alt="[field:fulltitle/]" /></a>
+                    <h3><a href="[field:arcurl/]">[field:title/]</a></h3>
+                    <p>[field:description function="cn_substr(@me,180)"/]...</p>
+                    <span>[field:pubdate function='strftime("%Y-%m-%d %H:%M:%S","@me")'/]</span>
+                </li>
+                {/dede:list}
+            </ul>
+            <div class="dede_pages">
+                <ul class="pagelist">
+                    {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="4"/}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="right_1">
+    	<div class="ban_251"><img src="{dede:global.cfg_cmsurl/}/wecskin/images/ad2.jpg" /></div>
+        <div class="g_box2 u_2">
+        	<div class="t_1">相关搜索</div>
+            <ul class="b_box3 u_1">
+                <li>{dede:likewords num='8'/}</li>
+            </ul>
+        </div>
+    	<div class="ban_251"><img src="{dede:global.cfg_cmsurl/}/wecskin/images/ad2.jpg" /></div>
+        
+    </div>
+    <div class="clear"></div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

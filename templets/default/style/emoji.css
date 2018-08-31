@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+#cyEmoji{background-color:transparent;border:0;color:#333;display:block;font-size:14px;font-weight:400;height:auto;line-height:1.4;margin:0 auto;overflow:visible;padding:0;position:relative;text-align:left;width:100%;font-size:14px}
+#cyEmoji div,#cyEmoji ul{margin:0;padding:0}
+#cyEmoji img{border:0;margin:0 auto;padding:0}
+#cyEmoji p{text-indent:0}
+#cyEmoji .emoji-tip{border-bottom:1px solid #e6e6e6;font-family:"Microsoft YaHei";font-size:16px;height:26px;line-height:26px;padding:5px 10px}
+#cyEmoji .emoji-tip span{float:right}
+#cyEmoji .emoji-list{text-align:center;list-style:none;margin:0;overflow:hidden;padding:10px 0 0 0;white-space:nowrap;width:100%}
+#cyEmoji .emoji-item{cursor:pointer;display:inline;padding:10px 0;margin:3px 0;position:relative;text-align:center;float:left;height:auto;background:0 0}
+#cyEmoji .emoji-item div{font-family:"Microsoft YaHei";text-align: center;}
+#cyEmoji .emoji-hover{border:1px solid #EEE;border-radius:4px;box-shadow:0 0 10px #CCC}
+#cyEmoji .emoji-name{display:block;font-family:"Microsoft YaHei";font-size:16px;height:26px;line-height:26px;margin:0;padding:7px 0 0}
+#cyEmoji .emoji-num{color:#c33;display:block;font-family:"Microsoft YaHei";font-size:12px;height:22px;line-height:22px;margin:0;padding:0}
+#cyEmoji .plus1{background-color:transparent;color:red;font-family:Arial;font-size:180%;position:absolute}
+#cyEmoji .saymore{box-shadow:0 0 10px #CCC;width:320px;border:1px solid #ccc;border-radius:2px;background-color:#fff;position:absolute;z-index:99}
+#cyEmoji .saymore-slogan{font-weight:700;height:37px;line-height:37px;padding:0 0 0 17px;background:url(/Static/pinglun/xb01.gif) repeat-x;border-bottom:1px solid #f0f0f0;height:37px}
+#cyEmoji .saymore-close{float:right;width:20px;height:20px;margin:8px 7px 0 0;display:inline;background:url(/Static/pinglun/icon15.png) no-repeat;font-size:0}
+#cyEmoji .saymore-tip{line-height:22px;color:#333;padding:15px 0;font-size:14px}
+#cyEmoji .saymore-tip img{margin:4px 10px 0 0}
+#cyEmoji .saymore-post{height:32px;line-height:32px;font-size:14px}
+#cyEmoji .saymore-text{float:left;width:200px;height:30px;border:1px solid #ccc;border-radius:3px;padding:0 0 0 10px;margin:0 5px 0 0}
+#cyEmoji .saymore-button{background-color:#f5f9fa;border:1px solid #ccd3d9;border-radius:3px;color:#5688a9;cursor:pointer;font-family:"Microsoft YaHei";font-size:14px;height:32px;width:50px;color:#5688a9}

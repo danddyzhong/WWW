@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+<link rel="shortcut icon" type="images/x-icon" href="{dede:global.cfg_basehost/}/favicon.ico">
+<script type="text/javascript" src="/skin/js/lib.js"></script>
+<script type="text/javascript" src="/skin/js/plugins.js"></script>
+<style>
+.post [rel="gallery"]:after {
+	background: #666666;
+}
+.post [rel="gallery"]:after {
+	background: #666666;
+	background: -moz-linear-gradient(top, #666666 0%, #666666 100%);
+	background: -webkit-gradient(linear, top center, bottom center, color-stop(0%, #666666), color-stop(100%, #666666));
+	background: -webkit-linear-gradient(top, #666666 0%, #666666 100%);
+	background: -o-linear-gradient(top, #666666 0%, #666666 100%);
+	background: -ms-linear-gradient(top, #666666 0%, #666666 100%);
+	background: linear-gradient(to bottom, #666666 0%, #666666 100%);
+}
+.wpcf7-text:focus, .wpcf7-number:focus, .wpcf7-select:focus, .wpcf7-textarea:focus, .text-input:focus {
+	border-color: #666666;
+}
+[id="submit"], .wpcf7-submit, .btn--primary {
+background: #666666;
+}
+.post-status {
+	color: #666666;
+}
+a {
+	color: #666666;
+}
+</style>
+<link rel='stylesheet' id='style-css'  href='/skin/css/style.css' type='text/css' media='all' />
+<script type='text/javascript' src='/skin/js/comments-ajax.js'></script>
+</head>
+<body class="home blog fancy-captions round-avatars">
+{dede:include filename="head.htm"/}
+<div class="m-header ">
+  <section id="hero1" class="hero">
+    <div class="inner"> </div>
+  </section>
+  <figure class="top-image" style="background-image: url(
+	/skin/img/pic6.jpg );"></figure>
+  <canvas height="550" width="1585" id="wave-canvas"></canvas>
+  <canvas id="wave-canvas"></canvas>
+</div>
+<div class="wrapper">
+  <article id="post-45" class="post-45 page type-page status-publish has-post-thumbnail hentry js-gallery">
+    <h1 class="post-title">友情链接</h1>
+    <div class="mb+">
+      <div class="linkpage clearfix">
+        <ul>
+          <li id="linkcat-14" class="linkcat">
+            <ul class="xoxo blogroll">
+              {dede:flink row='24'/}
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </article>
+</div>
+<div class="wrapper"> </div>
+{dede:include filename="footer.htm"/}
+<div id="fb-root"> </div>
+</body>
+</html>

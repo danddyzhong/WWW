@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="Cache-Control" content="no-transform"/>
+<meta http-equiv="Cache-Control" content="no-siteapp"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<meta http-equiv="Content-Language" content="zh-CN" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel="stylesheet" type="text/css" href="/style/css/style.css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="/style/css/font-awesome.min.css" media="screen"/>
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="/style/css/font-awesome-ie7.min.css" media="screen"/>
+<![endif]-->
+<script src="/style/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+<script src="/style/js/zblogphp.js" type="text/javascript"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/style/js/html5-css3.js"></script>
+<![endif]-->
+</head>
+
+<body>
+{dede:include filename="head.htm"/}
+<div class="container">
+  <main class="main" role="main">
+    <div class="rslides_container">
+      <ul class="rslides" id="slider">
+        {dede:arclist row='5' titlelen='60' typeid='5' addfields='lj' channelid='17'}
+        <li><a href="[field:lj/]" target="_blank" title="[field:title/]"><img src="[field:litpic/]" alt="[field:title/]"/></a></li>
+        {/dede:arclist}
+      </ul>
+    </div>
+    <div class="clear"></div>
+    <div class="post istop cate1 auth1">
+    
+      {dede:arclist row='5' titlelen='60' flag='c'}<h2><span>置顶推荐</span> <a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h2>{/dede:arclist}
+      
+    </div>
+    
+   {dede:arclist row='15' titlelen='60' channelid='1'}
+    <article class="post cate1 auth1">
+      <div class="thumb"> <a href="[field:arcurl/]" title="[field:title/]" target="_blank"> <img alt="[field:title/]" src="[field:litpic/]"/> </a> </div>
+      <span class="post-cat"><a href="[field:typeurl/]" title="[field:typename/]" target="_blank">[field:typename/]</a></span>
+      <h2><a href="[field:arcurl/]" title="[field:title/]" target="_blank">[field:title/]</a></h2>
+      <div class="entry loop-entry">
+        <p>[field:description function='cn_substr(@me,250)'/]...</p>
+      </div>
+      <div class="postmeta"> <span><i class="icon-calendar"></i> 日期：[field:pubdate function='strftime("%Y-%m-%d",@me)'/]</span> <span><i class="icon-fire"></i> 浏览：<script src="/plus/count.php?view=yes&aid=[field:id/]&mid=[field:mid/]" type='text/javascript' language="javascript"></script>次</span></div>
+    </article>
+    {/dede:arclist}
+    
+    
+  </main>
+  {dede:include filename="right.htm"/}
+</div>
+{dede:include filename="foot.htm"/}
+</body>
+</html>

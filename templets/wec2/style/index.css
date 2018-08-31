@@ -1,0 +1,18 @@
+
+.bk img{width:280px;height:179px;border:1px solid #e8e8e8;padding:2px;}
+.bk:hover img{border: 1px solid #339900;}
+.bk:hover{color: ff6699; /* Dummy definition to overcome IE bug */}
+
+/*---------列表页------------*/
+.list{float:left;width:610px;margin-top:10px;margin-bottom:10px;border:1px solid #e8e8e8;}
+.listzs{float:left;width:610px;margin-top:10px;}
+.listzs li{float:left;padding:8px;text-align:center;}
+.listzs li a{text-align:center;font-size:12px;color:#666;text-decoration: none;line-height:30px;}
+.listzs li a:hover{color:#339900;}
+
+
+
+
+
+
+

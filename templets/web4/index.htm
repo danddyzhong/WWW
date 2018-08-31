@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="author" content="order by dedesos.com" />
+<link href="/style/css/base.css" rel="stylesheet">
+<link href="/style/css/index.css" rel="stylesheet">
+<link href="/style/css/media.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<!--[if lt IE 9]>
+<script src="/style/js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="ibody"> {dede:include filename='head.htm'/}
+  <article>
+    <div class="banner">
+      <ul class="texts">
+        <p>The best life is use of willing attitude, a happy-go-lucky life. </p>
+        <p>最好的生活是用心甘情愿的态度，过随遇而安的生活。</p>
+      </ul>
+    </div>
+    <div class="bloglist">
+      <h2>
+        <p><span>推荐</span>文章</p>
+      </h2>
+      {dede:arclist row='5' orderby='pubdate' flag='c' type='image'}
+      <div class="blogs">
+        <h3><a href="[field:arcurl/]">[field:title/]</a></h3>
+        <figure>[field:image/]</figure>
+        <ul>
+          <p>[field:description/]</p>
+          <a href="[field:arcurl/]" target="_blank" class="readmore">阅读全文&gt;&gt;</a>
+        </ul>
+        <p class="autor"><span>作者：[field:writer/]</span><span>浏览（<a href="[field:arcurl/]">[field:click/]</a>）</span></p>
+        <div class="dateview">[field:pubdate function="GetDateMK(@me)"/]</div>
+      </div>
+      {/dede:arclist} </div>
+  </article>
+  {dede:include filename='right.htm'/} 
+  <script src="/style/js/silder.js"></script>
+  <div class="clear"></div>
+  <!-- 清除浮动 --> 
+</div>
+</body>
+</html>

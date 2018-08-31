@@ -1,0 +1,230 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}">
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}">
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css_dedemao/style.css" type="text/css" />
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/css_dedemao/js/jquery.min.js" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/css_dedemao/js/weiscript.js" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/css_dedemao/js/slides.jquery.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/css_dedemao/js/totop.js"></script>
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css_dedemao/fontello.css" type="text/css" />
+<!--[if IE 7]><link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css_dedemao/fontello-ie7.css" type="text/css" /><![endif]-->
+<script type="text/javascript">
+$(function (){
+	$(window).manhuatoTop({
+		showHeight : 100,
+		speed : 500
+	});
+});
+</script>
+<script type="text/javascript">
+	$(function(){
+		$('#slides').slides({
+		preload: true,
+		generateNextPrev: true
+		});
+	});
+</script>
+</head>
+<body class="Mubanzhijia_Com">
+
+{dede:include filename="head.htm"/}
+
+<div id="slides">
+	<div class="slides_container">
+	
+		<div class="slide">{dede:arclist flag='c' row='3' titlelen='40' orderby='rand' type='image.'}
+        	<div class="item">
+
+			
+<A href="[field:arcurl/]"><IMG alt="[field:title/]" src="[field:litpic/]" height="200" width="300"></A><p><a href="[field:arcurl/]">[field:title/]</a>
+  
+
+			
+			</div>
+{/dede:arclist}
+		</div>
+		<div class="slide">{dede:arclist flag='c' row='3' titlelen='40' orderby='rand' type='image.'}
+        	<div class="item">
+
+			
+<A href="[field:arcurl/]"><IMG alt="[field:title/]" src="[field:litpic/]" height="200" width="300"></A><p><a href="[field:arcurl/]">[field:title/]</a>
+  
+
+			
+			</div>
+{/dede:arclist}
+		</div>
+		<div class="slide">{dede:arclist flag='c' row='3' titlelen='40' orderby='rand' type='image.'}
+        	<div class="item">
+
+			
+<A href="[field:arcurl/]"><IMG alt="[field:title/]" src="[field:litpic/]" height="200" width="300"></A><p><a href="[field:arcurl/]">[field:title/]</a>
+  
+
+			
+			</div>
+{/dede:arclist}
+		</div>
+
+		</div>		
+		
+	</div>
+</div>
+<div class="Main1">
+	<div class="m_Left1 FL">
+    	<div class="m_Box11">您的位置:{dede:field name='position'/}</div>
+    	<div class="m_T1">
+        	<h2>
+            	<span><a href="{dede:field name='typelink'/}">{dede:field name='typename'/}</a></span> 
+                <a href="{dede:field name='arcurl'/}">{dede:field name="title"/}</a>
+            </h2>
+            <p><span class="c2">{dede:field name='pubdate' function='GetDateMk(@me)'/}</span><span class="c1">作者:织梦猫</span><span class="c12">来源：{dede:adminname/}</span><span class="c13"><script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>次阅读</span></p>
+        </div>
+        <div class="m_Box12">
+		
+{dede:field name='body'/} 
+
+        </div>
+        <div class="dede_pages dede_pagess">
+			<div class="pagelist">
+			{dede:pagebreak/} 
+			</div>
+		</div>
+        <div class="m_Box13">
+        <!-- 将此标记放在您希望显示like按钮的位置 -->
+<div class="bdlikebutton"></div>
+
+<!-- 将此代码放在适当的位置，建议在body结束前 -->
+<script id="bdlike_shell"></script>
+<script>
+var bdShare_config = {
+	"type":"large",
+	"color":"green",
+	"uid":"624690",
+	"likeText":"好文章，顶一下！",
+	"likedText":"您已顶过，谢谢！"
+};
+document.getElementById("bdlike_shell").src="http://bdimg.share.baidu.com/static/js/like_shell.js?t=" + Math.ceil(new Date()/3600000);
+</script>
+        </div>
+
+        <div class="m_Grid3">
+			<span></span>
+			<p class="p7">凡本站注明“本站”或“投稿”的所有文章，版权均属于本站或投稿人，未经本站授权不得转载、摘编或利用其它方式使用上述作品。本站已授权使用的作品，应在授权范围内使用，并注明“来源：某某站”并附上链接。违反上述声明者，本站将追究其相关法律责任。</p>
+		</div>
+        <div class="m_Box14">
+        	<span>编辑：{dede:dutyadmin/}</span>
+        	关键词：{dede:tag sort='new' getall='0'} <a href='[field:link/]'>[field:tag /]</a> {/dede:tag} 
+        </div>
+        <div class="m_Box15">
+        	<!-- Baidu Button BEGIN -->
+<div id="bdshare" class="bdshare_t bds_tools_32 get-codes-bdshare">
+<a class="bds_tsina"></a>
+<a class="bds_qzone"></a>
+<a class="bds_tqq"></a>
+<a class="bds_renren"></a>
+<a class="bds_t163"></a>
+<a class="bds_huaban"></a>
+<a class="bds_mshare"></a>
+<a class="bds_douban"></a>
+<a class="bds_tqf"></a>
+<a class="bds_sqq"></a>
+<a class="bds_bdhome"></a>
+<a class="bds_copy"></a>
+<span class="bds_more"></span>
+<a class="shareCount"></a>
+</div>
+<script type="text/javascript" id="bdshare_js" data="type=tools&uid=624690" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+var bds_config={"snsKey":{'tsina':'884358','tqq':'','t163':'','tsohu':''}}
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<!-- Baidu Button END -->
+        </div>
+        <div class="m_Box16">
+        	<h3>相关阅读：</h3>
+            <ul>
+ 
+{dede:likeart titlelen='60' row='5'}
+<li><a href="[field:arcurl /]">[field:title /]</a>[field:pubdate function=strftime('%Y.%m.%d',@me)/]</li>
+{/dede:likeart}
+
+            </ul>
+        </div>
+        <div class="m_T4"><h3>网友评论</h3></div>
+        <div class="m_Box20">
+        	<!-- Duoshuo Comment BEGIN -->
+	<div class="ds-thread"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"liyingchun"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = 'http://static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		|| document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- Duoshuo Comment END -->
+
+        </div>
+    </div>
+    <div class="m_Right1 FR">
+    	<div class="m_Box2">
+        	<span class="c10"><wb:follow-button uid="2661016603" type="red_2" width="136" height="24" ></wb:follow-button></span>
+            <a title="关注腾讯微信" id="weixin" href="javascript:void(0);"><img src="{dede:global.cfg_templets_skin/}/css_dedemao/images/img_weixin.jpg"></a>
+            <div class="new-weixin2DC" id="weixin2DC" style="display: none;"><img src="{dede:global.cfg_templets_skin/}/css_dedemao/images/weixin.png"></div>
+		</div>
+        <div class="m_T3"><h3>随机推荐</h3></div>
+        <ul class="m_Box17">
+		
+{dede:arclist orderby='rand' titlelen='40' row='8'}
+<li><a title="[field:title function='htmlspecialchars(@me)'/]" href="[field:arcurl /]">[field:title /]</a></li>
+{/dede:arclist} 
+
+        </ul>
+        <div class="m_T3"><h3>图文聚集</h3></div>
+        <ul class="m_Box18">
+	{dede:arclist orderby='rand' type='image.' titlelen='20' row='4'}
+	
+        	<li><a href="[field:arcurl/]"><img src="[field:litpic/]" alt="[field:title /]" height="96" width="135" />[field:title /]</a></li>
+    {/dede:arclist}
+
+            <div class="clear"></div>
+        </ul>
+        <div class="m_T3"><h3>热门排行</h3></div>
+        <div class="m_Box4">
+{dede:arclist orderby='click' titlelen='40' row='9'}
+<a title="[field:title function='htmlspecialchars(@me)'/]" href="[field:arcurl /]">[field:title /]</a>
+{/dede:arclist} 
+
+            <div class="clear"></div>
+        </div>
+
+        <div class="m_T3"><h3>最新文章</h3></div>
+        <ul class="m_Box7">
+{dede:arclist orderby='pubdate' titlelen='40' row='8'}
+<li><a title="[field:title function='htmlspecialchars(@me)'/]" href="[field:arcurl /]">[field:title /]</a></li>
+{/dede:arclist} 
+
+        </ul>
+
+        <div class="m_Box9">
+        	<a href="http://weibo.com/cqliyingchun" class="a1" target="_blank"><img src="{dede:global.cfg_templets_skin/}/css_dedemao/images/img_sina.gif" alt="新浪微博" /></a>
+            <a href="http://t.qq.com/cq_liyingchun" class="a2" target="_blank"><img src="{dede:global.cfg_templets_skin/}/css_dedemao/images/img_qqweibo.gif" alt="腾讯微博" /></a>
+            <a href="#" class="a3" target="_blank"><img src="{dede:global.cfg_templets_skin/}/css_dedemao/images/img_rss.gif" alt="RSS订阅" /></a>
+            <div class="clear"></div>
+        </div>
+	</div>
+    <div class="clear"></div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

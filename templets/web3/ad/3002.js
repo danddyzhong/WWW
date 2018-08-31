@@ -1,0 +1,1 @@
+document.writeln("<img src=\"\/ad\/g2.png\" \/>");

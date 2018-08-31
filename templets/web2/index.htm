@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="order by adminbuy.cn" />
+<link rel="canonical" href="{dede:global.cfg_basehost/}"/>
+<link rel='stylesheet' href='/skins/css/style.css' type='text/css' media='all' />
+<!--[if lt IE 9]><script src="js/html5.min.js"></script><![endif]-->
+<style type="text/css">
+.header, .excerpt .cat, .now-page, .pagination span:hover, .pagination ul>li>a:focus {
+	background-color: #C00;
+}
+.excerpt:hover {
+	border-color: #C00;
+}
+.excerpt h2 a:hover {
+	color: #C00;
+}
+#comments h4, #comments2 h4 {
+	border-left-color: #C00;
+}
+#frmSumbit input[type="submit"] {
+	background-color: #C00;
+}
+.excerpt-see-index h2 span {
+	color: #C00;
+}
+.logo-m {
+	background: #C00;
+}
+.excerpt {
+	padding: 20px 20px 20px 255px;
+}
+@media (max-width: 640px) {
+.excerpt {
+	padding: 10px 10px 10px 180px;
+}
+}
+@media (max-width: 480px) {
+.excerpt {
+	padding: 10px 10px 0px 120px;
+}
+}
+@media (max-width: 800px) {
+.header {
+	background-color: transparent;
+	padding: 0;
+}
+}
+</style>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<section class="container">
+  <div class="content-wrap">
+    <div class="content"> 
+      
+      <!---->
+      <article class="excerpt-see excerpt-see-index pc"> {dede:arclist row='1' titlelen='50' flag='h' }
+        <h2><span class="red">【站长推荐】</span> <a href="[field:arcurl/]" title="[field:title/]-{dede:global.cfg_webname/}">[field:title/]</a></h2>
+        <p class="note"> <a href="[field:arcurl/]" title="点击阅读（[field:title/]）">[field:description function='cn_substr(@me,200)'/]...</a></p>
+        {/dede:arclist}
+        <div class="relatescom">
+          <ul>
+            {dede:arclist row='5' titlelen='46' flag='c' }
+            <li><a href="[field:arcurl/]" title="[field:title/]-{dede:global.cfg_webname/}">[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </article>
+      {dede:arclist row=10 titlelen=42  }
+      <article class="excerpt"> <a class="focus" href="[field:arcurl/]"><img src="[field:litpic/]" alt="[field:title/]"/></a>
+        <header><a href="[field:typeurl/]" class="cat" title="[field:typename/]">[field:typename/]</a>
+          <h2><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h2>
+        </header>
+        <p class="meta">
+          <time>[field:pubdate function="MyDate('Y-m-d',@me)"/]</time>
+          <span class="pv">阅读([field:click/])</span> </p>
+        <p class="note pc"> <a href="[field:arcurl/]" title="[field:title/]">[field:description function='cn_substr(@me,200)'/]...</a></p>
+      </article>
+      {/dede:arclist}
+      <div class="cygswtags tags">
+        <ul>
+          {dede:tag row='50' getall='0'}
+          <li><a href="[field:link/]" title="[field:tag /]">[field:tag /]</a></li>
+          {/dede:tag}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <aside class="sidebar pc">
+    <dl class="function" id="tishi">
+      <dt class="function_t">关于本站</dt>
+      <dd class="function_c">
+        <div>{dede:sql sql='Select content from dede_arctype where id=48'} 
+          
+          [field:content  function='cn_substr(html2text(@me),300)'/]...
+          
+          {/dede:sql}</div>
+      </dd>
+    </dl>
+    <dl class="function" id="divPrevious">
+      <dt class="function_t">最近发表</dt>
+      <dd class="function_c">
+        <ul>
+          {dede:arclist  titlelen=42 row=10}
+          <li><a href="[field:arcurl/]">[field:title/]</a></li>
+          {/dede:arclist}
+        </ul>
+      </dd>
+    </dl>
+    <div class="widget widget_ui_tags">
+      <h3>友情链接</h3>
+      <div class="items">
+        <ul>
+          {dede:flinktype }
+          {dede:flink/}
+          
+          {/dede:flinktype}
+        </ul>
+      </div>
+    </div>
+  </aside>
+</section>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

@@ -1,0 +1,30 @@
+<div class="search-sec wl fix">
+  <h1><a href="/"><img alt="" src="/templets/default/images/fw_logo.png"></a></h1>
+  <div class="search-bar">
+<form id="form1" name="form1" method="post" action="/plus/search.php">
+      <label>
+        <input type="hidden" value="0">
+        <input type="hidden" name="channeltype" value="1">
+        <input name="q" type="text" class="socn" id="search-keyword"  style=" color:#CCC;   width: 82%;
+    text-indent: 12px;
+    float: left;
+    line-height:40px;
+    display: inline-block;" />
+      </label>
+      <input type="submit" class="butcn" value=""  style="  width: 18%; background: url(/templets/default/images/search_icon.png) 50% 50% no-repeat rgb(24, 169, 122);
+    cursor: pointer; float: right;
+    display: inline-block;  height: 38px;
+    line-height: 38px;" />
+    </form>
+  </div>
+</div>
+<div class="fw-subnav-sec">
+  <div class="fw-subnav wl">
+    <ul>
+      <li> <a href="{dede:global.cfg_cmsurl/}/" target="_blank">首页</a> </li>
+      {dede:channel     type='top'   row='6'  }
+      <li> <a title="[field:typename/]" href="[field:typelink/]" target="_blank">[field:typename/]</a> </li>
+      {/dede:channel}
+    </ul>
+  </div>
+</div>

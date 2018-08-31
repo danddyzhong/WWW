@@ -1,0 +1,72 @@
+<div class="top">
+	<div class="warp">
+    	<span><a href=""onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('{dede:global.cfg_basehost/}');">设为首页</a> - <a href="javascript:window.external.AddFavorite('{dede:global.cfg_basehost/}','{dede:global.cfg_webname/}')">加入收藏</a></span>
+        <script language="JavaScript" type="text/JavaScript">
+			var n = new Date();
+			var y = n.getFullYear();
+			var m = ((m=n.getMonth()+1)<10?'0'+m:m);
+			var d = ((d=n.getDate())<10?'0'+d:d);
+			var h = ((h=n.getHours())<10?'0'+h:h);
+			var i = ((i=n.getMinutes())<10?'0'+i:i);
+			var w = new Array('日','一','二','三','四','五','六');
+			document.write(y+"年"+m+"月"+d+"日"+' '+h+':'+i+' '+'星期'+w[n.getDay()]);
+		</script>
+    </div>
+</div>
+<div class="head">
+	<div class="logo"><a href="{dede:global.cfg_basehost/}"><img src="{dede:global.cfg_cmsurl/}/wecskin/images/logo.jpg" alt="{dede:global.cfg_webname/}"/></a></div>
+    <div class="search">
+    	<form action="{dede:field name='phpurl'/}/search.php" name="formsearch">
+            <input type="hidden" name="kwtype" value="0" />
+            <input name="keyword" type="text" class="search-keyword fl" id="search-keyword" value="请输入关键词" onfocus="if(this.value=='请输入关键词'){this.value='';}"  onblur="if(this.value==''){this.value='请输入关键词';}"/>
+            <button type="submit" class="search-submit fl">搜 索</button>
+        </form>
+    </div>
+    <div class="share">
+    	<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+		<script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    </div>
+</div>
+<div class="nav">
+	<ul>
+    	<li><a href="{dede:global.cfg_cmsurl/}/" class="home">首页</a></li>
+        {dede:channel type='top' row='10' currentstyle="<li><a href='~typelink~' ~rel~ class='on'>~typename~</a></li>"}
+      	<li><a href='[field:typeurl/]' [field:rel/]>[field:typename/]</a></li>
+      	{/dede:channel}
+    </ul>
+</div>
+<div class="mobile_nav">
+<ul class="m_home">
+		<li><a href="{dede:global.cfg_cmsurl/}/" class="home">赚钱网</a></li>
+</ul>
+<ul class="icon_ul">
+        <li><i class="icon-menu"></i></li>
+    </ul></div>
+<div class="mobile_navlist">
+		<ul>
+    	<li><a href="{dede:global.cfg_cmsurl/}/" class="home">首页</a></li>
+        {dede:channel type='top' row='10' currentstyle="<li><a href='~typelink~' ~rel~ class='on'>~typename~</a></li>"}
+      	<li><a href='[field:typeurl/]' [field:rel/]>[field:typename/]</a></li>
+      	{/dede:channel}
+    </ul>
+</div>
+<script>
+$(function(){
+	$(".mobile_navlist ul li a").hover(
+			function(){
+				$(this).addClass('home').css({'text-decoration':'none'});
+				$(this).parent().siblings().children().removeClass('home');
+			},
+			function(){
+				$(this).removeClass('home');
+			}
+	)
+	$(".icon_ul li").click(function(){
+		console.log('dddd');
+		$('.mobile_navlist').toggle();
+	});
+})
+</script>    
+<div class="ban_1001"><a href="http://www.mobantianxia.com/" target="_blank"></a></div>

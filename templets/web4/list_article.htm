@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:field.seotitle /}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description'  function='html2text(@me)'/}" />
+<link href="/style/css/base.css" rel="stylesheet">
+<link href="/style/css/index.css" rel="stylesheet">
+<link href="/style/css/style.css" rel="stylesheet">
+<link href="/style/css/media.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<!--[if lt IE 9]>
+<script src="/style/js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="ibody">
+  {dede:include filename='head.htm'/}
+  <article>
+    <h2 class="about_h">您现在的位置是：{dede:field name='position'/}</h2>
+    <div class="bloglist">
+      {dede:list pagesize='10' }
+      <div class="newblog">
+        <ul>
+          <h3><a href="[field:arcurl/]">[field:title/]</a></h3>
+          <div class="autor"><span>作者：[field:writer/]</span><span>浏览（<a href="[field:arcurl/]">[field:click/]</a>）</span></div>
+          <p>[field:description/]... <a href="[field:arcurl/]" target="_blank" class="readmore">全文</a></p>
+        </ul>
+        <figure>[field:image/]</figure>
+        <div class="dateview">[field:pubdate function="GetDateMK(@me)"/]</div>
+      </div>
+      {/dede:list}
+    </div>
+    <div class="page">{dede:pagelist istitem='index,pre,next,end,end,' listsize='3' /}</div>
+  </article>
+  {dede:include filename='right.htm'/}
+  <script src="/style/js/silder.js"></script>
+  <div class="clear"></div>
+  <!-- 清除浮动 --> 
+</div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<aside class="sidebar">
+  <div class="widget widget_text">
+    <div class="textwidget">
+      <div class="social"> <a data-original-title="新浪微博" href="http://weibo.com/gooxao" rel="external nofollow"
+              title="" target="_blank"> <i class="sinaweibo fa fa-weibo"> </i> </a> <a data-original-title="腾讯微博" href="http://t.qq.com/gooxao2" rel="external nofollow"
+              title="" target="_blank"> <i class="tencentweibo fa fa-tencent-weibo"> </i> </a> <a title="" data-original-title="" class="weixin"> <i class="weixins fa fa-weixin"> </i>
+        <div class="weixin-popover">
+          <div class="popover bottom in">
+            <div class="arrow"> </div>
+            <div class="popover-title"> 订阅号"被窝看图" </div>
+            <div class="popover-content"> <img src="/gong/images/weixin.gif"> </div>
+          </div>
+        </div>
+        </a> <a data-original-title="Email" href="#" rel="external nofollow"
+              title="" target="_blank"> <i class="email fa fa-envelope-o"> </i> </a> <a data-original-title="联系QQ" href="http://wpa.qq.com/msgrd?v=3&uin=9490489&site=qq&menu=yes" rel="external nofollow"
+              title="" target="_blank"> <i class="qq fa fa-qq"> </i> </a> <a data-original-title="订阅本站" href="#" rel="external nofollow"
+              target="_blank" title=""> <i class="rss fa fa-rss"> </i> </a> </div>
+    </div>
+  </div>
+  
+  <div class="widget d_postlist">
+    <div class="title">
+      <h2> 推荐文章 </h2>
+    </div>
+    <ul>
+      {dede:arclist titlelen=80 orderby ='pubdate' row='8'}
+      <li> <a href="[field:arcurl/]" title="[field:title/]"> <span class="thumbnail"> <img src="[field:litpic/]" alt="[field:title/]"> </span> <span class="text">[field:title/] </span> <span class="muted"> [field:pubdate function='strftime("%Y-%m-%d",@me)'/] </span>  </a> </li>
+      {/dede:arclist}
+    </ul>
+  </div>
+  <div class="widget d_banner">
+    <div class="d_banner_inner"> 
+      <script src='/plus/ad_js.php?aid=2' language='javascript'></script> 
+    </div>
+  </div>
+  
+  <div class="widget d_postlist">
+    <div class="title">
+      <h2> 猜你喜欢 </h2>
+    </div>
+    <ul>
+
+      {dede:arclist titlelen=80  orderby ='rand' limit='0,1'}
+      <li> <a href="[field:arcurl/]" title="[field:title/]"> <span class="thumbnail"> <img src="[field:litpic/]" alt="[field:title/]"> </span> <span class="text"> [field:title/] </span> <span class="muted"> [field:pubdate function='strftime("%Y-%m-%d",@me)'/] </span>  </a> </li>
+      {/dede:arclist}
+       {dede:arclist titlelen=80  orderby ='rand' limit='1,9'}
+      <li> <a href="[field:arcurl/]" title="[field:title/]"> <span class="thumbnail"> <img src="[field:litpic/]" alt="[field:title/]"> </span> <span class="text"> [field:title/] </span> <span class="muted"> [field:pubdate function='strftime("%Y-%m-%d",@me)'/] </span>  </a> </li>
+      {/dede:arclist}
+    </ul>
+  </div>
+  <div class="widget d_banner">
+    <div class="d_banner_inner"> 
+      <script src='/plus/ad_js.php?aid=3' language='javascript'></script> 
+    </div>
+  </div>
+  
+  <div class="widget widget_links">
+    <div class="title">
+      <h2> 友情链接 </h2>
+    </div>
+    <ul class="xoxo blogroll">
+      <li><a href='http://www.adminbuy.cn' target='_blank'>织梦模板</a> </li><li><a href='http://www.adminbuy.cn' target='_blank'>织梦源码</a> </li><li><a href='http://www.adminbuy.cn' target='_blank'>模板王</a> </li><li><a href='http://www.adminbuy.cn' target='_blank'>网站模版</a> </li><li><a href='http://www.adminbuy.cn' target='_blank'>discuz模版</a> </li><li><a href='http://sc.adminbuy.cn' target='_blank'>图标素材</a> </li>
+    </ul>
+  </div>
+</aside>

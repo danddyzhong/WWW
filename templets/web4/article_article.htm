@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{dede:field.title/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description  function='html2text(@me)'/}" />
+<link href="/style/css/base.css" rel="stylesheet">
+<link href="/style/css/index.css" rel="stylesheet">
+<link href="/style/css/style.css" rel="stylesheet">
+<link href="/style/css/media.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<!--[if lt IE 9]>
+<script src="/style/js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+<div class="ibody"> {dede:include filename='head.htm'/}
+  <article>
+    <h2 class="about_h">您现在的位置是：{dede:field name='position'/}</h2>
+    <div class="index_about">
+      <h2 class="c_titile">{dede:field.title/}</h2>
+      <p class="box_c"><span class="d_time">发布时间：{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</span><span>编辑：{dede:field.writer/}</span><span>浏览（{dede:field.click/}）</span></p>
+      <ul class="infos">
+        {dede:field.body/}
+      </ul>
+      <div class="nextinfo">
+        <p>{dede:prenext get='pre'/}</p>
+        <p>{dede:prenext get='next'/} </p>
+      </div>
+      <div class="otherlink">
+        <h2>相关文章</h2>
+        <ul>
+          {dede:likearticle row='5' titlelen='60'}
+          <li><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></li>
+          {/dede:likearticle}
+        </ul>
+      </div>
+    </div>
+  </article>
+  {dede:include filename='right.htm'/} 
+  <script src="/style/js/silder.js"></script>
+  <div class="clear"></div>
+  <!-- 清除浮动 --> 
+</div>
+</body>
+</html>

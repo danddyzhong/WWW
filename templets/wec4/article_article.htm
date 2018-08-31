@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta charset=gbk>
+<meta http-equiv="X-UA-Compatible" content="IE=10,IE=9,IE=8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="design by {dede:global.cfg_webname/}" />
+<link type="text/css" media="all" href="{dede:global.cfg_templets_skin/}/gong/css/gong.css" rel="stylesheet">
+<link rel="alternate" type="application/rss+xml" title="" href="/rss.php"/>
+<script language="javascript" type="text/javascript" src="/include/dedeajax2.js"></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/gong/js/jquery.min.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/gong/js/jquery.js'></script>
+
+<!--[if lt IE 9]>
+      <script src="/gong/js/html5.js">
+      </script>
+      <script src="/gong/js/selectivizr-min.js">
+      </script>
+    <![endif]-->
+<!--[if lte IE 8]>
+    <![endif]-->
+
+</head>
+<body class="home blog">
+{dede:include filename="head.htm"/}
+<section class="container">
+<div class="content-wrap">
+  <div class="content">
+    <header class="archive-header">
+      <h1 class="article-title" ><a href="{dede:field.arcurl/}">{dede:field.title/}</a></h1>
+      <div class="meta"> <span id="mute-category" class="muted"> <i class="fa fa-list-alt"> </i><a href="{dede:field.typeurl/}">{dede:field.typename/} </a> </span> <span class="muted"> <i class="fa fa-user"> </i>{dede:field.writer/} </span>
+        <time class="muted"> <i class="fa fa-clock-o"> </i> {dede:field.pubdate function='strftime("%Y-%m-%d",@me)'/} </time>
+        <span class="muted" style="display:none;"> <i class="fa fa-eye"> </i>{dede:field.click/}℃ </span>  </div>
+    </header>
+    <div class="banner banner-sticky">
+      <div style="text-align:left;padding:10px 20px;margin-bottom:-6px;"> </div>
+    </div>
+    <article class="article-content">
+      <blockquote>
+        <p>{dede:field.description/} </p>
+      </blockquote>
+      {dede:field.body/}
+    </article>
+
+<nav class="article-nav"> 
+  <span class="article-nav-prev"> <i class="fa fa-angle-double-left"> </i> {dede:prenext get='pre'/}  </span> 
+  <span class="article-nav-next"> {dede:prenext get='pre'/}  <i class="fa fa-angle-double-right"> </i> </span> </nav>
+
+<div class="related_top">
+      <div class="related_posts">
+        <ul class="related_img">
+          {dede:arclist titlelen=80  orderby ='rand' row='4' limit='0,4'}
+          <li class="related_box"> <a href="[filed:arcurl/]" title="[field:title/]" target="_blank"> <img src="[field:picname/]" alt="[field:title/]" width="185" height="110"><br>
+            <span class="r_title">[field:title/]</span> </a> </li>
+          {/dede:arclist}  
+        </ul>
+        <div class="relates">
+          <ul>
+            {dede:arclist titlelen=80  orderby ='rand' row='4' limit='0,4'}
+            <li><i class="fa fa-minus"></i><a href="[field:arcurl/]">[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  {dede:include filename="right.htm"/}
+</section>
+  {dede:include filename="foot.htm"/}
+</body>
+</html>

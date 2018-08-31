@@ -1,0 +1,142 @@
+/* ֯��58��dede58.com������õ�֯����վģ��������վ */
+div.wpcf7 {
+	margin: 0;
+	padding: 0;
+}
+div.wpcf7-response-output {
+	margin: 2em 0.5em 1em;
+	padding: 0.2em 1em;
+}
+div.wpcf7 .screen-reader-response {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+	height: 1px;
+	width: 1px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+div.wpcf7-mail-sent-ok {
+	border: 2px solid #398f14;
+}
+div.wpcf7-mail-sent-ng {
+	border: 2px solid #ff0000;
+}
+div.wpcf7-spam-blocked {
+	border: 2px solid #ffa500;
+}
+div.wpcf7-validation-errors {
+	border: 2px solid #f7e700;
+}
+span.wpcf7-form-control-wrap {
+	position: relative;
+}
+span.wpcf7-not-valid-tip {
+	color: #f00;
+	font-size: 1em;
+	display: block;
+}
+.use-floating-validation-tip span.wpcf7-not-valid-tip {
+	position: absolute;
+	top: 20%;
+	left: 20%;
+	z-index: 100;
+	border: 1px solid #ff0000;
+	background: #fff;
+	padding: .2em .8em;
+}
+span.wpcf7-list-item {
+	margin-left: 0.5em;
+}
+.wpcf7-display-none {
+	display: none;
+}
+div.wpcf7 img.ajax-loader {
+	border: none;
+	vertical-align: middle;
+	margin-left: 4px;
+}
+div.wpcf7 div.ajax-error {
+	display: none;
+}
+div.wpcf7 .placeheld {
+	color: #888;
+}
+/*��ҳЧ��*/
+.pages {
+	padding: 20px 0 30px;
+	font-family: simsun
+}
+.pages li {
+	display: inline
+}
+.pages li strong {
+	margin-left: 5px;
+	font-weight: normal
+}
+.pages a {
+	padding: 10px 13px;
+	border: 1px solid #CCC;
+	background: #fff;
+	color: #A4A4A4;
+	line-height: 18px
+}
+.pages li.thisclass, .pages a:hover {
+	padding: 10px 13px;
+	border: 1px solid #363636;
+	background: #363636;
+	color: #fff;
+	text-decoration: none
+}
+.pages li.thisclass {
+	padding: 10px 13px;
+	line-height: 18px
+}
+* html .pages li.thisclass {
+	padding: 10px 7px 10px 15px;
+	margin-right: 6px
+}
+*+html .pages li.thisclass {
+	padding: 10px 7px 10px 15px;
+	margin-right: 6px
+}
+/*���·�ҳ*/
+.pages_c {
+	padding-top: 25px;
+	clear: both;
+	text-align: center;
+	line-height: 0;
+	zoom: 1
+}
+.pages_c li {
+	display: inline-block;
+*display:inline;
+	height: 34px;
+	margin-bottom: 10px;
+	padding: 0 3px;
+	zoom: 1
+}
+.pages_c a {
+	display: inline-block;
+	height: 32px;
+	padding: 0 13px;
+	border: 1px solid #ddd;
+	background: #fff;
+	color: #333;
+	line-height: 32px;
+}
+.pages_c li:first-child a, .pages_c li:first-child a:hover {
+	border: none;
+	background: none;
+	color: #333
+}
+.pages_c li.thisclass a, .pages_c a:hover {
+	background: #f3ab00;
+	border: 1px solid #f3ab00;
+	color: #fff;
+	text-decoration: none
+}
+.pages_c span {
+	display: none
+}

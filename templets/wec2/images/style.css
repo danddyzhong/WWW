@@ -1,0 +1,4 @@
+.page { font-size:14px; font-family:Verdana, Arial, Helvetica, sans-serif; text-align:center; padding-top: 5px; padding-right: 0; padding-bottom: 16px; padding-left: 0; }
+.page li{display:inline;}
+.page a { color:#666666; text-decoration:none; margin:0 2px; border:1px solid #D9D9D9; padding:3px 6px }
+.page a:hover, .page a.current { color:#1C89D5; border-color:#1C89D5 }

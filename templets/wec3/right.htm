@@ -1,0 +1,44 @@
+<div class="sider">
+  <div class="right">
+    <div class="subblock">
+      <h3>推荐文章</h3>
+      <ul>
+        {dede:arclist titlelen='80' flag='a' row='5'}
+        <li>
+          <div class="sideshow"><a href="[field:arcurl/]" target="_ablank"  title="[field:title/]"> <img width='80' height='60' src='[field:picname/]' class='icon wp-post-image' alt='[field:title/]' title='[field:title/]' /> </a> <a href="[field:arcurl/]" target="_ablank"  title="[field:title/]"> [field:title/] </a> <span class="datetime"> [field:pubdate function='strftime("%Y-%m-%d",@me)'/] </span> </div>
+        </li>
+        {/dede:arclist} 
+      </ul>
+    </div>
+    <div class="subblock">
+      <h3>热门文章</h3>
+      <ul>
+        {dede:arclist titlelen=80 orderby ='click' row='8'}
+        <li>
+          <div class="sideshow"><a href="[field:arcurl/]" target="_ablank"  title="[field:title/]"> <img width='80' height='60' src='[field:picname/]' class='icon wp-post-image' alt='[field:title/]' title='[field:title/]' /> </a> <a href="[field:arcurl/]" target="_ablank"  title="[field:title/]"> [field:title/] </a> <span class="datetime"> [field:pubdate function='strftime("%Y-%m-%d",@me)'/] </span> </div>
+        </li>
+        {/dede:arclist}
+      </ul>
+    </div>
+    <div class="subblock linkcat">
+      <h3>友情链接</h3>
+      <ul>
+        
+        <li><a href='http://www.adminbuy.cn/' target='_blank'>织梦模板</a> </li>
+        
+        <li><a href='http://www.adminbuy.cn/' target='_blank'>织梦源码</a> </li>
+        
+        <li><a href='http://www.adminbuy.cn/' target='_blank'>网站模板</a> </li>
+        
+        <li><a href='http://www.adminbuy.cn/' target='_blank'>网站源码</a> </li>
+        
+        <li><a href='http://www.adminbuy.cn/' target='_blank'>模板王</a> </li>
+        
+        <li><a href='http://www.adminbuy.cn/' target='_blank'>手机网站模板</a> </li>
+        
+      </ul>
+    </div>
+    <ul class="widgets">
+    </ul>
+  </div>
+</div>

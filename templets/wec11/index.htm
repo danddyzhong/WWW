@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="order by {dede:global.cfg_hostname/}" />
+
+<!-- 禁止浏览器初始缩放 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/skin/style.css"  />
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/skin/responsive.css"  />
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/skin/font-awesome.css"  media="all" />
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/jquery.min.js'></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/skin/lazyload.js"></script>
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]>
+<script src="{dede:global.cfg_templets_skin/}/skin/html5.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/skin/css3-mediaqueries.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/skin/PIE_IE678.js"></script>
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/skin/iefix.css"  media="all" />
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/skin/font-awesome-ie7.min.css"  media="all" />
+<![endif]-->
+<!--[if IE 6]>
+<script src="{dede:global.cfg_templets_skin/}/skin/kill-IE6.js"></script>
+<![endif]-->
+</head>
+<body id="wrap" class="home blog" >
+<div id="body-container"> 
+  <!-- head 开始 --> 
+ <!-- 移动导航开始--> 
+  <aside id="navmenu-mobile">
+  <div id="navmenu-mobile-wraper">
+    <ul id="menu-mobile" class="menu-mobile">
+
+      <li id="menu-item-737" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-737"> <a title="{dede:global.cfg_webname/}" href="/"> <i class="fa fa-home"></i> 首页</a></li>
+
+      {dede:channelartlist typeid='12,18,14,15'  currentstyle="current-menu-item"}
+      <li id="menu-item-1106" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1106"><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+        <ul class='{dede:field name=typeid runphp="yes"}
+global $dsql;
+$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+$row = $dsql->GetOne($sql);
+@me=is_array($row)?'class="sub-menu"':'style="display:none"';
+{/dede:field}'>
+          {dede:channel type='son'}
+          <li id="menu-item-1147" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1147"><a href="[field:typeurl/]">[field:typename/]</a></li>
+          {/dede:channel}
+        </ul>
+      </li>
+      {/dede:channelartlist}
+    </ul>
+  </div>
+</aside>
+ 
+  <!-- 移动导航结束 -->
+  <section id="content-container" style="background:#f1f4f9; ">
+  <header class="header-wrap" id="nav-scroll">
+  <div class="nav-wrap"> 
+    <!-- 移动按钮 -->
+    <div class="toggle-menu"> <i class="fa fa-bars"></i> </div>
+    <!-- 移动按钮结束 -->
+    <div class="logo"> <a href="/" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}" id="logo" > <img src="{dede:global.cfg_templets_skin/}/skin/logo.png"> </a> </div>
+    <!-- 搜索框 -->
+    <div class="search-btn-click"> <i class="fa fa-search"></i>
+      <div class="header-search-slide">
+        <form method="get" id="searchform-slide" class="searchform" action="/plus/search.php" target="_blank" role="search">
+          <input type="search" class="field" name="q" value="" placeholder="Search" required>
+        </form>
+      </div>
+    </div>
+    <!-- 搜索框结束--> 
+    <!-- 关注我们开始 -->
+    <!-- 关注我们结束--> 
+    <!-- pc导航开始 -->
+    <nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+      <div class="menu-quarter-container">
+        <ul id="menu-quarter" class="nav-menu">
+
+          <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-737"> <a title="{dede:global.cfg_webname/}" href="/"><i class="fa fa-home"></i> 首页</a></li>
+          {dede:channelartlist typeid='12,18,14,15'  currentstyle="current-menu-item"}
+          <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1106"><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+            <ul class='{dede:field name=typeid runphp="yes"}
+global $dsql;
+$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+$row = $dsql->GetOne($sql);
+@me=is_array($row)?'class="sub-menu"':'style="display:none"';
+{/dede:field}'>
+              {dede:channel type='son'}
+              <li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1147"><a href="[field:typeurl/]">[field:typename/]</a></li>
+              {/dede:channel}
+            </ul>
+          </li>
+          {/dede:channelartlist}
+        </ul>
+      </div>
+    </nav>
+    <!-- pc导航结束 --> 
+  </div>
+</header>
+  <!-- head 结束 -->
+  <div class="hidefixnav"></div>
+  <div id="main-wrap">
+    <div class="bg-sitenews"></div>
+    <script src="{dede:global.cfg_templets_skin/}/skin/slider.js"></script> 
+    <script type="text/javascript">
+$(function(){
+
+	$('#flexslider').flexslider({
+		animation: "slide",
+		direction:"horizontal",
+		easing:"swing",
+		slideshowSpeed: 5000,
+		animationDuration:600
+	});
+});
+</script>
+    <section id="home-featured" class="clr"> 
+      <!-- 焦点幻灯 -->
+      <div id="home-slider" class="container">
+        <div id="flexslider" class="flexslider">
+          <ul class="slides">
+            {dede:arclist flag='f' row='5' }
+            <li> <a class="slider-img" href="[field:typeurl/]" title="[field:typename/]"> <img src="[field:picname/]" alt="[field:title/]"/></a>
+              <div class="slider-text">
+                <div class="cl">
+                  <div class="slider-meta"> <span class="num">0[field:global.autoindex/]</span> <span class="author">[field:writer/]</span> <span class="date">[field:pubdate function='strftime("%m-%d",@me)'/]</span> </div>
+                  <h2><a href="[field:typeurl/]" title="[field:title/]">[field:title/]</a></h2>
+                </div>
+                <span class="slider-excerpt"><br/>
+                [field:description function='cn_substr(@me,220)'/]</span> <span class="slider-readmore"><a href="[field:arcurl/]" title="[field:title/]" target="_blank">Read More »</a></span> </div>
+            </li>
+            {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+      <!--焦点幻灯结束--> 
+    </section>
+    <!-- 广告开始 -->
+    <div id="header-banner">  </div>
+    <!-- 广告结束 -->
+    <div class="container two-col-container cms-with-sidebar">
+      <div id="main-wrap-left">
+        <section class="stickys clr">
+          <h2 class="home-heading clr"> <span class="heading-text heading-text-cms active" id='.stickys-container'> 今日头条 </span> </h2>
+          <!--头条-->
+          <div class="stickys-container stickys-two-col stickys-latest-list clr">
+            {dede:arclist orderby='pubdate' row='4'}
+           <article class="clr col-small">
+              <div class="inner"> <a href="[field:arcurl/]" title="[field:title/]" class="fancyimg home-blog-entry-thumb">
+                <div class="thumb-img"> <img src="[field:picname/]" alt="[field:title/]"> <span><i class="fa fa-star"></i></span> </div>
+                </a>
+                <h3><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h3>
+                <p>[field:description function='cn_substr(@me,150)'/]...</p>
+              </div>
+              <div class="meta"> <span class="date">01-19 </span> <span class="views">热度:[field:click/] ℃</span> </div>
+            </article>
+            {/dede:arclist}
+          </div>
+          <!--头条  结束--> 
+        </section>
+        <!-- 第一板块  开始--> 
+        <section class="catlist-427 catlist clr">
+          <div class="catlist-container clr">
+           {dede:type typeid='12' } <h2 class="home-heading clr"> <span class="heading-text"> [field:typename/] </span> <a href="[field:typelink/]">+ 更多</a> </h2>{/dede:type}
+            <!-- 当前栏目推荐带图  开始--> 
+            <span class="col-left catlist-style4">
+            {dede:arclist typeid='12' row='1' flag='c' limit='1,1' }
+            <article class="home-blog-entry clr">
+              <div class="thumb-title"> <a href="[field:arcurl/]" title="[field:title/]" class="fancyimg home-blog-entry-thumb">
+                <div class="thumb-img"> <img src="[field:picname/]" alt="[field:title/]"> <span><i class="fa fa-plus"></i></span> </div>
+                </a>
+                <h3><a href="[field:url/]" title="[field:title/]">[field:title/]</a></h3>
+              </div>
+              <div class="postlist-meta"> <span class="postlist-meta-time">[field:pubdate function='strftime("%Y-%m-%d",@me)'/] </span> <span class="delim"></span> <span class="postlist-meta-views">[field:click/] &nbsp;℃</span> <span class="delim"></span> </div>
+              <p> [field:description function='cn_substr(@me,150)'/]...</p>
+            </article>
+            {/dede:arclist}
+            </span>
+ 
+            <!-- 当前栏目推荐带图  结束--> 
+            <!--当前最新文档 开始--> 
+            <span class="col-right catlist-style4">
+            {dede:arclist typeid='12' row='4' limit="3,4"} 
+              <article class="clr col-small">
+              <h3><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h3>
+              <p> [field:description function='cn_substr(@me,150)'/]... </p>
+            </article>
+            {/dede:arclist}</span>
+            <!--当前最新文档  结束--> 
+          </div>
+        </section> 
+        <!-- 第一板块  结束--> 
+        <!--广告开始-->
+  <!--       <div id="loopad" class="container"> <a href="http://www.baidu.com" title="百度一下">
+					<img src="/skin/ad02.jpg" alt="百度一下"></a> </div> -->
+        <!--广告 结束--> 
+        <!--第二板块 开始--> 
+        <section class="catlist-5 catlist clr">
+          <div class="catlist-container clr">
+            {dede:type typeid='18' }<h2 class="home-heading clr"> <span class="heading-text"> [field:typename/] </span> <a href="[field:typelink/]">+ 更多</a> </h2>{/dede:type}
+            <!--当前推荐带图文档 开始--> 
+            <span class="col-up catlist-style6">
+              {dede:arclist row='1' typeid='18' flag='p' limit='1,1' }
+            <article class="home-blog-entry clr"> <a href="[field:arcurl/]" title="[field:title/]" class="fancyimg home-blog-entry-thumb">
+              <div class="thumb-img"> <img src="[field:picname/]" alt="[field:title/]"> <span><i class="fa fa-plus"></i></span> </div>
+              </a>
+              <h3><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h3>
+              <br>
+              <span class="postlist-meta"> <span class="postlist-meta-time">[field:pubdate function='strftime("%Y-%m-%d",@me)'/] </span> <span class="postlist-meta-views">&nbsp;&nbsp;浏览: [field:click/]</span> </span>
+              <p> [field:description function="cn_substr(@me,220)"/]... </p>
+            </article>
+            {/dede:arclist}
+            </span>
+ 
+            <!--当前推荐带图文档 结束--> 
+            <!--当前最新文档 开始--> 
+            <span class="col-down catlist-style6">
+              {dede:arclist typeid='18' flag='p' limit='2,5'}
+             <article class="clr col-small"> <a href="[field:arcurl/]" title="[field:title/]" class="fancyimg home-blog-entry-thumb">
+              <div class="thumb-img"> <img src="[field:picname/]" alt="[field:title/]"> <span><i class="fa fa-plus"></i></span> </div>
+              </a>
+              <h3><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h3>
+              <p> [field:description function='cn_substr(@me,100)'/]... </p>
+            </article>
+            {/dede:arclist}
+ </span> <!--当前最新文档 结束--> 
+          </div>
+        </section> 
+        <!--第二板块 结束--> 
+        <!--广告开始-->
+       <!--  <div id="loopad" class="container"> <a href="http://www.baidu.com" title="百度一下">
+					<img src="/skin/ad02.jpg" alt="百度一下"></a> </div> -->
+        <!--广告 结束--> 
+        <!--第三板块 开始--> 
+        <section class="catlist-7 catlist clr">
+          <div class="catlist-container clr">
+            {dede:type typeid='14'}<h2 class="home-heading clr"> <span class="heading-text"> [field:typename/] </span> <a href="[field:typelink/]">+ 更多</a> </h2>{/dede:type}
+            <!--当前栏目推荐带图  开始--> 
+            <span class="col-left catlist-style2">
+              {dede:arclist typeid='14' row='1' flag='p' limit='1,1' }
+            <article class="home-blog-entry clr"> <a href="[field:arcurl/]" title="[field:title/]" class="fancyimg home-blog-entry-thumb">
+              <div class="thumb-img"> <img src="[field:picname/]" alt="[field:title/]"> <span><i class="fa fa-plus"></i></span> </div>
+              </a>
+              <h3><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h3>
+              <div class="postlist-meta"> <span class="postlist-meta-time">[field:pubdate function="strftime('%Y-%m-%d',@me)"/] </span> <span class="delim"></span> <span class="postlist-meta-views">[field:click/] &nbsp;℃</span> <span class="delim"></span> </div>
+              <p> [field:description function='cn_substr(@me,150)']... </p>
+            </article>
+            {/dede:arclist}
+            </span>
+ 
+            <!--当前栏目推荐带图  结束--> 
+            <!--当前栏目最新文档  开始--> 
+            <span class="col-right catlist-style2"> 
+              {dede:arclist typeid='14' row='4' flag='p' limit='2,4'}
+              <article class="clr col-small"> <a href="[field:arcurl/]" title="[field:title/]" class="fancyimg home-blog-entry-thumb">
+              <div class="thumb-img"> <img src="[field:picname/]" alt="[field:title/]"> <span><i class="fa fa-plus"></i></span> </div>
+              </a>
+              <h3><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h3>
+              <p> [field:description function="cn_substr(@me,150)"]... </p>
+            </article>
+            {/dede:arclist}
+ </span> <!--当前栏目最新文档  结束--> 
+          </div>
+        </section> 
+        <!--第三板块 结束--> 
+
+        <div class="clear"> </div>
+      </div>
+      <!--边栏开始--> 
+      <div id="sidebar" class="clr"> 
+  <!--广告 开始-->
+<!--   <div  class="widget widget_text enhanced-text-widget"> <a href="http://www.baidu.com" title="百度一下">
+					<img src="/skin/ad03.jpg" alt="百度一下"></a> </div> -->
+  <!--广告 结束-->
+  <div id="tintabs-4" class="widget widget_tin_tabs">
+    <ul class="tin-tabs-nav group tab-count-3">
+
+      <li class="tin-tab tab-recent"> <a href="#tab-recent" title="近期文章"><i class="fa fa-clock-o"></i> <span>近期文章</span></a> </li>
+      <li class="tin-tab tab-popular"> <a href="#tab-popular" title="热门文章"><i class="fa fa-star"></i> <span>热门文章</span></a> </li>
+      <li class="tin-tab tab-comments"> <a href="#tab-popular2" title="猜你喜欢"><i class="fa fa-heart"></i> <span>猜你喜欢</span></a></li>
+    </ul>
+    <div class="tin-tabs-container">
+      <ul id="tab-recent" class="tin-tab group thumbs-enabled">
+        <!--全站最新带图文档  开始--> 
+        {dede:arclist row='10' orderby='pubdate' }
+        <li>
+          <div class="tab-item-thumbnail"> <a href="[field:arcurl/]" title="[field:title/]">
+            <div class="thumb-img"> <img src="[field:picname/]" /> <span><i class="fa fa-plus"></i></span> </div>
+            </a> </div>
+          <div class="tab-item-inner group">
+            <p class="tab-item-title"><a href="[field:arcurl/]"  title="[field:title/]">[field:title/]</a></p>
+            <span class="tab-item-date">[field:pubdate function='strftime("%Y-%m-%d",@me)'] </span>&nbsp; <span class="tab-item-category"><a href="[field:typeurl/]" >[field:typename/]</a></span> </div>
+        </li>
+        {/dede:arclist}
+        <!--全站最新带图文档  结束-->
+      </ul>
+      <ul id="tab-popular" class="tin-tab group thumbs-enabled">
+        <!--全站热门带图文档  开始--> 
+         {dede:arclist row='10' orderby='click' flag='c' }
+        <li>
+          <div class="tab-item-thumbnail"> <a href="[field:arcurl/]" title="[field:title/]">
+            <div class="thumb-img"> <img src="[field:picname/]" /> <span><i class="fa fa-plus"></i></span> </div>
+            </a> </div>
+          <div class="tab-item-inner group">
+            <p class="tab-item-title"><a href="[field:arcurl/]"  title="[field:title/]">[field:title/]</a></p>
+            <span class="tab-item-date">[field:pubdate function='strftime("%Y-%m-%d",@me)'] </span>&nbsp; <span class="tab-item-category"><a href="[field:typeurl/]" >[field:typename/]</a></span> </div>
+        </li>
+         {/dede:arclist}
+        <!--全站热门带图文档  结束-->
+      </ul>
+      <ul id="tab-popular2" class="tin-tab group thumbs-enabled">
+        <!--全站随机带图文档  开始-->
+        {dede:arclist orderby='rand' row='9' } 
+        <li>
+          <div class="tab-item-thumbnail"> <a href="[field:arcurl/]" title="[field:title/]">
+            <div class="thumb-img"> <img src="[field:picname/]" /> <span><i class="fa fa-plus"></i></span> </div>
+            </a> </div>
+          <div class="tab-item-inner group">
+            <p class="tab-item-title"><a href="[field:arcurl/]"  title="[field:title/]">[field:title/]</a></p>
+            <span class="tab-item-date">[field:pubdate function='strftime("%Y-%m-%d",@me)'/] </span>&nbsp; <span class="tab-item-category"><a href="[field:typeurl/]" >[field:typename/]</a></span> </div>
+        </li>
+        {/dede:arclist}
+        <!--全站随机带图文档  结束-->
+      </ul>
+    </div>
+  </div>
+  <div class="floatwidget-container"> </div>
+</div>
+ 
+      <!-- 边栏 结束 --> 
+    </div>
+    <div class="clear"> </div>
+  </div>
+  <!-- 广告位开始 -->
+ <!--  <div id="bottom-banner"> <a href="http://www.baidu.com" title="百度一下">
+					<img src="/skin/ad01.jpg" alt="百度一下"/></a> </div> -->
+  <!-- 广告位结束 --> 
+  <!-- 友链开始 -->
+
+{dede:include filename='foot.htm'/}
+<!-- Footer 结束-->
+</section>
+</body>
+</html>

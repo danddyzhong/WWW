@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link type="text/css" media="all" href="{dede:global.cfg_templets_skin/}/skin/css/ks.css" rel="stylesheet" />
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="author" content="order by {dede:global.cfg_webname/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/js/jqumin.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/js/scroll.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/js/slid.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/js/script.js'></script>
+</head>
+<body class="home blog">
+
+  {dede:include filename="head.htm"/}
+
+
+<div id="content" class="site-content">
+  <div class="clear"> </div>
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <div id="slideshow">
+        <ul class="rslides" id="slider">
+          {dede:arclist titlelen='80' flag='f' row='5'}
+        <li> <a href="[field:arcurl/]" rel="bookmark"> <img src="[field:id runphp=yes]  
+    global $dsql;
+    $id = @me;
+    $sql='select slider_img from #@__archives where id='.$id;
+    $row=$dsql->getone($sql);
+    @me=$row['slider_img'];
+ [/field:id]" alt="[field:title/]" /></a> </li>
+        {/dede:arclist}
+        </ul>
+      </div>
+      <div class="clear"></div>
+      <div class="line-four">
+      {dede:arclist titlelen=80 orderby ='pubdate' row='28'}
+      <div class="xl4 xm4">
+          <div class="picture-h">
+            <figure class="picture-h-img"> <a href="[field:arcurl/]"> <img src="[field:picname/]" alt="[field:title/]" /></a> </figure>
+            <h3 class="picture-h-title"> <a href="[field:arcurl/]" rel="bookmark" title="[field:title/]">[field:title/]</a></h3>
+          </div>
+        </div>
+      {/dede:arclist}
+        <div class="clear"></div>
+      </div>
+      <!-- 预留位 --> 
+    </main>
+  </div>
+ 
+  <div id="sidebar" class="widget-area">
+    <aside id="hot_commend-24" class="widget widget_hot_commend"> <b>&nbsp;&nbsp; <a href="">推荐文章</a></b>
+      <div id="hot" class="hot_commend">
+        <ul>
+          {dede:arclist titlelen='80' flag='a' row='5'}
+         <li>
+            <figure class="thumbnail"> <a href="[field:arcurl/]"><img src="[field:picname/]" alt="[field:title/]" /></a> </figure>
+            <div class="hot-title"><a href="[field:arcurl/]" rel="bookmark">[field:title/]</a></div>
+          </li>
+          {/dede:arclist}
+          <div class="clear"></div>
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </aside>  
+    <aside id="cx_tag_cloud-6" class="widget widget_cx_tag_cloud"> &nbsp;&nbsp;
+      热门标签
+      <div id="tag_cloud_widget">
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </aside>
+    <aside id="recent_comments-27" class="widget widget_recent_comments"> &nbsp;&nbsp;<a href="">热门文章</a>
+      <div id="message" class="message-widget">
+        <ul>
+          {dede:arclist titlelen=80 orderby ='click' row='8'}
+        <li><span class='li-icon li-icon-1'>1</span><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></li>
+        {/dede:arclist}
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </aside>  
+    <div class="sidebar-roll"></div>
+  </div>
+  <div class="clear"></div>
+  <div class="clear"></div>
+  <div class="line-big">
+
+  {dede:channelartlist typeid='top' }
+  <div class="xl3 xm3">
+      <div class="cat-box">
+        <h3 class="cat-title"> <a href="{dede:field name='typelink'/}" title="{dede:field name='typename'/}">&nbsp;&nbsp;&nbsp;&nbsp;{dede:field name='typename'/}</a></h3>
+        <div class="clear"></div>
+        <div class="cat-site">
+          {dede:arclist row='1' titlelen='80' limit='1,1' orderby='click'}
+        <h2 class="entry-title"><a href="[field:arcurl/]" rel="bookmark" title="[field:title/]">[field:title/]</a></h2>
+          <figure class="thumbnail"> <a href="[field:arcurl/]"><img src="[field:picname/]"  alt="[field:title/]" /></a> </figure>
+          <div class="cat-main">[field:description function="cn_substr(@me,220)"/]...</div>
+        {/dede:arclist}
+  
+          <div class="clear"></div>
+          <ul class="cat-list">
+          {dede:arclist row='1' titlelen='80' limit='2,3' orderby='click'}
+          <span class="list-date">[field:pubdate function='strftime("%m-%d",@me)'/]</span>
+          <li class="list-title"><a href="[field:arcurl/]" rel="bookmark" title="[field:title/]">[field:title/]</a></li>
+          {/dede:arclist}
+          </ul>
+        </div>
+      </div>
+    </div>
+{/dede:channelartlist}
+
+    
+    <div class="clear"></div>
+  </div>
+  <div class="line-tao">
+    <div class="clear"></div>
+  </div>
+  <div class="clear"></div>
+</div>
+{dede:include filename='foot.htm'/}
+</body>
+</html>

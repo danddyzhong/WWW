@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link type="text/css" media="all" href="{dede:global.cfg_templets_skin/}/skin/css/ks.css" rel="stylesheet" />
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="author" content="order by {dede:global.cfg_webname/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/js/jqumin.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/js/scroll.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/js/slid.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/js/script.js'></script>
+</head>
+<body class="home blog">
+{dede:include filename="head.htm"/}
+<nav class="breadcrumb"> <a href="/">主页</a> &gt; <a href="[{dede:field name='typelink'/}]">{dede:field name='typename'/}</a> &gt; </nav>
+<div id="content" class="site-content">
+  <div class="clear"> </div>
+  <section id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+     
+      {dede:list pagesize ='6'}
+      <article id="post-6683" class="post-6683 post type-post status-publish format-standard hentry category-wordpress tag-wordpress">
+        <figure class="thumbnail box-hide box-show"> <a href="[field:arcurl/]"> <img src="[field:picname/]" alt="[field:title/]"> </a> <span class="cat"> [field:typelink runphp='yes'] @me =str_replace('[','',str_replace(']','',@me)); [/field:typelink]</span> </figure>
+        <header class="entry-header">
+          <h2 class="entry-title"><a href="[field:arcurl/]" rel="bookmark">[field:title/]</a></h2>
+        </header>
+        <div class="entry-content">
+          <div class="archive-content"> [field:description/]...</div>
+          <br>
+          <span class="title-l"></span><span class="entry-meta"><span class="date">[field:pubdate function=strftime('%Y.%m.%d',@me)/]&nbsp;</span> </span>
+          <div class="clear"></div>
+        </div>
+        <span class="entry-more"> <a href="[field:arcurl/]" rel="bookmark">阅读全文</a></span></article>
+        {/dede:list}
+      <nav id="nav-below">
+        <div class="nav-next"> </div>
+        <div class="nav-previous"> </div>
+      </nav>
+    </main>
+    <nav class="navigation pagination" role="navigation">
+      <div class="nav-links">
+      {dede:pagelist listitem="index,end,pre,next,pageno" listsize="3"/}
+      </div>
+    </nav>
+  </section>
+{dede:include filename="right.htm"/}
+  <div class="clear"></div>
+  <div class="clear"></div>
+  <div class="clear"></div>
+</div>
+{dede:include filename='foot.htm'/}
+</body>
+</html>

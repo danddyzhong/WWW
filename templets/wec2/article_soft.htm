@@ -1,0 +1,272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}">
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css_dedemao/style.css" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/images/style.css" rel="stylesheet" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="{dede:global.cfg_templets_skin/}/style/picture.css" rel="stylesheet" type="text/css" />
+<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/css_dedemao/js/jquery.min.js" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/css_dedemao/js/weiscript.js" type="text/javascript"></script>
+<script src="{dede:global.cfg_templets_skin/}/css_dedemao/js/slides.jquery.js"></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/css_dedemao/js/totop.js"></script>
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css_dedemao/fontello.css" type="text/css" />
+<!--[if IE 7]><link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/css_dedemao/fontello-ie7.css" type="text/css" /><![endif]-->
+<script type="text/javascript">
+$(function (){
+	$(window).manhuatoTop({
+		showHeight : 100,
+		speed : 500
+	});
+});
+</script>
+<script type="text/javascript">
+	$(function(){
+		$('#slides').slides({
+		preload: true,
+		generateNextPrev: true
+		});
+	});
+
+
+
+<!--
+function CheckLogin(){
+	var taget_obj = document.getElementById('_ajax_feedback');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("{dede:global.cfg_cmsurl/}/member/ajax_feedback.php");
+	DedeXHTTP = null;
+}
+function checkSubmit(){
+	if(document.feedback.msg.value!='') document.feedback.submit();
+	else alert("评论内容不能为空！");
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("{dede:field name='phpurl'/}/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+	DedeXHTTP = null;
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "{dede:global.cfg_phpurl/}/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+	DedeXHTTP = null;
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("{dede:global.cfg_phpurl/}/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+
+
+  var shortname = "{dede:global.art_shortname/}";
+  var npage = {dede:field name='nowpage'/};
+	var totalpage = {dede:field name='totalpage'/};
+	var namehand = '{dede:field name='namehand'/}';
+	var displaytype = '{dede:field name='displaytype'/}';
+	var gtimer = null;
+	//大图
+	function dPlayBig()
+	{
+		var imgObj = document.getElementById("bigimg");
+		window.open(imgObj.src);
+	}
+	//停止幻灯
+	function dStopPlay()
+	{
+		if(gtimer) clearTimeout(gtimer);
+		else dPlayNext();
+	}
+	//开始幻灯
+	function dStartPlay()
+	{
+		if(npage!=totalpage) {
+			gtimer = setTimeout("dPlayNext()",2000000);
+		}
+	}
+
+	//上一张
+	function dPlayPre(){
+
+	if(npage<2)
+	{
+			alert("这是第一张");
+	}
+	else
+	{
+			if(npage==2) {
+				if(namehand!='') location.href = namehand+shortname;
+				else location.href = "view.php?aid={dede:field name='id'/}";
+			} else if(displaytype=='st' && namehand!='') {
+				location.href = namehand+"_"+(npage-1)+shortname;
+			} else {
+				location.href = "view.php?aid={dede:field name='id'/}&pageno="+(npage-1);
+			}
+		}
+	}
+
+	//下一张
+	function dPlayNext()
+	{
+		if(npage==totalpage) { alert("没有了哦"); }
+		else
+		{
+			if(displaytype=='st' && namehand!='') location.href = namehand+"_"+(npage+1)+shortname;
+			else location.href = "view.php?aid={dede:field name='id'/}&pageno="+(npage+1);
+		}
+	}
+-->
+</script>
+</head>
+<body class="Mubanzhijia_Com">
+
+{dede:include filename="head.htm"/}
+
+<div id="slides">
+	<div class="slides_container">
+	
+		<div class="slide">{dede:arclist row='3' titlelen='24' orderby='rand' type='image.'}
+        	<div class="item">
+
+			
+<A href="[field:arcurl/]"><IMG alt="[field:title/]" src="[field:litpic/]" height="200" width="300"></A><p><a href="[field:arcurl/]">[field:title/]</a></p>
+  
+
+			
+			</div>
+{/dede:arclist}
+		</div>
+		<div class="slide">{dede:arclist row='3' titlelen='24' orderby='rand' type='image.'}
+        	<div class="item">
+
+			
+<A href="[field:arcurl/]"><IMG alt="[field:title/]" src="[field:litpic/]" height="200" width="300"></A><p><a href="[field:arcurl/]">[field:title/]</a></p>
+  
+
+			
+			</div>
+{/dede:arclist}
+		</div>
+		<div class="slide">{dede:arclist row='3' titlelen='24' orderby='rand' type='image.'}
+        	<div class="item">
+
+			
+<A href="[field:arcurl/]"><IMG alt="[field:title/]" src="[field:litpic/]" height="200" width="300"></A><p><a href="[field:arcurl/]">[field:title/]</a></p>
+  
+
+			
+			</div>
+{/dede:arclist}
+		</div>
+
+		</div>		
+		
+	</div>
+</div>
+
+<div class="w960 center clear mt1">
+	<div class="pleft">
+		<div class="place">
+			<strong>当前位置:</strong> {dede:field name='position'/}
+		</div><!-- /place -->
+		<div class="viewbox">
+			<div class="title">
+				<h2>{dede:field.title/}</h2>
+			</div><!-- /title -->
+			<div class="info">
+				<small>时间:</small>{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}<small>来源:</small>{dede:field.source/} <small>作者:</small>{dede:field.writer/} <small>点击:</small><script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>次
+			</div><!-- /info -->
+			<div class="picbox">
+					<center>
+<table width="800" border="0" bgcolor="#D9D9D9">
+  <tr>
+      <td><font color="#666666">商品价格：</font><font color="#FF0000">{dede:field.jiage/}</font></td>
+    <td><font color="#666666">商品类型：</font>{dede:field.leixing/}</td>
+    <td><font color="#666666">商品数量：</font>{dede:field.shuliang/}</td>
+    <td><font color="#666666">物流运费：</font>{dede:field.yunfei/}</td>
+	<td><font color="#666666">交易方式：</font>{dede:field.zhifu/}</td>
+  </tr>
+</table>
+					</center>
+ <br />
+{dede:field.introduce/}
+			</div>
+			<div class="page"> {dede:pagebreak/}</div>
+           	<div class="intro"><P>&nbsp;&nbsp;1、本站所售商品均通过支付宝交易。 
+<BR>&nbsp;&nbsp;2、本站所售实物均包邮，并提供7天包退服务。
+<BR>&nbsp;&nbsp;3、本站所售虚拟物品由于特殊性，售出后不提供退款服务，请购买前仔细思量。
+<BR>&nbsp;&nbsp;4、本站唯一联系方式QQ：884358 / E-mail：884358@gmail.com，有问题请及时与我们联系。
+<BR>&nbsp;&nbsp;5、打造一个良好的交易环境，如果您觉得DEDEMAO演示站不错，记得推荐给您的朋友，谢谢对我们的支持！^_^</P>
+            <div style="clear:both"></div>
+            </div>
+
+        </div>
+	</div>
+    <div class="clear"></div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

@@ -1,0 +1,44 @@
+<aside class="span4 sidebar-right hide-sidebar"> 
+  <!--  右侧广告5个-->
+  
+  <div class="widget-box widget align-center">
+    <div class="widget-content"> 
+      <script src="/plus/ad_js.php?aid=24" language="javascript"></script> 
+      <script src="/plus/ad_js.php?aid=23" language="javascript"></script> 
+      <script src="/plus/ad_js.php?aid=22" language="javascript"></script> 
+      <script src="/plus/ad_js.php?aid=21" language="javascript"></script> 
+      <script src="/plus/ad_js.php?aid=3" language="javascript"></script> 
+    </div>
+  </div>
+  <!--  右侧广告5个-->
+  
+  <div id="posts-list-widget-9" class="widget-box widget widget-posts">
+    <div class="widget-title"> <span class="icon"> <i class="icon-list"> </i> </span>
+      <h3> 最新文章 </h3>
+    </div>
+    <div class="widget-content">
+      {dede:arclist titlelen=80 orderby ='pubdate' row='8'}
+     <li>
+        <div class="widget-thumb"> <a class="post-thumbnail" href="[field:arcurl/]" title="[field:title/]" rel="bookmark"><img class="lazy" src="[field:picname/]" style="height:45px; width:45px"></a> <a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a><span class="date">[field:pubdate function='strftime("%Y-%m-%d",@me)'/]</span> </div>
+      </li>
+      {/dede:arclist}
+      <div class="clear"> </div>
+    </div>
+  </div>
+  <div id="cm-tagcloud-2" class="widget-box widget widget-new-comments">
+    <div class="widget-title"> <span class="icon"> <i class="icon-list"> </i> </span>
+      <h3> 热门推荐 </h3>
+    </div>
+    <div class="widget-content">
+      <ul>
+        {dede:arclist titlelen='80' flag='a' row='8'}
+        <li>
+          <div class="widget-thumb"> <a class="post-thumbnail" href="[field:arcurl/]" title="[field:title/]" rel="bookmark"><img class="lazy" src="[field:picname/]" style="height:45px; width:45px"></a> <a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a><span class="date">[field:pubdate function='strftime("%Y-%m-%d",@me)'/]</span> </div>
+        </li>
+        {/dede:arclist}
+      </ul>
+      <div class="clear"> </div>
+    </div>
+  </div>
+  
+</aside>

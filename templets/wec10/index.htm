@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <title>{dede:global.cfg_webname/}</title>
+    <meta name="keywords" content="{dede:global.cfg_keywords/}" />
+    <meta name="description" content="{dede:global.cfg_description/}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        var serverData = {
+            logowidth: '144',
+            logoheight: '30',
+            coverlogoheight: '50',
+            menuCount: 4,
+            terms: '',
+            menu: [],
+            channelname: '',
+            device: 'pc'
+        }
+    </script>
+    <link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/skin/css/style.css"/>
+</head>
+<body>
+<style>
+    body {
+        padding-top: 0
+    }
+    #Header {
+        position: relative;
+    }
+</style>
+<div class="wrap">
+<!-- <div id="Cover" class="mod-cover">
+    <div class="cover">
+        <div class="coverbg"></div>
+        <div class="coverlogo"><img
+                src="/skin/images/logo.png"></div>
+        <div class="coverslogan">
+            <p class="ll"></p>
+            <span>新闻是有分量的</span>
+            <p class="rl"></p>
+        </div>
+    </div>
+</div> -->
+{dede:include filename='head.htm'/}
+<div id="Body">
+<div class="body">
+<div class="left">
+<div id="banners">
+{dede:arclist row='10' orderby='pubdate'}
+<div class="feed_tegao long" data-href="[field:typeurl/]">
+    <h4>
+        <a href="[field:typeurl/]"
+           target="_blank">[field:title/]</a>
+    </h4>
+    <p class="picture"><a href="[field:arcurl/]" target="_blank"><img src="[field:picname/]" alt="[field:title/]"/></a></p>
+    <p class="summary">[field:description function='cn_substr(@me,220)'/]<a href="[field:arcurl/]" class="more" target="_blank">[详情]</a></p>
+    <div class="infos">
+        <span class="time">[field:pubdate function='strftime("%m月%d日",@me)'/]</span>
+    </div>
+</div>
+{/dede:arclist}
+</div>
+<!-- page start -->
+<!-- <div class="pagination"><ul><li class="prev-page"></li><li class="active"><span>1</span></li>
+<li><a href='list_8_2.html'>2</a></li>
+<li class="next-page"><a href='list_8_2.html'>下一页</a></li>
+</ul></div> -->
+<!-- page end -->
+</div>
+<div class="right">
+    <div class="ap">
+        <div class="apt">
+            <h4>随机看看</h4>
+            <p class="entit"><span>NEW ARTICLE</span></p>
+        </div>
+        <div class="apc">
+            <ul class="ulist">
+{dede:arclist row='10'}
+			<li>
+                    <span class="num top3">[field:global.autoindex/]</span>
+                    <a href="[field:arcur/]" title="[field:title/]">[field:title/]</a>
+                    <span class="tm">[field:pubdate function='strftime("%m-%d",@me)'/]</span>
+                </li>
+{/dede:arclist}
+            </ul>
+        </div>
+    </div>
+    <div class="ap apRecommend">
+        <div class="apt">
+            <h4>热门文章</h4>
+
+            <p class="entit"><span>HOT ARTICLE</span></p>
+        </div>
+        <div class="apc">
+            <ul class="ulist">
+            {dede:arclist row='10' orderby='click' }
+			<li>
+                    <span class="num top3">[field:global.autoindex/]</span>
+                    <a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a>
+                    <span class="tm">[field:pubdate function='strftime("%m月%d日",@me)'/]</span>
+                </li>
+            {/dede:arclist}
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+{dede:include filename='foot.htm'/}
+
+</body>
+</html>

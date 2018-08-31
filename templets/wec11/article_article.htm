@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<meta name="author" content="order by {dede:global.cfg_hostname/}" />
+
+<!-- 禁止浏览器初始缩放 -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/skin/style.css"  />
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/skin/responsive.css"  />
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/skin/font-awesome.css"  media="all" />
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/jquery.min.js'></script>
+<script type="text/javascript" src="{dede:global.cfg_templets_skin/}/skin/lazyload.js"></script>
+<!-- IE Fix for HTML5 Tags -->
+<!--[if lt IE 9]>
+<script src="{dede:global.cfg_templets_skin/}/skin/html5.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/skin/css3-mediaqueries.js"></script>
+<script src="{dede:global.cfg_templets_skin/}/skin/PIE_IE678.js"></script>
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/skin/iefix.css"  media="all" />
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/skin/font-awesome-ie7.min.css"  media="all" />
+<![endif]-->
+<!--[if IE 6]>
+<script src="{dede:global.cfg_templets_skin/}/skin/kill-IE6.js"></script>
+<![endif]-->
+</head>
+<body id="wrap" class="home blog" >
+<div id="body-container"> 
+  <!-- head 开始 --> 
+ <!-- 移动导航开始--> 
+{dede:include filename='mobile_nav.htm'/}
+  <!-- 移动导航结束 -->
+
+  <section id="content-container" style="background:#f1f4f9;">
+  <header class="header-wrap" id="nav-scroll">
+  <div class="nav-wrap"> 
+    <!-- 移动按钮 -->
+    <div class="toggle-menu"> <i class="fa fa-bars"></i> </div>
+    <!-- 移动按钮结束 -->
+    <div class="logo"> <a href="/" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}" id="logo" > <img src="{dede:global.cfg_templets_skin/}/skin/logo.png"> </a> </div>
+    <!-- 搜索框 -->
+    <div class="search-btn-click"> <i class="fa fa-search"></i>
+      <div class="header-search-slide">
+        <form method="get" id="searchform-slide" class="searchform" action="/plus/search.php" target="_blank" role="search">
+          <input type="search" class="field" name="q" value="" placeholder="Search" required>
+        </form>
+      </div>
+    </div>
+    <!-- 搜索框结束--> 
+    <!-- 关注我们开始 -->
+    <!-- 关注我们结束--> 
+    <!-- pc导航开始 -->
+   {dede:include filename='pc_nav.htm'/}
+    <!-- pc导航结束 --> 
+  </div>
+</header>
+  <!-- head 结束 -->
+  <div class="hidefixnav"></div>
+
+<!--搜索框和栏目顶部 开始--> 
+<div class="breadcrumbs">
+    <div class="container clr">
+      <div class="header-search">
+        <form method="get" id="searchform" class="searchform" action="/plus/search.php" target="_blank" role="search">
+          <input type="search" class="field" name="q" value="" id="s" placeholder="Search" required="">
+          <button type="submit" class="submit" id="searchsubmit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <div id="breadcrumbs">
+        <h1><i class="fa fa-folder-open"></i> {dede:field.title/}</h1>
+        <div class="breadcrumbs-text"> <a href="/">首页</a>&nbsp;&gt;&nbsp;<a href="{dede:field.typeurl/}">{dede:field.typename/}</a>&gt;{dede:field.title/}
+      </div>
+    </div>
+    <!--搜索框和栏目顶部 结束--> 
+  </div>
+    <!-- 广告开始 -->
+<div id="header-banner"> <a href="http://www.baidu.com" title="百度一下">
+          <img src="{dede:global.cfg_templets_skin/}/skin/ad01.jpg" alt="百度一下"></a> </div>
+    <!-- 广告结束 -->
+
+<div class='main-wrap'>
+    <div id="single-blog-wrap" class="container two-col-container">
+      <div id="main-wrap-left">
+        <div class="content"> 
+
+          <div id="single-meta"> <span class="single-meta-author"><i class="fa fa-user">&nbsp;</i>{dede:field.writer/}</span> <span class="single-meta-time"><i class="fa fa-calendar">&nbsp;</i>{dede:field.pubdate function='strftime("%Y-%m-%d",@me)'/}</span> <span class="single-meta-category"><i class="fa fa-folder-open">&nbsp;</i><a href="{dede:field.typeurl/}">{dede:field.typename/}</a></span> <span class="single-meta-views"><i class="fa fa-fire"></i> 
+            {dede:field.click/}
+            </span> </div>
+            <div id="loopad" class="container"> <a href="http://www.baidu.com" title="百度一下">
+          <img src="{dede:global.cfg_templets_skin/}/skin/ad02.jpg" alt="百度一下"></a> </div>
+          <div class="single-text">{dede:field.body/}</div>
+
+
+          <div class="relatedposts">
+            <h3 class="multi-border-hl"><span>推荐文章</span></h3>
+            <ul>
+              {dede:likearticle row='4' channelid='1' typeid="all"}
+              <li>
+                <div class="relatedposts-inner">
+                  <div class="relatedposts-inner-pic"> <a href="[field:arcurl/]" title="[field:title/]" class="">
+                    <div class="thumb-img"> <img src="[field:picname/]" alt="[field:title/]"> <span><i class="fa fa-plus"></i></span> </div>
+                    </a></div>
+                  <div class="relatedposts-inner-text"> <a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a> </div>
+                </div>
+                <div class="clear"></div>
+              </li>
+              {/dede:likearticle}
+            </ul>
+          </div>
+
+          <p style="padding-top:20px"> <span style="float:left">  {dede:prenext get='pre'/}  </span> <span style="float:right"> {dede:prenext get='next'/}  </span> </p>
+
+         
+        </div>
+
+        <div class="clear"> </div>
+      </div>
+ <!--边栏开始--> 
+ {dede:include filename='right.htm'/}
+           <!-- 边栏 结束 --> 
+    </div>
+</div>
+<div class="clear"> </div>
+  </div>
+  <!-- 广告位开始 -->
+  <div id="bottom-banner"> <a href="http://www.baidu.com" title="百度一下">
+					<img src="{dede:global.cfg_templets_skin/}/skin/ad01.jpg" alt="百度一下"/></a> </div>
+  <!-- 广告位结束 --> 
+  <!-- 友链开始 -->
+{dede:include filename='foot.htm'/}
+<!-- Footer 结束-->
+</section>
+</body>
+</html>

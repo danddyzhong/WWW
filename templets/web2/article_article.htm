@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<link rel='stylesheet' href='/skins/css/style.css' type='text/css' media='all' />
+<link rel="canonical" href="{dede:field.id runphp='yes'}$id=@me;@me='';$url=GetOneArchive($id);@me=$url['arcurl'];{/dede:field.id}"/>
+<style>
+a.keywordlink {
+	color: #0000ff !important;
+}
+</style>
+<!--[if lt IE 9]><script src="js/html5.min.js"></script><![endif]-->
+<style type="text/css">
+.header, .excerpt .cat, .now-page, .pagination span:hover, .pagination ul>li>a:focus {
+	background-color: #C00;
+}
+.excerpt:hover {
+	border-color: #C00;
+}
+.excerpt h2 a:hover {
+	color: #C00;
+}
+#comments h4, #comments2 h4 {
+	border-left-color: #C00;
+}
+#frmSumbit input[type="submit"] {
+	background-color: #C00;
+}
+.excerpt-see-index h2 span {
+	color: #C00;
+}
+.logo-m {
+	background: #C00;
+}
+.excerpt {
+	padding: 20px 20px 20px 255px;
+}
+@media (max-width: 640px) {
+.excerpt {
+	padding: 10px 10px 10px 180px;
+}
+}
+@media (max-width: 480px) {
+.excerpt {
+	padding: 10px 10px 0px 120px;
+}
+}
+@media (max-width: 800px) {
+.header {
+	background-color: transparent;
+	padding: 0;
+}
+}
+</style>
+</head>
+<body class="single">
+{dede:include filename="head.htm"/}
+<section class="container">
+  <div class="content-wrap" style="padding-top: 15px;">
+    <div class="content">
+      <header class="article-header">
+        <h1 class="article-title">{dede:field.title/}</h1>
+      </header>
+      <article class="article-content">{dede:field.body/}</article>
+      <div class="cygswtags title" id="comments2">
+        <ul>
+          {dede:tag row='50' getall='0'}
+          <li><a href="[field:link/]" title="[field:tag /]">[field:tag /]</a></li>
+          {/dede:tag}
+        </ul>
+      </div>
+      <DIV class="ads ads-post ads-post-02"> </DIV>
+      <div class="relates">
+        <div class="title" id="comments">
+          <h4>相关阅读</h4>
+        </div>
+        <ul>
+          {dede:likeart  titlelen=60 row=5}
+          <li class="tuijian554"><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a> <span class="sijian554">[field:pubdate function='strftime("%Y-%m-%d",@me)'/]</span></li>
+          {/dede:likeart}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <aside class="sidebar pc">
+    <dl class="function" id="tishi">
+      <dt class="function_t">关于本站</dt>
+      <dd class="function_c">
+        <div>{dede:global.cfg_jieshao/}</div>
+      </dd>
+    </dl>
+    <dl class="function" id="divPrevious">
+      <dt class="function_t">最近发表</dt>
+      <dd class="function_c">
+        <ul>
+          {dede:arclist  titlelen=42 row=10}
+          <li><a href="[field:arcurl/]">[field:title/]</a></li>
+          {/dede:arclist}
+        </ul>
+      </dd>
+    </dl>
+    <dl class="function">
+      <dt class="function_t">文章信息</dt>
+      <dd class="function_c">
+        <ul style="font-size: 12px;">
+          <li class="breadcrumb" >{dede:field name='position'/}</li>
+          <li>时间：{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</li>
+          <li>阅读：<script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}" type='text/javascript' language="javascript"></script>次</li>
+          <li>{dede:prenext get='pre'/}</li>
+          <li>{dede:prenext get='next'/}</li>
+        </ul>
+      </dd>
+    </dl>
+  </aside>
+</section>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link type="text/css" media="all" href="{dede:global.cfg_templets_skin/}/skin/css/ks.css" rel="stylesheet" />
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="author" content="order by {dede:global.cfg_webname/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/js/jqumin.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/js/scroll.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/js/slid.js'></script>
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/js/script.js'></script>
+</head>
+<body class="home blog">
+{dede:include filename="head.htm"/}
+<nav class="breadcrumb"> {dede:field.position/} </nav>
+<div id="content" class="site-content">
+  <div class="clear"> </div>
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+     
+      <article id="post-6683" class="post-6683 post type-post status-publish format-standard hentry category-wordpress tag-wordpress">
+
+        <header class="entry-header">
+          <h1 class="entry-h1">{dede:field.title/}</h1>
+        </header>
+        <div class="entry-content">
+          <div class="single-content">
+          <div class="ad-pc ad-site">
+            {dede:field.body/}
+          </div>
+        </div>
+
+       {dede:prenext get='pre'/}
+
+       {dede:prenext get='next'/}
+       <footer class="single-footer">
+<ul class="single-meta">
+<li class="comment"></li>
+<li class="r-hide">
+<a href="javascript:pr()" onclick="javascript:this.innerHTML=(this.innerHTML=='隐藏边栏'?'显示边栏':'隐藏边栏');">隐藏边栏</a></li></ul>
+<ul id="fontsize">A+</ul>
+ </footer>
+          <div class="clear"></div>
+        </div></article>
+
+        <div id="single-widget">
+      <aside id="related_post-7" class="widget widget_related_post">
+        <h3 class="widget-title">
+          <div class="s-icon"> </div>
+          最新热点新闻</h3>
+        <div id="related_post_widget">
+          <ul>
+          {dede:arclist titlelen=80  orderby ='rand' row='14'}
+          <li><span class="li-icon li-icon-[field:global.autoindex/]">[field:global.autoindex/]</span><a href="[field:arcurl/]">[field:title/]</a></li>
+          {/dede:arclist}
+ 
+          </ul>
+        </div>
+        <div class="clear"> </div>
+      </aside>
+      <aside id="hot_comment-17" class="widget widget_hot_comment">
+        <h3 class="widget-title">
+          <div class="s-icon"> </div>
+          网站最新资讯</h3>
+        <div id="hot_comment_widget">
+          <ul>
+            {dede:arclist titlelen=80  orderby ='rand' row='14'}
+            <li><span class="li-icon li-icon-[field:global.autoindex/]">[field:global.autoindex/]</span><a href="[field:arcurl/]">[field:title/]</a></li>
+            {/dede:arclist}
+          </ul>
+        </div>
+        <div class="clear"> </div>
+      </aside>
+      <div class="clear"> </div>
+    </div>
+    </main>
+  </div>
+
+{dede:include filename="article_right.htm"/}
+  <div class="clear"></div>
+</div>
+{dede:include filename='foot.htm'/}
+</body>
+</html>

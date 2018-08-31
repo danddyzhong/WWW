@@ -1,0 +1,25 @@
+<div id="sidebar" class="widget-area">
+
+    <aside id="hot_commend-24" class="widget widget_hot_commend"> <b>&nbsp;&nbsp; <a href="">热点新闻</a></b>
+      <div id="message" class="message-widget">
+        <ul>
+        {dede:arclist titlelen='80' orderby ='click' row='10'}
+        <li><span class="li-icon li-icon-[field:global.autoindex/]">[field:global.autoindex/]</span><a href="[field:arcurl/]">[field:title/]</a></li>
+        {/dede:arclist}
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </aside>
+     <aside id="hot_commend-24" class="widget widget_hot_commend"> <b>&nbsp;&nbsp; <a href="">推荐阅读</a></b>
+      <div id="message" class="message-widget">
+        <ul>
+          {dede:arclist titlelen='80' flag='c' row='10'}
+        <li><span class="li-icon li-icon-[field:global.autoindex/]">[field:global.autoindex/]</span><a href="[field:arcurl/]">[field:title/]</a></li>
+        {/dede:arclist}
+        </ul>
+      </div>
+      <div class="clear"></div>
+    </aside>
+    
+    <div class="sidebar-roll"></div>
+  </div>

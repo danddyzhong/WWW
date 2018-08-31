@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="" />
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/templets/cc/style/index.css" />
+</head>
+<body id="css_list">
+{dede:include filename="head.htm"/}
+</div>
+<div id="xxx"></div>
+<div id="allbg">
+  <div id="all">
+    <div id="middle">
+      <div id="xgi">
+        <h6><a href='/'>发型</a>{dede:field name='position'/} </h6>
+        <dl class="joke">
+          {dede:list pagesize='15' titlelen='50'}
+          <div class="one">
+            <dt><a href="[field:arcurl/]"><img alt="[field:title function='html2text(@me)'/]" src="[field:litpic/]" /></a></dt>
+            <dd><a href="[field:arcurl/]">[field:title/]</a>
+              <p>[field:description/]... <a href="[field:arcurl/]">[阅读全文]</a> <span>栏目：[field:typelink/]</span></p>
+            </dd>
+          </div>
+          {/dede:list}
+        </dl>
+        <div id="pa1">
+          <div class="dede_pages">
+            <ul class="pagelist">
+              {dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}
+            </ul>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div class="side1">
+      <h4>热门排行 <img src="{dede:global.cfg_templets_skin/}/templets/cc/style/h.gif" /></h4>
+      <ul>
+        {dede:arclist  orderby='rand' row=12}
+        <li><a href="[field:arcurl/]">[field:title/]</a></li>
+        {/dede:arclist}
+      </ul>
+      <div class="gg300"> <img src="{dede:global.cfg_templets_skin/}/templets/cc/style/g1.png"/></div>
+      <div id="float"> <img src="{dede:global.cfg_templets_skin/}/templets/cc/style/g2.png"/> <img src="{dede:global.cfg_templets_skin/}/ad/2w.png" alt="手机版" /> </div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>
