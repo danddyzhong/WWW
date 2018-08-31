@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo $cfg_soft_lang; ?>">
+<title>更改文章</title>
+<style type="text/css">
+<!--
+body {
+	background-image: url(images/allbg.gif);
+}
+-->
+</style>
+<link href="css/base.css" rel="stylesheet" type="text/css">
+<link href='css/tb-box.css' rel='stylesheet' type='text/css' />
+<script language="javascript" src="../includes/js/dedeajax2.js"></script>
+<script type="text/javascript" src="js/calendar/calendar.js"></script>
+<script language="javascript" src="js/main.js"></script>
+<script type="text/javascript"src="js/handlers.js"></script>
+<script type="text/javascript" src="../includes/js/swfupload/swfupload.js"></script>
+<script language="javascript" src="../includes/js/jquery/jquery.js"></script>
+<script language="javascript" src="../includes/js/jquery/ui.core.js"></script>
+<script language="javascript" src="../includes/js/jquery/ui.draggable.js"></script>
+<script language='javascript' src='js/tb-box.js'></script>
+<style>
+.cke_dialog{
+	top:60px !important;
+}
+</style>
+<script language="javascript">
+<!--
+var swfu = null;
+var arctype = 'article';
+function checkSubmit()
+{
+}
+
+
+
+
+window.onload = function ()
+{
+	swfu = new SWFUpload(
+	{
+		// Backend Settings
+		upload_url: "swfupload.php",
+		post_params: {"PHPSESSID": "<?php echo session_id(); ?>", "dopost" : "", "arctype" : arctype},
+
+		// File Upload Settings
+		file_size_limit : "2 MB",	// 2MB
+		file_types : "*.jpg; *.gif; *.png",
+		file_types_description : "选择 JPEG/GIF/PNG 格式图片",
+		file_upload_limit : "0",
+
+		file_queue_error_handler : fileQueueError,
+		file_dialog_complete_handler : fileDialogComplete,
+		upload_progress_handler : uploadProgress,
+		upload_error_handler : uploadError,
+		upload_success_handler : uploadSuccess,
+		upload_complete_handler : uploadComplete,
+
+		button_image_url : "../images/SmallSpyGlassWithTransperancy_17x18.png",
+		button_placeholder_id : "spanButtonPlaceholder",
+		button_width: '100%',
+		button_height: 26,
+		button_text : '<div class="button" style="background-color:#E5F1CF; height:26px; text-align:center; line-height:26px">上传图片(可多选)</div>',
+		button_text_style : '',
+		button_text_top_padding: 0,
+		button_text_left_padding: 10,
+		button_window_mode: SWFUpload.WINDOW_MODE.TRANSPARENT,
+		button_cursor: SWFUpload.CURSOR.HAND,
+		
+		// Flash Settings
+		flash_url : "../images/swfupload/swfupload.swf",
+
+		custom_settings : {
+			upload_target : "divFileProgressContainer"
+		},
+		
+		// Debug Settings
+		debug: false
+	});
+};
+
+function addtoEditOld(picurl,pid)
+{
+	var picTitle = jQuery('input[name="picinfook'+pid+'"]').val();
+	var picHTML = '<img src="'+picurl+'" alt="'+picTitle+'"/>';
+	CKEDITOR.instances.body.insertHtml(picHTML);
+}
+
+//删除已经上传的图片
+function delAlbPic(pid){
+	// 同步删除编辑器中插入的图片
+	jQuery("#__tmpbody").html();
+	jQuery.get('swfupload.php?dopost=addtoedit&id=' + pid, function(data)
+	{
+		var iptbody = CKEDITOR.instances.body.getData();
+		jQuery("#__tmpbody").html(iptbody);
+		jQuery("#__tmpbody").find('img').each(function()
+		{
+			if(jQuery(this).attr('src') == data)
+			{
+				//alert(data);
+				jQuery(this).remove();
+			}
+		});
+		CKEDITOR.instances.body.setData(jQuery("#__tmpbody").html()); 
+		jQuery("#__tmpbody").html();
+		var tgobj = $Obj('albCtok'+pid);
+		var myajax = new DedeAjax(tgobj);
+		myajax.SendGet2('swfupload.php?dopost=del&id='+pid);
+		$Obj('thumbnails').removeChild(tgobj);
+	});
+}
+
+function addtoEdit(pid)
+{
+	jQuery.get('swfupload.php?dopost=addtoedit&id=' + pid, function(data)
+	{
+		var picTitle = jQuery('input[name="picinfook'+pid+'"]').val();
+		var picHTML = '<img src="'+data+'" alt="'+picTitle+'"/>';
+		CKEDITOR.instances.body.insertHtml(picHTML);
+	});
+}
+
+//删除已经上传的图片(编辑时用)
+function delAlbPicOld(picfile, pid){
+	var iptbody = CKEDITOR.instances.body.getData();
+	jQuery("#__tmpbody").html(iptbody);
+	jQuery("#__tmpbody").find('img').each(function()
+	{
+		if(jQuery(this).attr('src') == picfile)
+		{
+			//alert(data);
+			jQuery(this).remove();
+		}
+	});
+	CKEDITOR.instances.body.setData(jQuery("#__tmpbody").html()); 
+	jQuery("#__tmpbody").html();
+	
+	var tgobj = $Obj('albold'+pid);
+	var myajax = new DedeAjax(tgobj);
+	myajax.SendGet2('swfupload.php?dopost=delold&picfile='+picfile);
+	$Obj('thumbnailsEdit').removeChild(tgobj);
+}
+-->
+</script>
+</head>
+<body topmargin="8">
+<form name="form1" action="member_page.php" enctype="multipart/form-data" method="post" onSubmit="return checkSubmit();">
+  <input type="hidden" name="dopost" value="save" />
+  <input type="hidden" name='id' value="<?php echo $row['id'];  ?>" />
+  <table width="98%"  border="0" align="center" cellpadding="2" cellspacing="2" id="needset" style="border:1px solid #cfcfcf;background:#ffffff;">
+    <tr>
+      <td height="24" colspan="2" bgcolor="#F9FCEF" class="bline2">&nbsp;会员中心页面：</td>
+    </tr>
+    <tr>
+      <td width="100%"><?php  SpGetEditor("body",$row['body'],450); ?></td>
+      <td width="255" align="center" valign="top" bgcolor="#FFFFCC" id="mPic" style="display:none"><div class="multipic">
+          <div style="display: block;background-color:#E5F1CF; height:26px"> <span id="spanButtonPlaceholder"></span> </div>
+          <div id="divFileProgressContainer"></div>
+          
+          
+          <div id="thumbnailsEdit" style="width: 254px; height: 535px; background-color: rgb(255, 255, 255); overflow-y: scroll;">
+         
+            <div class="albCt" id="albold<?php echo $trow['aid'];?>"><img width="120" onclick="addtoEditOld('<?php echo $trow['url'];?>',<?php echo $trow['aid'];?>)" src="<?php echo $trow['url'];?>" style="cursor:pointer"><a href="javascript:delAlbPicOld('<?php echo $trow['url'];?>', <?php echo $trow['aid'];?>)">[删除]</a>
+              <div style="margin-top:10px">注释：
+                <input type="text" style="width:100px;" value="<?php echo $trow['title'];?>" name="picinfook<?php echo $trow['aid'];?>">
+              </div>
+            </div>
+            <div id="thumbnails"></div>
+          </div>
+          
+        </div></td>
+    </tr>
+  </table>
+
+ 
+
+  <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#F9FCEF" style="border:1px solid #cfcfcf;border-top:none;">
+    <tr>
+      <td height="35"><table width="100%" border="0" cellspacing="1" cellpadding="1">
+          <tr>
+            <td width="17%">&nbsp;</td>
+            <td width="83%"><table width="214" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td width="115"><input name="imageField" type="image" src="images/button_ok.gif" width="60" height="22" class="np" border="0" style="cursor:pointer"></td>
+                  <td width="99"><img src="images/button_reset.gif" width="60" height="22" border="0" onClick="location.reload();" style="cursor:pointer"></td>
+                </tr>
+              </table></td>
+          </tr>
+        </table></td>
+    </tr>
+  </table>
+  <script language='javascript'>InitPage();</script>
+</form>
+</body>
+</html>
