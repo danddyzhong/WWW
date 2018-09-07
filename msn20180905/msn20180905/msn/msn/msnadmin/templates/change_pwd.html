@@ -1,0 +1,41 @@
+<html><head>
+<meta charset="utf-8">
+<title>后台首页</title>
+<link href="css/root.css" rel="stylesheet">
+<style type="text/css">
+	body{background: #f5f5f5;}
+	.index-slider-tools {background-color:#fff;text-align:center;padding:15px 0px;}
+	.index-slider-tools:not(:first-child){margin-top:-10px;}
+	.index-slider-tools li {list-style:none;}
+	.index-slider-tools li a .fa{display:block; color:#399BFF; transition:.2s}
+	.index-slider-tools li a .fa:hover{color:#23527C}
+	.index-slider-tools li:not(:last-child){ border-right:1px dashed #E1E1E1;}
+	.index-slider-tools li h5{ font-size:14px;}
+	.index-new-article ul {padding-left:0px;}
+	.index-new-article ul li{ list-style:none;}
+	.index-new-article ul li:not(:last-child){ border-bottom:1px dashed #E1E1E1}
+	.index-new-article ul li a{ display:block;padding:10px 0px;}
+	.layout{width:95%;margin:0px auto;}
+	.mdiv,.mtb{width:100%;}
+	.mtb td{padding:10px;border: 1px solid #ccc;}
+	.pwd{float:left;}
+</style>
+</head>
+<body>
+<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 layout">
+	<div class="mdiv">
+		<form action='change_pwd.php'  method="post">
+		<input name="changepwd" type="hidden" value="changepwd"/>
+		<input name="pwd" type="text" class="pwd"/>
+		<div><input type="submit" value="提交" class="button"/></div>
+		</form>
+	</div>
+
+</div>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/bootstrap-select/bootstrap-select.js"></script>
+<script type="text/javascript" src="js/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+</body></html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我的网站-佳园网络企业建站系统 V1_UTF8</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/root.css" rel="stylesheet">
+<style type="text/css">
+	.container-widget iframe#main{min-height:1500px;}
+</style>
+</head>
+<body>
+<div class="loading">
+	<img src="img/loading.gif" alt="loading-img">
+</div>
+<div id="top" class="clearfix">
+	<div class="applogo">
+		<a href="index.php" class="logo">企业网站后台管理</a>
+	</div>
+	<a href="#" class="sidebar-open-button"><i class="fa fa-bars" style="
+    color: #f7f7f7;
+"></i></a>
+	<a href="#" class="sidebar-open-button-mobile" style="
+    color: #f7f7f7;
+"><i class="fa fa-bars" ></i></a>
+	<ul class="topmenu" style="float:right;">
+		<li><a href="login_out.php" target="_top">退出</a></li>
+	</ul>
+</div>
+<!-- 导航开始 -->
+<div class="sidebar clearfix">
+	<ul class="sidebar-panel nav" style="border-bottom:none">
+		<li><a href='index_body.php' target='main'><span class="icon color15"><i class="fa fa-home"></i></span>后台首页</a></li>
+		<li><a href="#"><span class="icon color7"><i class="fa fa-file-text-o"></i></span>常用操作<span class="caret"></span></a>
+		<ul>
+            <li><a href='web_index.php' target='main'>首页管理</a></li>
+            <li><a href="member_info.php" target="main">手机注册信息</a></li>
+            <li><a href="member_page.php" target="main">会员中心页面管理</a></li>
+            <li><a href="change_pwd.php" target='main'>更改密码</a></li>
+		</ul>
+		</li>
+		
+	</ul>
+</div>
+<div class="content">
+	<div class="container-widget" id="dcMain">
+		<iframe width="100%" src="index_body.php" name="main" id="main" scrolling="auto" frameborder="0" onload="setIframeHeight(this)">
+		</iframe>
+	</div>
+	<div class="row footer">
+		<div class="col-md-6 text-left">
+      Copyright &copy; 
+			<a target="_blank" href="http://www.baiyoujia.cn">后台管理系统</a> All rights reserved.
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/bootstrap-select/bootstrap-select.js"></script>
+<script type="text/javascript" src="js/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+<script type="text/javascript">
+function setIframeHeight(iframe) {
+if (iframe) {
+var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+if (iframeWin.document.body) {
+iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+}
+}
+};
+window.onload = function () {
+setIframeHeight(document.getElementById('main'));
+};
+</script>
+</body>
+</html>

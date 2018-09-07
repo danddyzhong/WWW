@@ -1,0 +1,109 @@
+.content{
+	width:75%;
+	margin:0px auto;
+	border:1px solid #ccc;
+}
+.tb_con{
+	width:100%;
+	height:auto;
+}
+.reg{
+	width:100%;
+}
+.form_body{
+	width:85%;
+	margin: 0px auto;
+}
+.tip_title{
+	padding: 20px;
+	color: #1654de;
+    font-size: 20px;
+    text-align: center;
+}
+.le_tit{
+	padding: 5px 0px;
+	width: 20%;
+    float: left;
+}
+.ri_tit{
+	width: 80%;
+    margin: 0px auto;
+    float: right;
+    position: relative;
+	padding:5px 0px;
+
+}
+.ri_tit .phone_number,.pwd,.yzm,.scform_srchtxt{
+	width: 30%;
+    margin: 0px auto;
+    line-height: 30px;
+    height: 30px;
+    border: 1px solid #DBDBDB;
+    padding: 0px 5px;
+    font-size: .6rem;
+    outline: medium;
+}
+.bt{
+	padding: 10px;
+	text-align:center;
+}
+.clear{
+	clear:both;
+}
+.button{
+	height: 30px;
+    line-height: 30px;
+    padding: 0px 11px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    background: #FF5050;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    -webkit-appearance: none;
+    margin-right: 30px;
+}
+.button:hover{
+	background: #A30A0A;
+    text-decoration: none;
+}
+.button2{
+	background:#00AAFF;
+}
+.reg_t{
+	width:50px;
+	height:25px;
+	float:left;
+	cursor: pointer;
+}
+.log_t{
+	width:50px;
+	height:25px;
+	float:left;
+	margin-left:20px;
+	cursor: pointer;
+}
+.log{
+	display: none;
+}
+.active{
+	border-bottom: 2px solid red;
+}
+
+@media only screen and (max-width: 780px){
+	.content {
+		width:100%;
+	}
+	.form_body{
+		width:98%;
+	}
+	.ri_tit .phone_number, .pwd, .yzm, .scform_srchtxt{
+		width:70%;
+	}
+	.le_tit{width:25%;}
+	.ri_tit{width:70%;}
+}
+
