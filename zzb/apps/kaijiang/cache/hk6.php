@@ -1,0 +1,2 @@
+<?php 
+ $data='{"errorCode":0,"message":"操作成功","result":{"businessCode":0,"data":{"preDrawTime":"2018-09-11 21:46:22","preDrawIssue":2018103,"drawIssue":2018104,"drawTime":"2018-09-13 21:30:00","preDrawCode":"38,45,47,31,49,36,37","sumTotal":283,"color":[2,1,3,3,2,3,3],"chineseZodiac":[10,3,1,5,11,12,11],"serverTime":"2018-09-13 14:33:24","fiveElements":[2,3,2,2,1,3,3],"type":4},"message":"操作成功"}}';

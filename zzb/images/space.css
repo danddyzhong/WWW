@@ -1,0 +1,31 @@
+@charset "utf-8";
+A { PADDING-BOTTOM: 0px; BORDER-RIGHT-WIDTH: 0px; MARGIN: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; TEXT-DECORATION: none; PADDING-TOP: 0px }
+body { background-color: #e9f4e6; color: #5b5f6b; margin:0px; font-size:12px; }
+.head_wrap { MARGIN-BOTTOM: 10px; BACKGROUND: url(bg_head.gif) repeat-x; HEIGHT: 75px }
+.head { MIN-WIDTH: 910px; OVERFLOW-Y: hidden; BACKGROUND: url(bg_head.jpg) no-repeat center top; HEIGHT: 75px; }
+#head_box { POSITION: relative; WIDTH: 910px; HEIGHT: 75px; margin: 0px auto; }
+#head_box .head_user { POSITION: absolute; COLOR: #fffbe6; TOP: 10px; RIGHT: 0px }
+#head_box .head_user A { MARGIN: 0px 2px; COLOR: #fffbe6 }
+#main { margin: 0px auto; margin-top:10px;  WIDTH: 908px;}
+.index {BACKGROUND: url(bg_login2_a0a122_200809100001.jpg) #fff no-repeat 0px 0px;HEIGHT: 435px; BORDER: #afda8c 1px solid; }
+.space {}
+.login_box .login_iframe { WIDTH: 370px; HEIGHT: 330px }
+.login_box { BORDER-RIGHT: #aed98b 1px solid; BORDER-TOP: #aed98b 1px solid; MARGIN-TOP: 30px; DISPLAY: inline; BACKGROUND: #fff; FLOAT: right; BORDER-LEFT: #aed98b 1px solid; WIDTH: 370px; MARGIN-RIGHT: 20px; BORDER-BOTTOM: #aed98b 1px solid; HEIGHT: 380px; _width: 372px; _height: 372px }
+.login_box H2 { MARGIN-TOP: 10px; FONT-SIZE: 14px; BACKGROUND: url(li.gif) repeat-x left -32px; MARGIN-BOTTOM: 5px; MARGIN-LEFT: 15px; WIDTH: 340px; HEIGHT: 30px }
+.login_box H2 SPAN { DISPLAY: block; PADDING-LEFT: 30px; BACKGROUND: url(li.gif) no-repeat left top; LINE-HEIGHT: 24px; HEIGHT: 30px }
+.login_info { MARGIN-TOP: 80px; MARGIN-LEFT: 280px; WIDTH: 230px; POSITION: relative }
+.login_info li { BACKGROUND: url(li.gif) no-repeat left -73px; TEXT-INDENT: 18px; HEIGHT: 30px; line-height:30px; overflow: hidden; list-style-type: none; list-style-position: outside; }
+.foot { PADDING-RIGHT: 0px; MARGIN-TOP: 10px; PADDING-LEFT: 0px; PADDING-BOTTOM: 4px; COLOR: #666666; LINE-HEIGHT: 1.2; PADDING-TOP: 4px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; TEXT-ALIGN: center }
+.map { DISPLAY: inline; FLOAT: left; }
+.map .bg_map_l { background:url(bg_nav_left.png) no-repeat; MARGIN-TOP: 38px; WIDTH: 4px; FLOAT: left; HEIGHT: 34px; OVERFLOW: hidden; _background-image: none }
+.map .bg_map_r { background:url(bg_nav_right.png) no-repeat; MARGIN-TOP: 38px; WIDTH: 4px; FLOAT: left; HEIGHT: 34px; OVERFLOW: hidden; _background-image: none }
+#head_box .logo { WIDTH: 175px; HEIGHT: 75px; OVERFLOW: hidden; float:left; }
+#head_box .logo IMG { DISPLAY: none }
+#head_box .logo A { WIDTH: 175px; DISPLAY: block; HEIGHT: 72px }
+#head_box .map_ul { MARGIN-TOP: 38px; FLOAT: left; HEIGHT: 34px; _background-image: none }
+#head_box .map_ul LI { Z-INDEX: 1; POSITION: relative; DISPLAY: inline; FLOAT: left; FONT-SIZE: 14px; FONT-WEIGHT: bold; background: url(bg_nav_mid.png) no-repeat; }
+#head_box .map_ul LI A { PADDING-BOTTOM: 0px; LINE-HEIGHT: 34px; PADDING-LEFT: 22px; PADDING-RIGHT: 22px; DISPLAY: block; HEIGHT: 34px; CURSOR: pointer; PADDING-TOP: 0px }
+#head_box .map_ul LI .this_page { Z-INDEX: 10; POSITION: absolute; WIDTH: 14px; HEIGHT: 7px; MARGIN-LEFT: -7px; TOP: 28px; LEFT: 50%; BACKGROUND: url(icon_selected.gif) no-repeat 0px 0px }
+
+#main_left{ float:left; width:200px;}
+#main_right{float: right; width:700px;}

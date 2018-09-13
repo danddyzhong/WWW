@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+body{font-family:'Microsoft YaHei UI', 'Microsoft YaHei', SimSun, 'Segoe UI', Tahoma, Helvetica, Sans-Serif;}
+li{float:left;padding:0;margin:0;}
+a{font-size:inherit;text-decoration: none; color:#CCC}
+i,em,b{font-size: inherit;font-style: normal;font-weight: inherit;}
+
+ul,li{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+.mainBg{background: url(mainBg.jpg) no-repeat top center #f0ffff;width:100%; position:absolute; bottom:150px; height:100%; top:0px;}
+.logoBar{padding:20px 0;}
+.logo a{background: url(logo.png) no-repeat;width:131px;height:41px;display: inline-block;}
+.regBtn{color:#ee6229;width:114px;height:36px;border: 1px solid #ee6229;font-size:14px;font-weight: bold;display: inline-block;line-height: 36px;text-align: center;}
+.regBtn:hover{color:#fff;background: #ee6229;}
+
+/*社区登录页*/
+.loginBox{width:1020px;margin: 0 auto;}
+.loginMain{background: url(snsBg.png) left top no-repeat;width:980px;padding:0 20px;}
+.loginBt{background: url(snsBg.png) left bottom no-repeat;height:50px;width:1020px;}
+.fLinks{background: #444;color:#aaa;font-size: 12px;padding:10px 0;}
+.fLinks a{color:#aaa;}
+.fLinks a:hover{color:#fff;}
+.fLinks li{padding-right: 10px;}
+.fLinks ul{width:930px;}
+.copy{padding:25px 0;background: #333;font-size: 12px;color:#aaa;line-height: 1.8em;}
+.loginLeft{border-right: 1px solid #eee;width:660px;margin:20px;padding-right:30px;}
+.loginForm{padding-top: 30px;padding-bottom:10px;color:#666;}
+.loginForm .oneLine{padding: 10px 0 8px;}
+.loginForm .code{width:150px;} 
+.loginForm .verifycode{height:36px;width:132px;vertical-align:middle;}
+.loginTitle{font-size: 14px;font-weight: bold;}
+.loginTitle p{background: url(titleBg.png) no-repeat;height: 27px;width:302px;}
+.loginTitle .userLogin{background-position: 0 0;}
+.loginTitle .userReg{background-position: 0 -27px;}
+.loginTitle .userForget{background-position: 0 -54px;}
+.loginTitle .toReg{background-position: -319px 0;width:162px;}
+.loginTitle .toLogin{background-position: -319px -27px;width:162px;}
+.loginTitle .toMibao{background-position: -319px -54px;width:162px;}
+.loginTitle .applyRoom{background-position: 0 -81px;width:280px;}
+.itemName{width:60px;display:inline-block;text-align:right;}
+.star{width:20px;display: inline-block;color:#f34c58;text-align: center;}
+.loginForm input{width:286px;border:1px solid #CCC;height:20px;padding:7px;vertical-align:middle;}
+.tishi i{background: url(tishi.png) no-repeat;height:16px;padding-left:20px;display: inline-block;line-height: 16px;margin-left:5px;}
+.tishi i.cuo{background-position: 0 -16px;color:#f34c58;}
+.tishi i.dui{background-position: 0 0;color:#9fc174;}
+.tishi i.shua{background-position: 0 -32px;}
+.trans03{-webkit-transition:all 0.3s ease-in-out;-moz-transition:all 0.3s ease-in-out;-o-transition:all 0.3s ease-in-out;transition:all 0.3s ease-in-out;}
+.trans15{-webkit-transition:all 0.15s ease-in-out;-moz-transition:all 0.15s ease-in-out;-o-transition:all 0.15s ease-in-out;transition:all 0.15s ease-in-out;}
+.loginBtn{background:#41aefa;height:48px;width:302px;color:#fff;font-size:16px;font-weight:bold;text-align: center;line-height: 48px;display: inline-block;}
+.loginBtn:hover{background:#1f8cd8;}
+.loginBtn2{color:#41aefa;width:114px;height:36px;border: 1px solid #41aefa;font-size:14px;font-weight: bold;display: inline-block;line-height: 36px;text-align: center;}
+.loginBtn2:hover{color:#fff;background: #41aefa;}
+.regBtn{color:#ee6229;width:114px;height:36px;border: 1px solid #ee6229;font-size:14px;font-weight: bold;display: inline-block;line-height: 36px;text-align: center;}
+.regBtn:hover{color:#fff;background: #ee6229;}
+.regBtn2{background:#ee6229;height:48px;width:302px;color:#fff;font-size:16px;font-weight:bold;text-align: center;line-height: 48px;display: inline-block;}
+.regBtn2:hover{background:#d54206;}
+.loginForm .checkbox{height:14px;width:14px;border:#ccc solid 1px;outline: none;padding:0;}
+.loginForm .radio{height:14px;width:14px;border:none;outline: none;padding:0;}
+a.forgot{color:#6ba7d1;}
+a.forgot:hover{color:#1f8cd8;}
+.loginRight{margin:40px 0 0 30px;width:162px;}
+.roomLogin{font-size: 12px;display: none;}
+.roomLogin input{width:200px;border:1px solid #CCC;height:14px;padding:5px;}
+.roomLogin .code{width:110px;}
+.roomLogin .verifycode{height:26px;width:86px;}
+.roomLogin .oneLine{padding: 6px 0 6px;}
+.roomLogin .loginLeft{width:500px;margin:0 20px 20px 0;padding-right:20px;}
+.roomLogin .loginForm{padding-top: 0;}
+.roomLogin .loginRight{margin-top: 0 ;width:100px;}
+.roomLogin .regBtn2, .roomLogin .loginBtn{width:212px;height:34px;font-size: 14px;line-height: 34px;}
+.roomLogin .loginBtn2, .roomLogin .regBtn{width:78px;height:24px;line-height: 24px;font-size: 12px;}
+.roomLogin .loginForm{padding-bottom: 0;}
+.roomLogin .loginLeft{margin-left:0px;margin-bottom:0px;}
+.roomLogin .tab_menu{padding-top: 0 !important;}
+.roomLogin .tab_menu input{width:16px;}
+.ie7LoginWidth{width:302px;}
+.ie7LoginSmall{width:212px;}
+.Mibao .loginLeft{width: 620px;}
+.selectBox{border:1px solid #ccc;width:300px;height:34px;clip:rect(0px,181px,18px,0px);overflow:hidden;position: relative;top:12px;*+border:none;}
+.selectBox select{position:relative;left:0px;top:4px;font-size:14px;width:300px;line-height:30px;color:#666;border:none;outline:none;} 
+.selectBox option{height:34px;line-height:34px;}
+.mibaoChoice .tab_menu{font-size: 14px;color:#444;padding:30px 0 0 86px;}
+.mibaoChoice .loginForm{padding-top: 0;}
+.snsSuccess{width:600px;margin: 0 auto;padding:120px 0;}
+.snsSuccess h1{font-size: 26px;font-weight: bold;color:#666;}
+.tishiText{width:480px;}
+.success{background: url(jieguo.png) no-repeat;height:90px;width: 90px;}
+.error{background: url(jieguo.png) no-repeat -90px 0;height:90px;width: 90px;}
+.roomLogin .selectBox{height:24px;width: 210px;top:7px;}
+.roomLogin select{position:relative;left:0px;top:2px;font-size:12px;width:210px;line-height:24px;color:#666;border:none;outline:none;} 
+.roomLogin option{height:24px;line-height:24px;}
+.roomLogin .snsSuccess{padding:20px 0;}
+.roomLogin .tiyan{top:8px;right:-78px;}
+.tiyan{position: absolute;top:12px;right:-84px;color:#6ba7d1;font-weight: bold;}
+.tiyan:hover{text-decoration: underline;color:#1f8cd8;}
+.qq_login{background:url(union_login.png) no-repeat 0 0;width:102px;height:24px;display:inline-block;}
+.qq_login:hover{background-position:0 -30px;}
+.weibo_login{background:url(union_login.png) no-repeat -120px 0;width:102px;height:24px;display:inline-block;}
+.weibo_login:hover{background-position:-120px -30px;}
+.footer{width:100%;}

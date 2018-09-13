@@ -1,0 +1,10 @@
+@charset "utf-8";
+body{ 
+	font:"宋体,Verdana, Arial";
+	font-size:12px;
+	background: #ffffff;
+	margin:0;
+	text-align:left;
+	FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+}
+#head_box { OVERFLOW-Y: hidden; MIN-WIDTH: 910px; BACKGROUND: url(bg_head.jpg) #bce275 no-repeat center top; HEIGHT: 75px; margin-bottom:2px;}

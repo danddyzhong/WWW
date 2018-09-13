@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ckplayer简单调用演示</title>
+
+</head>
+
+<body>
+//YY代码
+<embed src="http://yy.com/s/30451//yyscene.swf" quality="high" width="520" height="390" align="middle" allowscriptaccess="never" allowfullscreen="true" mode="transparent" wmode="transparent" type="application/x-shockwave-flash">
+
+<br><br>
+rmtp、hls直播 （奥点云）
+<div id="a1"></div>
+<script type="text/javascript" src="/ckplayer/ckplayer.js" charset="utf-8"></script>
+<script type="text/javascript">
+    var flashvars={
+        f:'rtmp://4285.lssplay.aodianyun.com/jinlazhu/stream',
+        c:0,
+        p:1
+    };
+    var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
+    var video=['http://4285.lssplay.aodianyun.com/jinlazhu/stream.m3u8'];
+    CKobject.embed('/ckplayer/ckplayer.swf','a1','ckplayer_a1','520','390',false,flashvars,video,params);
+</script>
+</body>
+</html>

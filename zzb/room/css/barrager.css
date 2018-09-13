@@ -1,0 +1,14 @@
+.barrage { position: fixed; bottom: 70px; right: -500px; display: inline-block; width: 500px; z-index: 99999 }
+.barrage_box { background-color: rgba(0,0,0,.6); padding-right: 8px; display: inline-block; border-radius: 5px; transition: all .3s; position: relative }
+.barrage_box:before { content: ""; width: 0; height: 0; overflow: hidden; border-width: 6px; border-style: solid; border-color: transparent; border-right-color: rgba(0,0,0,.6); position: absolute; left: -12px; top: 8px; }
+.barrage_box .portrait { display: inline-block;width: 35px; height: 35px; border-radius: 50%; overflow: hidden; position: absolute; left: -45px; border:2px solid #FFF; background:#FFF }
+.barrage_box .portrait img { width: 100%; height: 100%; }
+.barrage_box div.p { padding: 14px; }
+.barrage_box div.p a { margin-right: 2px; font-size: 14px; color: #fff; line-height: 20px; margin-left: 18px; }
+.barrage_box div.p a:hover {  }
+.barrage_box .close { visibility: hidden; opacity: 0; text-align: center; width: 25px; height: 25px; margin-left: 20px; border-radius: 50%; background: #fff; margin-top: 8px; background-image: url(../images/close.png); position: absolute; right: -10px; top: -15px; transition: all .3s; }
+.barrage_box:hover .close { visibility: visible; opacity: 1; }
+.barrage_box .close a { display: block; }
+.barrage_box .close .icon-close { font-size: 14px; color: rgba(255,255,255,.5); display: inline-block; margin-top: 5px; }
+.barrage .z { float: left !important; }
+.barrage a { text-decoration: none; }

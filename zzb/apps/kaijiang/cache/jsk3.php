@@ -1,0 +1,2 @@
+<?php 
+ $data='{"errorCode":0,"message":"操作成功","result":{"businessCode":0,"data":{"preDrawCode":"2,3,6","drawIssue":180913037,"drawTime":"2018-09-13 14:39:00","preDrawTime":"2018-09-13 14:29:00","preDrawIssue":180913036,"drawCount":36,"sumNum":11,"sumBigSmall":0,"sumSingleDouble":0,"firstSeafood":2,"secondSeafood":3,"thirdSeafood":6,"frequency":"","lotCode":10007,"iconUrl":"http://webapp.1680180.com/images/icon/3x/jsks@3x.png","shelves":0,"groupCode":5,"lotName":"江苏快3","totalCount":82,"serverTime":"2018-09-13 14:33:24","index":100},"message":"操作成功"}}';

@@ -1,0 +1,2 @@
+<?php die('forbidden'); ?>
+{"appid":"101413179","appkey":"1fe71b0244c449d26fe395663c61d4a2","callback":"http://vip.ppchat.org/oauth/qq/callback.php","scope":"get_user_info","errorReport":true,"storageType":"file","host":"localhost","user":"root","password":"root","database":"test"}

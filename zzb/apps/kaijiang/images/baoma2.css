@@ -1,0 +1,53 @@
+html { overflow-y:scroll}
+*{word-wrap:break-word;}
+body{  font-weight: normal;}
+body,input,button,select,textarea{font:12px/1.5 'Microsoft Yahei','Simsun'; color:#000;}
+textarea{resize:none;}body,ul,ol,li,dl,dd,p,h1,h2,h3,h4,h5,h6,form,fieldset,.pr,.pc{margin:0;padding:0;}
+table{empty-cells:show;border-collapse:collapse;}caption,th{text-align:left;font-weight:400;}
+ul li,.xl li{list-style:none;}h1,h2,h3,h4,h5,h6{font-size:1em;}em,cite,i{font-style:normal;}
+a{color:#333;text-decoration:none; /*transition:all .2s linear*/}
+a:hover{text-decoration:blink;}
+a img{border:none;}
+label{cursor:pointer;}
+ul,li { list-style:none}
+.z{float:left;}
+.y{float:right;}
+.cl:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.cl{zoom:1;}
+.none { display:none}
+.ppbaoma { width:100%; height:auto; overflow:hidden}
+.ppbaomad { clear:both; width:100%; height:50px; padding:5px 0; border-bottom:1px dashed #999; overflow:hidden; position:relative}
+.ppbaomady { margin-left:60px; margin-right:3px}
+.ppbaomadz { position:absolute; left:0; top:10px; left:5px; width:40px;}
+.ppbaomadz img { width:100%}
+.ppbaomadyt { height:23px; line-height:23px; width:100%; clear:both}
+#expectbjpk10 span,#expectcqssc span,#expectxjssc span { float:left; margin-right:3px; width:21px; height:21px; text-align:center; line-height:21px; color:#fff;-webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; font-size:14px;}
+.bjpk10_no1{ background:#ff0000}
+.bjpk10_no2 { background:#008fff}
+.bjpk10_no3{ background:#4b4b4b}
+.bjpk10_no4{ background:#ff7600}
+.bjpk10_no5{ background:#237c7d}
+.bjpk10_no6{ background:#5234ff}
+.bjpk10_no7{ background:#5f5a5a}
+.bjpk10_no8{ background:#ff2600}
+.bjpk10_no9{ background:#780b00}
+.bjpk10_no10{ background:#098504}
+
+.cqssc_no0,.cqssc_no1,.cqssc_no2,.cqssc_no3,.cqssc_no4,.cqssc_no5,.cqssc_no6,.cqssc_no7,.cqssc_no8,.cqssc_no9 { background:#008fff}
+.xjssc_no0,.xjssc_no1,.xjssc_no2,.xjssc_no3,.xjssc_no4,.xjssc_no5,.xjssc_no6,.xjssc_no7,.xjssc_no8,.xjssc_no9 { background:#008fff}
+
+#expecthk6 span { float:left; margin-right:3px; width:21px; height:21px; text-align:center; line-height:21px; color:#000;-webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px; font-size:14px;}
+#expectjsk3 span { float:left; margin-right:3px; width:21px; height:21px; text-align:center; line-height:21px; font-size:0; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
+.jsk3_no1{ background:url(s1.png) 0 0 no-repeat; background-size:21px 21px;}
+.jsk3_no2{ background:url(s2.png) 0 0 no-repeat; background-size:21px 21px;}
+.jsk3_no3{ background:url(s3.png) 0 0 no-repeat; background-size:21px 21px;}
+.jsk3_no4{ background:url(s4.png) 0 0 no-repeat; background-size:21px 21px;}
+.jsk3_no5{ background:url(s5.png) 0 0 no-repeat; background-size:21px 21px;}
+.jsk3_no6{ background:url(s6.png) 0 0 no-repeat; background-size:21px 21px;}
+#expectfc3d span,#expectpl3 span { float:left; margin-right:3px; width:21px; height:21px; text-align:center; line-height:21px; font-size:14px; color:#fff; background:#f60; -webkit-border-radius:11px; -moz-border-radius:11px; border-radius:11px;}
+
+#expectcqklsf span { float:left; margin-right:3px; width:21px; height:21px; text-align:center; line-height:21px; font-size:14px; color:#fff; background:#369; -webkit-border-radius:11px; -moz-border-radius:11px; border-radius:11px;}
+
+#expectbjkl8 span { float:left; margin-right:3px; width:21px; height:21px; text-align:center; line-height:21px; margin-bottom:3px; font-size:14px; color:#fff; background:#f60; -webkit-border-radius:11px; -moz-border-radius:11px; border-radius:11px;}
+
+#expectgdklsf span { float:left; margin-right:3px; width:21px; height:21px; text-align:center; line-height:21px; font-size:14px; color:#fff; background:#0092dd; -webkit-border-radius:11px; -moz-border-radius:11px; border-radius:11px;}
