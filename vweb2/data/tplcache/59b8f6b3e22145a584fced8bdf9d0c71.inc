@@ -1,0 +1,1 @@
+<li> <i class="a[field:global.autoindex/]">[field:global.autoindex/]</i> <a href="[field:arcurl/]" title="[field:title/]" target="_blank">[field:title/]</a> </li>

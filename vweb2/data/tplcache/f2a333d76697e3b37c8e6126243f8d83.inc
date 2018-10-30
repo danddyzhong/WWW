@@ -1,0 +1,3 @@
+<li> <a href="[field:arcurl/]" target="_blank" class="i"><img src="[field:picname/]" width="86" height="122" alt="[field:fulltitle/][field:shorttitle/]" /></a>
+            <p><b class="c0071bc"><a href="[field:arcurl/]" target="_blank" >[field:title/]</a></b><a href="[field:arcurl/]" target="_blank" title="查看[field:fulltitle/]详情" class="rud">查看详情</a></p>
+            <em>[field:writer/]-[field:typename/]</em> </li>

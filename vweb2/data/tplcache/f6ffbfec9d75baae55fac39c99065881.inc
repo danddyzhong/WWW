@@ -1,0 +1,1 @@
+<a class="title-lg" href="[field:arcurl/]" target="_blank" title="[field:title/]">[field:title/]</a>

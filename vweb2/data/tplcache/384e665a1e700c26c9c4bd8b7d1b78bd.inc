@@ -1,0 +1,9 @@
+<article class="clr col-small">
+              <div class="inner"> <a href="[field:arcurl/]" title="[field:title/]" class="fancyimg home-blog-entry-thumb">
+                <div class="thumb-img"> <img src="[field:picname/]" alt="[field:title/]"> <span><i class="fa fa-star"></i></span> </div>
+                </a>
+                <h3><a href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h3>
+                <p>[field:description function='cn_substr(@me,150)'/]...</p>
+              </div>
+              <div class="meta"> <span class="date">01-19 </span> <span class="views">热度:[field:click/] ℃</span> </div>
+            </article>

@@ -1,0 +1,1 @@
+<h3> <a href="[field:typelink/]" target="_blank"> <span><i class="nLi_icon nLi_icon1"></i>[field:typename/]</span> <i class="more-icon"></i> </a> </h3>

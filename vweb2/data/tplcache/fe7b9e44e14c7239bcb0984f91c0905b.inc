@@ -1,0 +1,1 @@
+<li> <a href="[field:global name=cfg_mip/][field:typelink/]" title="[field:typename/]" class="label">[field:typename/]</a> <span>|</span> <a href="[field:global name=cfg_mip/][field:arcurl/]" title="[field:title/]" class="tit">[field:title/]</a> </li>

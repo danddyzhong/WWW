@@ -1,0 +1,1 @@
+<li> <a title="[field:title/]" href="[field:title/]" target="_blank">[field:title/]</a> </li>

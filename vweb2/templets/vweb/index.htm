@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link href="{dede:global.cfg_templets_skin/}/static/images/index.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<script src="{dede:global.cfg_templets_skin/}/static/js/tab.js" type="text/javascript"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="/static/js/DD_belatedPNG.js" ></script>
+<script type="text/javascript">DD_belatedPNG.fix('.png,.h_site_top2');</script>
+<![endif]-->
+</head>
+<body>
+{dede:include filename="header.htm"/}
+<div class="divauto" id="main">
+  <div class="section1">
+    <div class="news_top">
+      <div class="tab tabw2">
+        <div class="tit">
+          <h2 class="ico1 png">推荐电影</h2>
+          <span class="c0071bc"> {dede:channel type='son' reid='1' row='10'}<a href='[field:typeurl/]' target="_blank">[field:typename/]</a>|{/dede:channel}{dede:type typeid=1}<a href="[field:typelink/]" target="_blank">全部</a> {/dede:type}</span> </div>
+        <ul class="pic plist1">{dede:arclist typeid='12,14' row='12' titlelen='12'}
+          <li> <a href="[field:arcurl/]" target="_blank" class="i"><img src="[field:picname/]" width="86" height="122" alt="[field:fulltitle/][field:shorttitle/]" /></a>
+            <p><b class="c0071bc"><a href="[field:arcurl/]" target="_blank" >[field:title/]</a></b><a href="[field:arcurl/]" target="_blank" title="查看[field:fulltitle/]详情" class="rud">查看详情</a></p>
+            <em>[field:writer/]-[field:typename/]</em> </li>
+          {/dede:arclist}
+        </ul>
+      </div>
+      <div class="box list2 right">
+        <div class="tit">
+          <h2>电影更新</h2>
+        </div>
+        <ul>{dede:arclist orderby='rand' limit='0,15' typeid='2,3,4,5,6,7,8,9' titlelen='32'}
+          <li><a href="[field:arcurl/]"  target="_blank">[field:title/][field:shorttitle/]</a></li>
+          {/dede:arclist}
+        </ul>
+      </div>
+    </div>
+    <div class="bot"></div>
+  </div>
+  <div class="section1 mt10">
+    <div class="news_top">
+      <div class="tab tabw2">
+        <div class="tit">
+          <h2 class="ico2 png">推荐电视剧</h2>
+          <span class="c0071bc"> {dede:channel type='son' reid='10' row='10'}<a href='[field:typeurl/]' target="_blank">[field:typename/]</a>|{/dede:channel}{dede:type typeid=10}<a href="[field:typelink/]" target="_blank">全部</a> {/dede:type} </span> </div>
+        <ul class="pic plist1">{dede:arclist typeid='11,12,13,15,16' row='12' titlelen='12'}
+          <li> <a href="[field:arcurl/]" target="_blank" class="i"><img src="[field:picname/]" width="86" height="122" alt="[field:fulltitle/][field:shorttitle/]" /></a>
+            <p><b class="c0071bc"><a href="[field:arcurl/]" target="_blank" >[field:title/]</a></b><a href="[field:arcurl/]" target="_blank" title="查看[field:fulltitle/]详情" class="rud">查看详情</a></p>
+            <em>[field:writer/]-[field:typename/]</em> </li>
+          {/dede:arclist}
+        </ul>
+      </div>
+      <div class="box list2 right">
+        <div class="tit">
+          <h2>电视剧更新</h2>
+        </div>
+        <ul>{dede:arclist orderby='rand' limit='0,15' typeid='11,12,13,15,16' titlelen='32'}
+          <li><a href="[field:arcurl/]"  target="_blank">[field:title/][field:shorttitle/]</a></li>
+          {/dede:arclist}
+        </ul>
+      </div>
+    </div>
+    <div class="bot"></div>
+  </div>
+  <div class="section1 mt10">
+    <div class="news_top">
+      <div class="tab tabw2">
+        <div class="tit">
+          <h2 class="ico3 png">推荐动漫*综艺*预告片</h2>
+          <span class="c0071bc"> {dede:type typeid=17}<a href="[field:typelink/]" target="_blank">[field:typename/]</a>{/dede:type} {dede:type typeid=18}<a href="[field:typelink/]" target="_blank">[field:typename/]</a>{/dede:type} {dede:type typeid=19}<a href="[field:typelink/]" target="_blank">[field:typename/]</a> {/dede:type} </span> </div>
+        <ul class="pic plist1">{dede:arclist typeid='17,18,19' row='12' titlelen='12'}
+          <li> <a href="[field:arcurl/]" target="_blank" class="i"><img src="[field:picname/]" width="86" height="122" alt="[field:fulltitle/][field:shorttitle/]" /></a>
+            <p><b class="c0071bc"><a href="[field:arcurl/]" target="_blank" >[field:title/]</a></b><a href="[field:arcurl/]" target="_blank" title="查看[field:fulltitle/]详情" class="rud">查看详情</a></p>
+            <em>[field:writer/]-[field:typename/]</em> </li>
+          {/dede:arclist}
+        </ul>
+      </div>
+      <div class="box list2 right">
+        <div class="tit">
+          <h2>动漫*综艺*预告片</h2>
+        </div>
+        <ul>
+          {dede:arclist orderby='rand' limit='0,15' typeid='17,18,19' titlelen='32'}
+          <li><a href="[field:arcurl/]"  target="_blank">[field:title/][field:shorttitle/]</a></li>
+          {/dede:arclist}
+        </ul>
+      </div>
+    </div>
+    <div class="bot"></div>
+  </div>
+  <div class="section1 mt10">
+    <div class="news_top1 c555">
+      <div class="tit">
+        <h2>友情链接</h2>
+        <em>欢迎同类网站申请本站友情链接</em> </div>
+      <div class="link"> {dede:flink/}</div>
+    </div>
+    <div class="bot"></div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

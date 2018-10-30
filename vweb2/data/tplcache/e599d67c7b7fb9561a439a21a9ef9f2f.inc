@@ -1,0 +1,1 @@
+<a href='[field:typelink /]' data-nav-section="portfolio">[field:typename /]</a>

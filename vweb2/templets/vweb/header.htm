@@ -1,0 +1,27 @@
+<div class="top">
+  <div class="divauto c9c9c9c">
+    <p class="left">{dede:global.cfg_wecome/}</p>
+    <p class="right"><a href="javascript:void(0)" onClick="setIndex('{dede:global.cfg_basehost/}', '{dede:global.cfg_webname/}')">设为首页</a> - <a href="javascript:void(0)" onClick="setAddsite('{dede:global.cfg_basehost/}', '{dede:global.cfg_webname/}')">加入收藏</a> - <a href="/special/hotmovie.html">影视热播</a> - <a href="/sitemap.html" target="_blank">网站地图</a> - <a href="/rssmap.html" target="_blank">RSS订阅</a> </p>
+  </div>
+</div>
+<div id="header" class="divauto">
+  <div class="logo"><a href="/"><img src="/static/images/logo.png" width="230" height="70" class="png" alt="{dede:global.cfg_webname/}" /></a></div>
+  <div class="search">
+    <div class="search_box"><form  name="formsearch" action="/plus/search.php"><input type="hidden" name="searchtype" value="titlekeyword" />
+      <input type="text" name="q" class="search_text" value="请输入您要搜索的电影/电视剧" onfocus="if(this.value=='请输入您要搜索的电影/电视剧'){this.value='';}"  onblur="if(this.value==''){this.value='请输入您要搜索的电影/电视剧';}" />
+      <input type="submit" value="" class="search_btn" /></form>
+    </div>
+    <p class="c555"><em>热门：</em>{dede:global.cfg_hotkey/}</span></p>
+  </div>
+  <div class="nav"> <span class="nav_l"></span> <span class="nav_m">
+    <div class="menu">
+      <ul>
+        <li><a href="/">首页</a></li>
+        {dede:channel type='top' row='10'}
+      	<li><a href='[field:typeurl/]'>[field:typename/]</a></li>
+      	{/dede:channel}
+      </ul>
+    </div>
+    <p><b>热门分类：</b>{dede:channel typeid='1' type='son' row='10'}<a href='[field:typeurl/]'>[field:typename/]</a>{/dede:channel}{dede:channel type='son' typeid='10' row='10'}<a href='[field:typeurl/]'>[field:typename/]</a>{/dede:channel}</p>
+    </span> <span class="nav_r"></span> </div>
+</div>

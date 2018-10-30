@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="author" content="order by adminbuy.cn" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel='stylesheet' id='_bootstrap-css'  href='{dede:global.cfg_templets_skin/}/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='_fontawesome-css'  href='{dede:global.cfg_templets_skin/}/skin/css/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='_main-css'  href='{dede:global.cfg_templets_skin/}/skin/css/main.css' type='text/css' media='all' />
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/js/jquery.min.js'></script>
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/skin/css/colorbox.css" type="text/css" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/skin/css/erphpdown.css" type="text/css" />
+<script  src="{dede:global.cfg_templets_skin/}/skin/js/jquery.colorbox-min.js" ></script>
+<script  src="{dede:global.cfg_templets_skin/}/skin/js/webThunderDetect.js" ></script>
+<script  src="{dede:global.cfg_templets_skin/}/skin/js/base64.js" ></script>
+<script  src="{dede:global.cfg_templets_skin/}/skin/js/thunderForum.js" ></script>
+<script>
+$(function(){
+	$('*[blockid="lianmeng_mask"]').attr("thunderHref",$('*[blockid="lianmeng_mask"]').attr("ceekohdp"));
+	
+})
+function gethref(){
+	$('*[blockid="lianmeng_mask"]').attr("href",$('*[blockid="lianmeng_mask"]').attr("ceekohdp"));
+}
+
+</script>
+<script>
+			jQuery(document).ready(function(){
+				jQuery(".iframe").colorbox({iframe:true, innerWidth:360, innerHeight:309});
+				jQuery(".inline").colorbox({inline:true, width:"50%",height:"45%"});
+				jQuery("#click").click(function(){ 
+					jQuery("#click").css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here powered by adminbuy.cn");
+					return false;});});</script>
+<link rel="shortcut icon" href="/skin/img/favicon.ico">
+<!--[if lt IE 9]><script src="{dede:global.cfg_templets_skin/}/skin/js/html5.min.js"></script><![endif]-->
+</head>
+<body class="single single-post postid-98">
+{dede:include filename="head.htm"/}
+
+<section class="container">
+  <div class="content-wrap">
+    <div class="content">
+
+      <h1 class="article-title">{dede:field name='title'/}</h1>
+
+<article class="article-content"> 
+{dede:field name='body'/}
+          </article>
+      <div class="article-tags"> 
+      </div>
+      <div class='clear' style="clear:both;"></div>
+<div class="relates">
+        <div class="title">
+          <h3>相关推荐</h3>
+        </div>
+        <ul>
+          {dede:arclist row="8" orderby='rand' flag='p'}
+          <li><a href="[field:arcurl/]">
+            <p class="image-container"><span class="thumbnail"><img src="[field:picname/]" class="thumb"></span></p>
+            <span class="text">[field:title/]</span></a></li>
+          {/dede:arclist}</ul>   </div>    
+  </div>
+    </div> 
+
+<aside class="sidebar">
+    <div class="widget widget_ui_ads">
+      <div class="item"><span style=" display:block; margin:10px 0px 10px 2px;"><div class="item"><span style=" display:block; margin:10px 0px 10px 9px;"> 
+       <a href="http://www.adminbuy.cn" target="_blank"><img src="/skin/img/3cd871e89f2f6eb8a3a032653a4f8018.jpg" border="0" width="300" height="250" alt=""></a>
+        </span></div></span></div>
+    </div>
+    <div class="widget widget_ui_posts">
+      <h3>猜你喜欢</h3>
+      <ul>
+        {dede:arclist row="6" orderby='rand' flag='p'}
+        <li><a target="_blank" href="[field:arcurl/]"><i class="a[field:global.autoindex/]">[field:global.autoindex/]&nbsp;&nbsp;</i>[field:title/]<time><i class="fa fa-clock-o"></i>[field:pubdate function='strftime("%m-%d",@me)'/]</time></a></li>
+         </span></li>
+          {/dede:arclist}
+          </ul>
+    </div>
+    <div class="widget widget_ui_ads">
+      <div class="item"><span style=" display:block; margin:10px 0px 10px 2px;"> 
+       <div class="item"><span style=" display:block; margin:10px 0px 10px 9px;"> 
+       <a href="http://www.adminbuy.cn" target="_blank"><img src="/skin/img/ab93d4726fd97c7472919aa707607472.jpg" border="0" width="300" height="250" alt=""></a>
+        </span></div>
+        </span></div>
+    </div>
+    
+  </aside>
+
+    <div class="pagination">  <ul>{dede:pagelist listitem="index,end,pre,next,pageno" listsize="3"/}</ul></div>
+  </div>
+</section>
+
+{dede:include filename="foot.htm"/}
+</body>
+</html>

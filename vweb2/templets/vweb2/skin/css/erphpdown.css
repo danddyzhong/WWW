@@ -1,0 +1,12 @@
+@charset "utf-8";
+.skyOrange{ padding:5px 10px; background:#ff3800; color:#FFF;}
+#paycenter td{ line-height:30px;}
+.erphpdown{margin-bottom: 20px;width: auto;background: #fff;overflow:hidden;border: 1px solid #eee;}
+.erphpdown p{margin:3px;padding:3px 15px;border-bottom: 1px solid #f8f8f8;text-indent: 0;}
+.erphpdown p span{padding:0 5px;color: #E14D43;font-weight: bold;font-size: 120%;}
+.erphpdown .down-detail{float: right;width: 100%;}
+.erphpdown p.down-ordinary{color: #28B78D;}
+.erphpdown p.down-vip{color: #E14D43;}
+.erphpdown p a{margin-left: 10px;font-weight: bold;}
+.erphpdown p.down-tip{border-bottom: none;}
+/* www.mobantu.com  qq 82708210*/

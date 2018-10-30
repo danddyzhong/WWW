@@ -1,0 +1,47 @@
+<?php
+$z[0]=Array("global","",107,133);
+$z[0][4]['name']="cfg_webname";
+$z[1]=Array("global","",312,339);
+$z[1][4]['name']="cfg_basehost";
+$z[2]=Array("global","",379,409);
+$z[2][4]['name']="cfg_description";
+$z[3]=Array("global","",446,473);
+$z[3][4]['name']="cfg_keywords";
+$z[4]=Array("global","",515,547);
+$z[4][4]['name']="cfg_templets_skin";
+$z[5]=Array("global","",611,643);
+$z[5][4]['name']="cfg_templets_skin";
+$z[6]=Array("global","",719,751);
+$z[6][4]['name']="cfg_templets_skin";
+$z[7]=Array("global","",839,871);
+$z[7][4]['name']="cfg_templets_skin";
+$z[8]=Array("global","",947,979);
+$z[8][4]['name']="cfg_templets_skin";
+$z[9]=Array("global","",1056,1088);
+$z[9][4]['name']="cfg_templets_skin";
+$z[10]=Array("global","",2039,2071);
+$z[10][4]['name']="cfg_templets_skin";
+$z[11]=Array("global","",2155,2187);
+$z[11][4]['name']="cfg_templets_skin";
+$z[12]=Array("include","",2402,2437);
+$z[12][4]['filename']="head.htm";
+$z[13]=Array("arclist","      \r\n		  <li>\r\n              	<a href=\"[field:arcurl/]\">\r\n              		<img src=\"[field:id runphp=yes]  \r\n    global \$dsql;\r\n    \$id = @me;\r\n    \$sql='select slider_img from #@__archives where id='.\$id;\r\n    \$row=\$dsql->getone(\$sql);\r\n    @me=\$row['slider_img'];\r\n [/field:id]\" alt=\"[field:title/]\" ></a>\r\n              		<div class=\"type_text\">\r\n              			<p class=\"title\">[field:title/]</p>\r\n              			</div></li>\r\n      ",2626,3129);
+$z[13][4]['titlelen']="80";
+$z[13][4]['flag']="f";
+$z[13][4]['row']="5";
+$z[14]=Array("arclist","\r\n    <article class=\"post_box\">\r\n    <div class=\"c-top\">\r\n        <div class=\"datetime\">[field:pubdate function='strftime(\"%Y年%m月%d日\",@me)'/]</div>	\r\n            <header class=\"tit\">\r\n                <h2 class=\"h1\">\r\n                	<a href=\"[field:arcurl/]\" title=\"[field:title/]\">[field:title/]</a></h2>\r\n                <aside class=\"iititle\">\r\n                	<span><i class=\"icon-folder-open icon-large\"></i> <a href=\"[field:typeurl/]\" title=\"[field:typename/]\" rel=\"category\">[field:typename/]</a></span>\r\n                	<span><i class=\"icon-eye-open icon-large\"></i> 围观[field:click/] 次</span>\r\n                	</aside>\r\n            </header>\r\n    </div>\r\n    <div class=\"c-con\">    \r\n    	<a href=\"[field:arcurl/]\" class=\"disp_a\" title=\"[field:title/]\">	\r\n    		<img src=\"[field:picname/]\" alt=\"[field:title/]\">[field:description function=\"cn_substr(@me,220)\"/]...</a>\r\n    		<a href=\"[field:arcurl/]\" class=\"more-link\" style=\"width: 15%; \">阅读更多</a><div class=\"cls\"></div>\r\n    </div>\r\n    <div class=\"c-bot\">\r\n    <aside class=\"cb_bq\"></aside>\r\n        <div class=\"cls\"></div>\r\n    </div>\r\n</article>\r\n",4893,6098);
+$z[14][4]['titlelen']="80";
+$z[14][4]['orderby']="pubdate";
+$z[14][4]['row']="20";
+$z[15]=Array("arclist","\r\n	<li><a href=\"[field:arclist/]\" title=\"[field:title/]\">[field:title/]</a></li>\r\n  ",6587,6718);
+$z[15][4]['flag']="c";
+$z[15][4]['row']="12";
+$z[16]=Array("arclist","\r\n	<li><a href=\"[field:arcurl/]\" title=\"[field:title/]\">[field:title/]</a></li>\r\n",7060,7195);
+$z[16][4]['orderby']="click";
+$z[16][4]['row']="12";
+$z[17]=Array("arclist","\r\n	<li><a href=\"[field:arcurl/]\" title=\"[field:title/]\">[field:title/]</a></li>\r\n  ",7320,7441);
+$z[17][4]['row']="10";
+$z[18]=Array("include","",8626,8661);
+$z[18][4]['filename']="foot.htm";
+
+?>

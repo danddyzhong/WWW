@@ -1,0 +1,2 @@
+<li class="related_box"> <a href="[filed:arcurl/]" title="[field:title/]" target="_blank"> <img src="[field:picname/]" alt="[field:title/]" width="185" height="110"><br>
+            <span class="r_title">[field:title/]</span> </a> </li>

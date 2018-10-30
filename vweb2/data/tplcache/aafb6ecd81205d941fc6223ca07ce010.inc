@@ -1,0 +1,1 @@
+<li> <a href="listlb.php?tid=[field:typeid/]" title="[field:typename/]" class="label">[field:typename/]</a> <span>|</span> <a href="view.php?aid=[field:id/]" title="[field:title/]" class="tit">[field:title/]</a> </li>

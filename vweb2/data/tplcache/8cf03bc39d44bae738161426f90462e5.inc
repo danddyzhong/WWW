@@ -1,0 +1,1 @@
+<li> <a href="[field:arcurl/]" title="[field:title/]"> <span class="thumbnail"> <img src="[field:litpic/]" alt="[field:title/]"> </span> <span class="text">[field:title/] </span> <span class="muted"> [field:pubdate function='strftime("%Y-%m-%d",@me)'/] </span>  </a> </li>

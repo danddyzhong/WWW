@@ -1,0 +1,1 @@
+<li><i>[field:pubdate function='strftime("%Y-%m-%d",@me)'/]</i><span class="top">[field:global name=autoindex runphp="yes"]@me=@me;[/field:global]</span><a href="[field:arcurl/]" target="_blank" title="[field:title /]">[field:title /]</a></li>

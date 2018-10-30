@@ -1,0 +1,1 @@
+<li class=""><a id="banner3" href="[field:typelink /]" style="background: url(/templets/default/images/baogaofw.jpg) no-repeat center center;"></a></li>

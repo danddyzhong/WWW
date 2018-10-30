@@ -1,0 +1,1 @@
+<a target="_blank" href="[field:arcurl/]" title="[field:title/]"><img src="[field:litpic/]"/></a>

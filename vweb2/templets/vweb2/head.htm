@@ -1,0 +1,40 @@
+<header class="header">
+  <div class="container">
+    <h1 class="logo"><a href="/" title="{dede:global.cfg_webname/}"><img src="{dede:global.cfg_templets_skin/}/skin/img/logo.png">{dede:global.cfg_webname/}</a></h1>
+    <ul class="site-nav site-navbar">
+
+
+      <li class="{dede:field name=typeid runphp='yes'}(@me=='')? @me='current-menu-item':@me='';{/dede:field}"><a rel="nofollow" href="/">首页</a></li>
+
+      {dede:channelartlist typeid='top'  currentstyle="current-menu-item" }
+        <li  class='{dede:field.currentstyle/}'>
+          <a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a> 
+          <ul class='{dede:field name=typeid runphp="yes"}
+global $dsql;
+$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+$row = $dsql->GetOne($sql);
+@me=is_array($row)?'sub-menu':'display:none';
+{/dede:field}' >
+          {dede:channel type='son'}
+           <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+           {/dede:channel}
+          </ul>
+        </li>
+      {/dede:channelartlist}
+        <li class="navto-search"><a href="javascript:;" class="search-show active"><i class="fa fa-search"></i></a></li>
+</ul> 
+    <span class="search2">
+    <li class="navto-search"><a href="javascript:;" class="search-show active"><i class="fa fa-search"></i></a></li>
+    </span>
+    <div class="topbar"> </div>
+    <i class="fa fa-bars m-icon-nav"></i> </div>
+</header>
+<div class="site-search">
+  <div class="container">
+  <form  class="site-search-form" name="formsearch" action="/plus/search.php">
+      <input type="hidden" name="kwtype" value="0" />
+      <input class="search-input" type="text" name="q" placeholder="搜索一下">
+       <button class="search-btn" type="hidden"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>

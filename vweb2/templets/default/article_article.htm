@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_OK范文网</title>
+<meta content="{dede:field.keywords/}" name="keywords" />
+<meta content="{dede:field.description  function='html2text(@me)'/}" />
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/basic.css">
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/footer.css">
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/iconfont.css">
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/top_new_2017.css">
+<link rel="stylesheet" type="text/css" href="{dede:global.cfg_templets_skin/}/style/less_02.css">
+<script type="text/javascript" src="/Statics/js/jquery-1.10.2.min.js"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div class="fw-detail-main">
+  <div class="detail-main-left">
+    <div class="fw-top-crumbs"> <span>当前位置：</span><span>{dede:field name='position'/}{dede:field.title/}</span> </div>
+    <div class="article-main">
+      <h1 id="print_title">{dede:field.title/}</h1>
+      <div class="article-related-ifo">
+        <div class="delivery-time"><i class="time-icon"></i><span>发布时间：{dede:field.pubdate function="MyDate('Y-m-d H:i',@me)"/}</span><em></em></div>
+        <div class="article-source-b"><i class="source-icon-b"></i><span>浏览数：</span><span id="addviews"><script src="{dede:field name='phpurl'/}/count.php?view=yes&aid={dede:field name='id'/}&mid={dede:field name='mid'/}"type='text/javascript' language="javascript"></script></span></div>
+      </div>
+      <div style="margin:0 auto;width:670px;"> </div>
+      <div class="article-text" id="print_content"> {dede:field.body/} </div>
+    </div>
+    <div style="border:1px solid #ddd; ">
+      <div style="float:left;  padding:20px; ">{dede:prenext get='pre'/}</div>
+      <div style="float:left;  padding:20px; ">{dede:prenext get='next'/}</div>
+      <div style="clear:both;"></div>
+    </div>
+  </div>
+  <div class="detail-main-right">
+    <div class="hot-label">
+      <h3>热门标签</h3>
+      <ul>
+        <li>
+        {dede:channel     type='son'        noself='yes'     }
+       <a title="[field:typename/]" href="[field:typelink/]" target="_blank"><span>[field:typename/]</span><em></em></a>
+        {/dede:channel}   
+          </li>
+      </ul>
+    </div>
+    <div class="lastnew-work-paper">
+      <h3>最新学习范文</h3>
+      <ul>
+        {dede:arclist          orderby ='pubdate'         titlelen='38'       row='10'     }
+        <li> <a title="[field:typename/]" href="[field:typeurl/]" target="_blank" class="tit">[field:typename/]</a> <a title="[field:title/]" href="[field:arcurl/]" target="_blank" class="detial">[field:title/]</a> </li>
+        {/dede:arclist}
+      </ul>
+    </div>
+    <div class="random-work-paper">
+      <h3>热门学习范文</h3>
+      <ul>
+        {dede:arclist          orderby ='click'         titlelen='38'       row='10'     }
+        <li> <a title="[field:typename/]" href="[field:typeurl/]" target="_blank" class="tit">[field:typename/]</a> <a title="[field:title/]" href="[field:arcurl/]" target="_blank" class="detial">[field:title/]</a> </li>
+        {/dede:arclist}
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="wl friend-link-sec">
+  <div class="friend-link-sec-tit"> 友情链接 </div>
+  <div class="friend-link-ct"> {dede:flink row='24' type='text' titlelen="24" typeid="3"} [field:link /] {/dede:flink} </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

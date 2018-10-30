@@ -1,0 +1,82 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="author" content="order by adminbuy.cn" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel='stylesheet' id='_bootstrap-css'  href='{dede:global.cfg_templets_skin/}/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='_fontawesome-css'  href='{dede:global.cfg_templets_skin/}/skin/css/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='_main-css'  href='{dede:global.cfg_templets_skin/}/skin/css/main.css' type='text/css' media='all' />
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/js/jquery.min.js'></script>
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/skin/css/colorbox.css" type="text/css" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/skin/css/erphpdown.css" type="text/css" />
+<script  src="{dede:global.cfg_templets_skin/}/skin/js/jquery.colorbox-min.js" ></script>
+<script>
+			jQuery(document).ready(function(){
+				jQuery(".iframe").colorbox({iframe:true, innerWidth:360, innerHeight:309});
+				jQuery(".inline").colorbox({inline:true, width:"50%",height:"45%"});
+				jQuery("#click").click(function(){ 
+					jQuery("#click").css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here powered by adminbuy.cn");
+					return false;});});</script>
+<link rel="shortcut icon" href="/skin/img/favicon.ico">
+<!--[if lt IE 9]><script src="{dede:global.cfg_templets_skin/}/skin/js/html5.min.js"></script><![endif]-->
+</head>
+<body class="home blog">
+{dede:include filename="head.htm"/}
+
+<section class="container">
+  <div class="content-wrap">
+        <div class="contentlist">
+      <div class="pagetitle title">
+        <h1>{dede:field name='typename'/}</h1>
+        <div>
+          <ul class="filter-wrapper">
+            <div class="details" id="details">
+             <li><span class="title">热门类型：</span> 
+              {dede:channel type='son'  currentstyle="<a href='~typelink~' class='thisclass'>~typename~</a>"}
+             <a href="[field:typelink/]" >[field:typename/]</a>
+             {/dede:channel} 
+              </li>
+            </div>
+          </ul>
+        </div>
+        <script>
+    var myNav = document.getElementById("details").getElementsByTagName("a"); 
+for(var i=0;i<myNav.length;i++) 
+{ 
+var links = myNav[i].getAttribute("href"); 
+//alert(links) 
+//alert(myNav[i]); 
+var myURL = document.location.href; 
+if(myURL.indexOf(links) != -1) 
+{ 
+myNav[i].className="active"; 
+} 
+} 
+    </script>
+        </div>
+<div class="ad"><script src="/plus/ad_js.php?aid=32" language="javascript"></script></div>
+      {dede:list pagesize ='21' }
+     <article class="excerpt list5">
+        <p class="image-container"><a target="_blank" class="focus" href="[field:arcurl/]"><img src="[field:picname/]" class="thumb"></a></p>
+        <header>
+          <h2><a target="_blank" href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h2>
+        </header>
+        <p class="meta">
+          <time><i class="fa fa-clock-o"></i>[field:pubdate function='strftime("%Y-%m-%d",@me)'/]</time>
+          <span class="pv"><i class="fa fa-eye"></i>浏览:[field:click/]次</span></p>
+      </article>
+      {/dede:list}
+    </div>
+    </div> 
+    <div class="pagination">  <ul>{dede:pagelist listitem="index,end,pre,next,pageno" listsize="3"/}</ul></div>
+  </div>
+</section>
+
+{dede:include filename="foot.htm"/}
+</body>
+</html>

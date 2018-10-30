@@ -1,0 +1,1 @@
+<a href='[field:typelink /]' data-nav-section="baike">[field:typename /]</a>

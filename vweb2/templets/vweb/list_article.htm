@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>高清{dede:field.title/}_720P高清_1080P高清{dede:field.title/}下载-{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="高清{dede:field.title/}下载,{dede:global.cfg_webname/}" />
+<meta name="description" content="hgvod.com致力于提供最新最热门的{dede:field.title/}高清电影大片下载资源,让您可以体验高清{dede:field.title/}电影的强憾视觉冲激,快来吧这里的高清电影绝对让您值得拥有." />
+<link href="{dede:global.cfg_templets_skin/}/static/images/index.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<!--[if IE 6]>
+<script type="text/javascript" src="/static/js/DD_belatedPNG.js" ></script>
+<script type="text/javascript">DD_belatedPNG.fix('.png,.h_site_top2');</script>
+<![endif]-->
+</head>
+<body>
+{dede:include filename="header.htm"/}
+<div class="divauto" id="main">
+  <div class="sections">
+    <div class="sl">
+      <div class="tit1 c5b5c5c">当前位置: {dede:field name='position'/}</div>
+      <div class="con">
+        <ul class="piclist">{dede:list pagesize='18'}
+          <li> <a href="[field:arcurl/]" target="_blank" class="i"><img alt="[field:title/][field:shorttitle/]" src="[field:picname/]" width="86" height="122" /></a>
+            <div class="info">
+              <h2 class="c0071bc"><a href="[field:arcurl/]" target="_blank">[field:title/][field:shorttitle/]</a></h2>
+              <p>主演：[field:authors/]</p>
+              <p><b>状态：[field:source/]</b><b>地区：[field:areas/]</b></p>
+              <span class="jianjie">[field:description/]...</span> </div>
+          </li>
+          {/dede:list}
+        </ul>
+        <div id="pager" style="padding-left:10px;">
+          <ul>
+            {dede:pagelist listitem="index,end,pre,next,pageno" listsize="3"/}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="sr">
+      <div class="box newr1">
+        <h2>热门{dede:field.typename/}</h2>
+        <ul style="height:403px;">{dede:arclist orderby='click' row=14 titlelen='32'}
+          <li><a href="[field:arcurl/]" target="_blank">[field:title/][field:shorttitle/]</a></li>
+          {/dede:arclist}
+        </ul>
+      </div>
+      <div class="ads250 mt10"> <script language="javascript" type="text/javascript" src="/a/250x250.js"></script> </div>
+      <div class="box mt10 newr1">
+        <h2>猜你喜欢看{dede:field.typename/}</h2>
+        <ul style="height:286px;">{dede:arclist orderby='rand' row=14 titlelen='32'}
+          <li><a href="[field:arcurl/]" target="_blank">[field:title/][field:shorttitle/]</a></li>
+          {/dede:arclist}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

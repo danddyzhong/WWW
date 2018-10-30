@@ -1,0 +1,1 @@
+<li> <a title="[field:title/]" href="[field:arcurl/]" target="_blank"> <i class="circle-dot circle-dot2"></i> <span>[field:title/]</span> </a> </li>

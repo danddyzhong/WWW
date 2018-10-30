@@ -1,0 +1,1 @@
+<li><a href="[field:arcurl/]" title="[field:title/]-{dede:global.cfg_webname/}">[field:title/]</a></li>

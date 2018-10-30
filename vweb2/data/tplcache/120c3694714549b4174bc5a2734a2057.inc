@@ -1,0 +1,1 @@
+<li id="navbar-page-2"><a href="[field:typelink /]"><i class="icon-comments"></i> [field:typename /]</a></li>

@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>后台首页</title>
+<link href="css/root.css" rel="stylesheet">
+<style type="text/css">
+	body{background: #f5f5f5;}
+	.index-slider-tools {background-color:#fff;text-align:center;padding:15px 0px;}
+	.index-slider-tools:not(:first-child){margin-top:-10px;}
+	.index-slider-tools li {list-style:none;}
+	.index-slider-tools li a .fa{display:block; color:#399BFF; transition:.2s}
+	.index-slider-tools li a .fa:hover{color:#23527C}
+	.index-slider-tools li:not(:last-child){ border-right:1px dashed #E1E1E1;}
+	.index-slider-tools li h5{ font-size:14px;}
+	.index-new-article ul {padding-left:0px;}
+	.index-new-article ul li{ list-style:none;}
+	.index-new-article ul li:not(:last-child){ border-bottom:1px dashed #E1E1E1}
+	.index-new-article ul li a{ display:block;padding:10px 0px;}
+</style>
+</head>
+<body>
+<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+	<div class="widget profile-widget">
+		<img src="img/icon.jpg" class="profile-image" alt="img">
+		<h1><?php echo $cuserLogin->
+		getUserName(); ?></h1>
+		<p>
+			<?php
+           		if($cuserLogin->
+			getUserType()==10) {
+                echo "总管理员";
+                    } else if($cuserLogin->getUserType()==5) {
+                         echo "频道总编";
+                    } else {
+                        echo "信息采集员或其它管理员";
+                    }
+            	?>
+		</p>
+	</div>
+	<div class="panel panel-widget">
+		<div class="panel-title">
+              系统信息
+		</div>
+		<div class="panel-body table-responsive">
+			<table class="table table-dic table-hover ">
+			<tbody>
+			
+			<tr>
+				<td>
+					<i class="fa fa-dashboard"></i>操作系统
+				</td>
+				<td class="text-r">
+					<?php echo PHP_OS;?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<i class="fa fa-globe"></i>网站域名/IP
+				</td>
+				<td class="text-r">
+					<?php echo $_SERVER['SERVER_NAME'];?>
+					(<?php echo gethostbyname($_SERVER['SERVER_NAME']);?>
+					)
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<i class="fa fa-linux"></i>PHP 版本
+				</td>
+				<td class="text-r">
+					<?php echo "php ".PHP_VERSION;?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<i class="fa fa-database"></i>MySQL 版本
+				</td>
+				<td class="text-r">
+					<?php echo "mysql ".mysql_get_server_info();?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<i class="fa fa-archive"></i>最大上传尺寸
+				</td>
+				<td class="text-r">
+					<?php echo get_cfg_var("upload_max_filesize");?>
+				</td>
+			</tr>
+			</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+	<ul class="index-slider-tools clearfix">
+		<li class="col-xs-3 col-lg-3 col-md-3 col-sm-3">
+            <a href="content_list.php?arcrank=-1" target="main">
+                <i class="fa fa-check-circle fa-3x"></i>
+                <h5>文章审核</h5>
+            </a>
+		</li>
+		<li class="col-xs-3 col-lg-3 col-md-3 col-sm-3">
+            <a href="ad_main.php" target="main">
+                <i class="fa fa-lightbulb-o fa-3x"></i>
+                <h5>广告管理</h5>
+            </a>
+		</li>
+		<li class="col-xs-3 col-lg-3 col-md-3 col-sm-3">
+            <a href="friendlink_main.php" target="main">
+                <i class="fa fa-chain fa-3x"></i>
+                <h5>友情链接</h5>
+            </a>
+		</li>
+		<li class="col-xs-3 col-lg-3 col-md-3 col-sm-3">
+            <a href="sys_info.php" target="main">
+                <i class="fa fa-cogs fa-3x"></i>
+                <h5>系统设置</h5>
+            </a>
+		</li>
+	</ul>
+	<ul class="index-slider-tools clearfix">
+		<li class="col-xs-3 col-lg-3 col-md-3 col-sm-3">
+            <a href="article_add.php?channelid=1" target="main">
+                <i class="fa fa-file-text-o fa-3x"></i>
+                <h5>发表文章</h5>
+            </a>
+		</li>
+		<li class="col-xs-3 col-lg-3 col-md-3 col-sm-3">
+            <a href="makehtml_all.php" target="main">
+                <i class="fa fa-refresh fa-3x"></i>
+                <h5>一键更新</h5>
+            </a>
+		</li>
+		<li class="col-xs-3 col-lg-3 col-md-3 col-sm-3">
+            <a href="makehtml_list.php" target="main">
+                <i class="fa fa-bars fa-3x"></i>
+                <h5>栏目更新</h5>
+            </a>
+		</li>
+		<li class="col-xs-3 col-lg-3 col-md-3 col-sm-3">
+            <a href="makehtml_archives.php" target="main">
+                <i class="fa fa-archive fa-3x"></i>
+                <h5>文档更新</h5>
+            </a>
+		</li>
+	</ul>
+	<div class="panel panel-widget">
+		<div class="panel-title">
+              最新文档
+		</div>
+		<div class="panel-search">
+			<form>
+				<input type="text" class="form-control" placeholder="Search...">
+				<i class="fa fa-search icon"></i>
+			</form>
+		</div>
+		<div class="panel-body table-responsive index-new-article">
+                <?php
+                    $query = "SELECT arc.id, arc.arcrank, arc.title, arc.channel, ch.editcon  FROM `#@__archives` arc
+                            LEFT JOIN `#@__channeltype` ch ON ch.id = arc.channel
+                             WHERE arc.arcrank<>-2 ORDER BY arc.id DESC LIMIT 0, 6 ";
+                    $arcArr = array();
+                    $dsql->Execute('m', $query);
+                    while($row = $dsql->GetArray('m'))
+                    {
+                        $arcArr[] = $row;
+                    }
+                ?>
+                    <ul class="dboxtable">
+                    <?php
+                    if(count($arcArr) > 1)
+                    {
+                        foreach($arcArr as $row)
+                        {
+                            if(trim($row['editcon'])=='') {
+                                $row['editcon'] = 'archives_edit.php';
+                            }
+                            $linkstr = "<li><a href='{$row['editcon']}?aid={$row['id']}&channelid={$row['channel']}'>{$row['title']}</a></li>";
+                            if($row['arcrank']==-1) $linkstr .= "<font color='red'>(未审核)</font>";
+                        ?>
+                        <li class='nline'>
+                                <?php echo $linkstr; ?>
+                        </li>
+                        <?php
+                        }
+                    } else {
+                    ?>
+                        <li class='nline'>
+                        	暂无新增内容
+                        </li>
+                    <?php
+                    }
+                    ?>
+                    </ul>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/bootstrap-select/bootstrap-select.js"></script>
+<script type="text/javascript" src="js/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+</body>
+</html>

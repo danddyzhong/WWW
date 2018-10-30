@@ -1,0 +1,43 @@
+<?php
+$z[0]=Array("global","",236,264);
+$z[0][4]['name']="cfg_soft_lang";
+$z[1]=Array("global","",546,572);
+$z[1][4]['name']="cfg_webname";
+$z[2]=Array("global","",616,646);
+$z[2][4]['name']="cfg_description";
+$z[3]=Array("global","",683,710);
+$z[3][4]['name']="cfg_keywords";
+$z[4]=Array("global","",946,978);
+$z[4][4]['name']="cfg_templets_skin";
+$z[5]=Array("global","",1071,1103);
+$z[5][4]['name']="cfg_templets_skin";
+$z[6]=Array("global","",1180,1212);
+$z[6][4]['name']="cfg_templets_skin";
+$z[7]=Array("global","",1289,1321);
+$z[7][4]['name']="cfg_templets_skin";
+$z[8]=Array("global","",1398,1430);
+$z[8][4]['name']="cfg_templets_skin";
+$z[9]=Array("global","",1517,1549);
+$z[9][4]['name']="cfg_templets_skin";
+$z[10]=Array("include","",1601,1636);
+$z[10][4]['filename']="head.htm";
+$z[11]=Array("arclist","\r\n          <li> <a href=\"[field:arcurl/]\" target=\"_blank\" title=\"[field:title/]\"><img src=\"[field:litpic/]\" alt=\"[field:title/]\" ></a> </li>\r\n          ",1795,2008);
+$z[11][4]['titlelen']="80";
+$z[11][4]['flag']="f";
+$z[11][4]['row']="3";
+$z[12]=Array("arclist","\r\n    <div class=\"block\">\r\n      <h2><span class=\"category\"> <a href=\"[field:typeurl/]\" rel=\"category tag\" alt=\"[field:typename/]\" >[field:typename/]</a> <i class=\"fa fa-caret-right\"></i></span><a href=\"[field:arcurl/]\"  target=\"_ablank\" title=\"[field:title/]\">[field:title/]</a></h2>\r\n      <div class=\"clear\"></div>\r\n      \r\n      <div class='viewimg'> <a href='[field:arcurl/]' title='[field:title/]' target='_ablank' class='ipic'> <img src='[field:picname/]' alt='[field:title/]' class='thumbnail' /><span class='shine' style='background-position: 160px 50%;'> </span></a> </div>\r\n      \r\n      <div class=\"preview\"> [field:description function=\"cn_substr(@me,220)\"/]... </div>\r\n      <div class=\"preem\"> <span><i class=\"fa fa-clock-o\"></i> [field:pubdate function='strftime(\"%Y-%m-%d\",@me)'/] </span><span><i class=\"fa fa-comment-o\"></i> <a href=\"[field:arcurl/]\" class=\"ds-thread-count\" data-thread-key=\"156\">暂无评论</a> </span><span><i class=\"fa fa-eye\"></i> [field:click/] </span><span> </span><span class=\"more\"><a href=\"[field:arcurl/]\" title=\"[field:title/]\">阅读详情</a></span> </div>\r\n    </div>\r\n    ",2056,3251);
+$z[12][4]['titlelen']="80";
+$z[12][4]['orderby']="pubdate";
+$z[12][4]['row']="10";
+$z[13]=Array("arclist","\r\n        <li>\r\n          <div class=\"sideshow\"><a href=\"[field:arcurl/]\" target=\"_ablank\"  title=\"[field:title/]\"> <img width='80' height='60' src='[field:picname/]' class='icon wp-post-image' alt='[field:title/]' title='[field:title/]' /> </a> <a href=\"[field:arcurl/]\" target=\"_ablank\"  title=\"[field:title/]\"> [field:title/] </a> <span class=\"datetime\"> [field:pubdate function='strftime(\"%Y-%m-%d\",@me)'/] </span> </div>\r\n        </li>\r\n        ",3469,3979);
+$z[13][4]['titlelen']="80";
+$z[13][4]['flag']="a";
+$z[13][4]['row']="5";
+$z[14]=Array("arclist","\r\n        <li>\r\n          <div class=\"sideshow\"><a href=\"[field:arcurl/]\" target=\"_ablank\"  title=\"[field:title/]\"> <img width='80' height='60' src='[field:picname/]' class='icon wp-post-image' alt='[field:title/]' title='[field:title/]' /> </a> <a href=\"[field:arcurl/]\" target=\"_ablank\"  title=\"[field:title/]\"> [field:title/] </a> <span class=\"datetime\"> [field:pubdate function='strftime(\"%Y-%m-%d\",@me)'/] </span> </div>\r\n        </li>\r\n        ",4084,4600);
+$z[14][4]['titlelen']="80";
+$z[14][4]['orderby']="click";
+$z[14][4]['row']="8";
+$z[15]=Array("include","",5414,5449);
+$z[15][4]['filename']="foot.htm";
+
+?>

@@ -1,0 +1,41 @@
+<?php
+$z[0]=Array("global","",71,97);
+$z[0][4]['name']="cfg_webname";
+$z[1]=Array("global","",143,173);
+$z[1][4]['name']="cfg_description";
+$z[2]=Array("global","",212,239);
+$z[2][4]['name']="cfg_keywords";
+$z[3]=Array("global","",285,311);
+$z[3][4]['name']="cfg_webname";
+$z[4]=Array("global","",333,365);
+$z[4][4]['name']="cfg_templets_skin";
+$z[5]=Array("global","",460,492);
+$z[5][4]['name']="cfg_templets_skin";
+$z[6]=Array("global","",581,613);
+$z[6][4]['name']="cfg_templets_skin";
+$z[7]=Array("global","",663,695);
+$z[7][4]['name']="cfg_templets_skin";
+$z[8]=Array("include","",754,789);
+$z[8][4]['filename']="head.htm";
+$z[9]=Array("arclist","\r\n									<div class=\"item active\">\r\n										<a href='[field:arcurl/]'>\r\n											<img src=\"[field:picname/]\" alt=\"[field:title/]\">\r\n											<div class=\"carousel-caption\">\r\n												<h3>[field:title/]</h3>\r\n												<p>[field:description function='cn_substr(@me,90)'/]</p>\r\n											</div>\r\n										</a>\r\n									</div>\r\n									",1288,1697);
+$z[9][4]['titlelen']="80";
+$z[9][4]['flag']="f";
+$z[9][4]['row']="1";
+$z[10]=Array("arclist","\r\n									<div class=\"item\">\r\n										<a href='[field:arcurl/]'>\r\n											<img src=\"[field:picname/]\" alt=\"[field:title/]\">\r\n											<div class=\"carousel-caption\">\r\n												<h3>[field:title function='cn_substr(@me,50)'/]</h3>\r\n												<p>[field:description function='cn_substr(@me,90)'/]..</p>\r\n											</div>\r\n										</a>\r\n									</div>\r\n									",1712,2145);
+$z[10][4]['titlelen']="80";
+$z[10][4]['flag']="f";
+$z[10][4]['row']="4";
+$z[11]=Array("arclist","\r\n							<a href=\"[field:arcurl/]\" >\r\n							<strong>博主置顶</strong>\r\n							<h3 class=\"title\">[field:title/]</h3>\r\n							<p class=\"overView\">[field:description function='cn_substr(@me,220)'/]。。。</p>\r\n							</a>\r\n							",2724,3023);
+$z[11][4]['row']="1";
+$z[11][4]['flag']="c";
+$z[11][4]['orderby']="pubdate";
+$z[12]=Array("arclist","\r\n									<div class=\"panel panel-default\">\r\n										<div class=\"panel-body\">\r\n											<div class=\"contentleft\">\r\n											<h4><a class=\"title\" href=\"[field:arcurl/]\">[field:title/]</a></h4>\r\n											<p></p>\r\n											<p class=\"overView\">[field:description function='cn_substr(@me,220)'/]。。。</p>\r\n											<p><span class=\"count\"><i class=\"glyphicon glyphicon-user\"></i>[field:writer/]</span> <span class=\"count\"><i class=\"glyphicon glyphicon-eye-open\"></i>阅读:[field:click/]</span><span class=\"count\"><i class=\"glyphicon glyphicon-time\"></i>[field:pubdate function='strftime(\"%Y-%m-%d\",@me)'/]</span></p>\r\n										</div>\r\n											<div class=\"contentImage\">\r\n												<div class=\"row\">\r\n													<a href=\"[field:arcurl/]\" class=\"thumbnail w_thumbnail\">\r\n														<img src=\"[field:picname/]\" alt=\"[field:title/]\">\r\n													</a>\r\n												</div>\r\n										</div>\r\n										</div>\r\n										\r\n									</div>\r\n									",3300,4324);
+$z[12][4]['orderby']="pubdate";
+$z[12][4]['row']="10";
+$z[13]=Array("arclist","\r\n									<li>\r\n										<a href=\"[field:arclist/]\">[field:title/]</a>\r\n									</li>\r\n									",4731,4877);
+$z[13][4]['flag']="c";
+$z[13][4]['row']="10";
+$z[14]=Array("include","",5849,5884);
+$z[14][4]['filename']="foot.htm";
+
+?>

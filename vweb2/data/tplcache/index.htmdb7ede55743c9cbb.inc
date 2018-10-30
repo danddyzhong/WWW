@@ -1,0 +1,41 @@
+<?php
+$z[0]=Array("global","",254,280);
+$z[0][4]['name']="cfg_webname";
+$z[1]=Array("global","",321,348);
+$z[1][4]['name']="cfg_keywords";
+$z[2]=Array("global","",386,416);
+$z[2][4]['name']="cfg_description";
+$z[3]=Array("include","",1010,1045);
+$z[3][4]['filename']="head.htm";
+$z[4]=Array("arclist","\r\n   <span><a href=\"[field:arcurl/]\" title=\"[field:title /]\">[field:title /]</a><br /><b>[field:pubdate function='strftime(\"%Y-%m-%d\",@me)'/]</b></span>\r\n   ",1163,1371);
+$z[4][4]['titlelen']="40";
+$z[4][4]['row']="4";
+$z[5]=Array("arclist","<h4><a href=\"[field:arcurl/]\" title=\"[field:title /]\">[field:title /]</a></h4>",1452,1590);
+$z[5][4]['titlelen']="60";
+$z[5][4]['row']="1";
+$z[5][4]['flag']="h";
+$z[6]=Array("arclist","\r\n			\r\n			<li><a href=\"[field:arcurl/]\" title=\"[field:title /]\"><img src=\"[field:litpic/]\" alt=\"[field:title /]\" /></a></li>\r\n		  ",1659,1849);
+$z[6][4]['titlelen']="40";
+$z[6][4]['row']="3";
+$z[6][4]['flag']="f";
+$z[7]=Array("tag","<a href=\"[field:link/]\" target=\"_blank\">[field:tag /]</a> | ",1902,2015);
+$z[7][4]['row']="6";
+$z[7][4]['getall']="1";
+$z[7][4]['sort']="month";
+$z[8]=Array("arclist","\r\n     <li>\r\n      <h4><a href=\"[field:arcurl/]\" title=\"[field:title /]\">[field:title /]</a></h4>\r\n       <div class=\"wiget\">\r\n        <a href=\"[field:arcurl/]\" title=\"[field:title /]\"><img width=\"120\" height=\"90\" class=\"dream-img\"  src=\"[field:litpic/]\" alt=\"[field:title /]\"></a>\r\n       <div class=\"dreamer-info\"><p>[field:description function=\"cn_substr(@me,120)\"/]...</p></div>\r\n       </div>\r\n      </li>    \r\n     ",2151,2640);
+$z[8][4]['titlelen']="40";
+$z[8][4]['row']="2";
+$z[8][4]['orderby']="click";
+$z[9]=Array("arclist","\r\n    <dl>\r\n     <dt><img src=\"[field:litpic/]\" alt=\"[field:title /]\" /><h5>[field:pubdate function=\"MyDate('m-d',@me)\"/] / 浏览量：[field:click/] 次</h5></dt>\r\n     <dd>\r\n      <h3><a href=\"[field:arcurl/]\">[field:title /]</a></h3>\r\n      <span>[field:description function=\"cn_substr(@me,220)\"/]......[详细]</span>\r\n      <h6>[field:id function=GetTags(@me)/]</h6>\r\n      <div class=\"jw\">\r\n       <div class=\"bshare-custom\"><div class=\"bsPromo bsPromo2\"></div><a title=\"分享到QQ空间\" class=\"bshare-qzone\"></a><a title=\"分享到新浪微博\" class=\"bshare-sinaminiblog\"></a><a title=\"分享到人人网\" class=\"bshare-renren\"></a><a title=\"分享到腾讯微博\" class=\"bshare-qqmb\"></a><a title=\"分享到网易微博\" class=\"bshare-neteasemb\"></a><a title=\"更多平台\" class=\"bshare-more bshare-more-icon more-style-addthis\"></a></div><script type=\"text/javascript\" charset=\"utf-8\" src=\"http://static.bshare.cn/b/buttonLite.js#style=-1&uuid=cefff51d-26d3-4436-a3f7-2ab64beca899&pophcol=3&lang=zh\"></script><script type=\"text/javascript\" charset=\"utf-8\" src=\"http://static.bshare.cn/b/bshareC0.js\"></script>\r\n      </div>\r\n     </dd>\r\n    </dl>\r\n   ",2759,4002);
+$z[9][4]['titlelen']="55";
+$z[9][4]['row']="10";
+$z[9][4]['typeid']="all";
+$z[9][4]['noflag']="f,c";
+$z[10]=Array("type","[field:typelink /]",4054,4106);
+$z[10][4]['typeid']="1";
+$z[11]=Array("include","",4216,4252);
+$z[11][4]['filename']="right.htm";
+$z[12]=Array("include","",4292,4327);
+$z[12][4]['filename']="foot.htm";
+
+?>

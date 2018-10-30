@@ -1,0 +1,1 @@
+<a  class="title-sm fl" href="[field:arcurl/]" target="_blank">[field:title/]</a>

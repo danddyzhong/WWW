@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteRule ^index.html$ index.php [L]
+RewriteRule ^(.*)/$ list.php?tid=$1 [L]
+RewriteRule ^(.*)/list_([0-9]+)_([0-9]+).html$ list.php?tid=$2&PageNo=$3 [L]
+RewriteRule ^(.*)/([0-9]+).html?$ view.php?aid=$2 [L]
+RewriteRule ^(.*)/([0-9]+)-([0-9]+).html?$ view.php?aid=$2&pageno=$3 [L]

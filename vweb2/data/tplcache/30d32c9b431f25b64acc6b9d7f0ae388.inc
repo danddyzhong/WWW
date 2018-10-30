@@ -1,0 +1,1 @@
+<li><i class="fa fa-minus"></i><a href="[field:arcurl/]">[field:title/]</a></li>

@@ -1,0 +1,3 @@
+<li>
+          <div class="sideshow"><a href="[field:arcurl/]" target="_ablank"  title="[field:title/]"> <img width='80' height='60' src='[field:picname/]' class='icon wp-post-image' alt='[field:title/]' title='[field:title/]' /> </a> <a href="[field:arcurl/]" target="_ablank"  title="[field:title/]"> [field:title/] </a> <span class="datetime"> [field:pubdate function='strftime("%Y-%m-%d",@me)'/] </span> </div>
+        </li>

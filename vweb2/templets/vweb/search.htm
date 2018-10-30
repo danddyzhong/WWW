@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:global name='keyword' function='RemoveXSS(@me)'/}相关电影_{dede:global.cfg_webname/}</title>
+<link href="{dede:global.cfg_templets_skin/}/static/images/index.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<!--[if IE 6]>
+<script type="text/javascript" src="/static/js/DD_belatedPNG.js" ></script>
+<script type="text/javascript">DD_belatedPNG.fix('.png,.h_site_top2');</script>
+<![endif]-->
+</head>
+<body>
+{dede:include filename="header.htm"/}
+<div class="divauto" id="main">
+  <div class="sections">
+    <div class="sl">
+      <div class="tit1 c5b5c5c">当前位置: 搜索 <strong class="fc_03c">{dede:global name='keyword' function='RemoveXSS(@me)'/}</strong> 的结果</div>
+      <div class="con">
+        <ul class="searchlist">{dede:list pagesize='18'}
+          <li>
+          	<h1 class="c0071bc"><a href="[field:arcurl/]" target="_blank">[field:title/][field:shorttitle/]</a></h1>
+            <p>[field:description/]...</p>
+          </li>
+          {/dede:list}
+        </ul>
+        <div id="pager" style="padding-left:10px;">
+          <ul>
+            {dede:pagelist listsize='4'/} 
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="sr">
+      <div class="box newr1">
+        <h1>相关搜索</h1>
+        <ul style="height:403px;">
+        	{dede:likewords num='14'/}
+        </ul>
+      </div>
+      <div class="ads250 mt10"> <script language="javascript" type="text/javascript" src="/a/250x250.js"></script> </div>
+    </div>
+  </div>
+</div>
+{dede:include filename="footer.htm"/}
+</body>
+</html>

@@ -1,0 +1,1 @@
+<a title="[field:typename/]" href="[field:typelink/]" target="_balnk"> <img alt="" src="/templets/default/images/fanwen_3_2.png"> <span>[field:typename/]</span> </a>

@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=11,IE=10,IE=9,IE=8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="author" content="" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link rel='stylesheet' id='_bootstrap-css'  href='{dede:global.cfg_templets_skin/}/skin/css/bootstrap.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='_fontawesome-css'  href='{dede:global.cfg_templets_skin/}/skin/css/font-awesome.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='_main-css'  href='{dede:global.cfg_templets_skin/}/skin/css/main.css' type='text/css' media='all' />
+<script type='text/javascript' src='{dede:global.cfg_templets_skin/}/skin/js/jquery.min.js'></script>
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/skin/css/colorbox.css" type="text/css" />
+<link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/skin/css/erphpdown.css" type="text/css" />
+<script  src="{dede:global.cfg_templets_skin/}/skin/js/jquery.colorbox-min.js" ></script>
+<script  src="{dede:global.cfg_templets_skin/}/skin/js/webThunderDetect.js" ></script>
+<script  src="{dede:global.cfg_templets_skin/}/skin/js/mibt_mi.js" ></script>
+<script>
+			jQuery(document).ready(function(){
+				jQuery(".iframe").colorbox({iframe:true, innerWidth:360, innerHeight:309});
+				jQuery(".inline").colorbox({inline:true, width:"50%",height:"45%"});
+				jQuery("#click").click(function(){ 
+					jQuery("#click").css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here powered by adminbuy.cn");
+					return false;});});</script>
+<link rel="shortcut icon" href="/skin/img/favicon.ico">
+<!--[if lt IE 9]><script src="{dede:global.cfg_templets_skin/}/skin/js/html5.min.js"></script><![endif]-->
+</head>
+<body class="home blog">
+{dede:include filename="head.htm"/}
+<section class="container">
+  <div class="content-wrap">
+    <div class="content">
+      <div class="ad"><div class="ad"></div></div>
+      <div class="title">
+        <h3> 最新电影</h3>
+      </div>
+      {dede:arclist titlelen=100 orderby ='pubdate' flag='p' row='10' typeid='1' listtype='image' }
+      <article class="excerpt " >
+        <p class="image-container" ><a target="_blank" class="focus" href="[field:arcurl/]"><img  src="[field:picname/]" class="thumb"></a></p>
+        <header>
+          <h2><a target="_blank" href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h2>
+        </header>
+        <p class="meta"><span style="display:inline"><time><i class="fa fa-clock-o"></i>[field:pubdate function='strftime("%m-%d",@me)'/]</time></span><br/><span class="pv"><i class="fa fa-eye"></i>浏览：[field:click/]次</span></p></article>
+      {/dede:arclist}
+      
+      <div style="clear:both;"></div>
+      <div class="ad"><div class="ad"></div></div>
+      <div class="title">
+        <h3> 最新电视剧</h3>
+      </div>
+      {dede:arclist titlelen=100  orderby ='pubdate'  flag='p' typeid='7'  row='10' listtype='image'}
+      <article class="excerpt " >
+        <p class="image-container" ><a target="_blank" class="focus" href="[field:arcurl/]"><img  src="[field:picname/]" class="thumb"></a></p>
+        <header>
+          <h2><a target="_blank" href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h2>
+        </header>
+        <p class="meta">
+          <time><i class="fa fa-clock-o"></i>[field:pubdate function='strftime("%m-%d",@me)'/]</time><br/>
+          <span class="pv"><i class="fa fa-eye"></i>浏览：[field:click/] 次</span></p>
+      </article>
+      {/dede:arclist}
+      
+      <div style="clear:both;"></div>
+      <div class="ad"><div class="ad"></div></div>
+      <div class="title">
+        <h3>喜剧片</h3>{dede:autochannel  partsort='1' typeid='1' }
+        <span class="more_see"><a href="[field:typelink/]">更多>></a></span>
+        {/dede:autochannel}
+      </div>
+      {dede:arclist titlelen=100  orderby ='pubdate' typeid='2' row='5' listtype='image' }
+      <article class="excerpt " >
+        <p class="image-container" ><a target="_blank" class="focus" href="[field:arcurl/]"><img  src="[field:picname/]" class="thumb"></a></p>
+        <header>
+          <h2><a target="_blank" href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h2>
+        </header>
+        <p class="meta">
+          <time><i class="fa fa-clock-o"></i>[field:pubdate function='strftime("%m-%d",@me)'/]</time><br/>
+          <span class="pv"><i class="fa fa-eye"></i>浏览：[field:click/] 次</span></p>
+      </article>
+      {/dede:arclist}
+      
+      
+      <div style="clear:both;"></div>
+      <div class="ad"><div class="ad"></div></div>
+      <div class="title">
+        <h3>动作片</h3>{dede:autochannel  partsort='2' typeid='1' }
+        <span class="more_see"><a href="[field:typelink/]">更多>></a></span>
+        {/dede:autochannel}
+      </div>
+      {dede:arclist titlelen=100  orderby ='pubdate' typeid='3' row='5' listtype='image' }
+      <article class="excerpt " >
+        <p class="image-container" ><a target="_blank" class="focus" href="[field:arcurl/]"><img  src="[field:picname/]" class="thumb"></a></p>
+        <header>
+          <h2><a target="_blank" href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h2>
+        </header>
+        <p class="meta">
+          <time><i class="fa fa-clock-o"></i>[field:pubdate function='strftime("%m-%d",@me)'/]</time><br/>
+          <span class="pv"><i class="fa fa-eye"></i>浏览：[field:click/] 次</span></p>
+      </article>
+      {/dede:arclist}
+      
+       <div style="clear:both;"></div>
+      <div class="ad"><div class="ad"></div></div>
+      <div class="title">
+        <h3>爱情片</h3>{dede:autochannel  partsort='3' typeid='1' }
+        <span class="more_see"><a href="[field:typelink/]">更多>></a></span>
+        {/dede:autochannel}
+      </div>
+      {dede:arclist titlelen=100  orderby ='pubdate' typeid='4' row='5' listtype='image' }
+      <article class="excerpt " >
+        <p class="image-container" ><a target="_blank" class="focus" href="[field:arcurl/]"><img  src="[field:picname/]" class="thumb"></a></p>
+        <header>
+          <h2><a target="_blank" href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h2>
+        </header>
+        <p class="meta">
+          <time><i class="fa fa-clock-o"></i>[field:pubdate function='strftime("%m-%d",@me)'/]</time><br/>
+          <span class="pv"><i class="fa fa-eye"></i>浏览：[field:click/] 次</span></p>
+      </article>
+      {/dede:arclist}
+      
+      <div style="clear:both;"></div>
+      <div class="ad"><div class="ad"></div></div>
+      <div class="title">
+        <h3>恐怖片</h3>{dede:autochannel  partsort='4' typeid='1' }
+        <span class="more_see"><a href="[field:typelink/]">更多>></a></span>
+        {/dede:autochannel}
+      </div>
+      {dede:arclist titlelen=100  orderby ='pubdate' typeid='5' row='5' listtype='image' }
+      <article class="excerpt " >
+        <p class="image-container" ><a target="_blank" class="focus" href="[field:arcurl/]"><img  src="[field:picname/]" class="thumb"></a></p>
+        <header>
+          <h2><a target="_blank" href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h2>
+        </header>
+        <p class="meta">
+          <time><i class="fa fa-clock-o"></i>[field:pubdate function='strftime("%m-%d",@me)'/]</time><br/>
+          <span class="pv"><i class="fa fa-eye"></i>浏览：[field:click/] 次</span></p>
+      </article>
+      {/dede:arclist}
+      
+      <div style="clear:both;"></div>
+      <div class="ad"><div class="ad"></div></div>
+      <div class="title">
+        <h3>科幻片</h3>{dede:autochannel  partsort='5' typeid='1' }
+        <span class="more_see"><a href="[field:typelink/]">更多>></a></span>
+        {/dede:autochannel}
+      </div>
+      {dede:arclist titlelen=100  orderby ='pubdate' typeid='6' row='5' listtype='image' }
+      <article class="excerpt " >
+        <p class="image-container" ><a target="_blank" class="focus" href="[field:arcurl/]"><img  src="[field:picname/]" class="thumb"></a></p>
+        <header>
+          <h2><a target="_blank" href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h2>
+        </header>
+        <p class="meta">
+          <time><i class="fa fa-clock-o"></i>[field:pubdate function='strftime("%m-%d",@me)'/]</time><br/>
+          <span class="pv"><i class="fa fa-eye"></i>浏览：[field:click/] 次</span></p>
+      </article>
+      {/dede:arclist}
+      
+      <div style="clear:both;"></div>
+      <div class="ad"><div class="ad"></div></div>
+      <div class="title">
+        <h3>战争片</h3>{dede:autochannel  partsort='6' typeid='1' }
+        <span class="more_see"><a href="[field:typelink/]">更多>></a></span>
+        {/dede:autochannel}
+      </div>
+      {dede:arclist titlelen=100  orderby ='pubdate' typeid='14' row='5' listtype='image' }
+      <article class="excerpt " >
+        <p class="image-container" ><a target="_blank" class="focus" href="[field:arcurl/]"><img  src="[field:picname/]" class="thumb"></a></p>
+        <header>
+          <h2><a target="_blank" href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h2>
+        </header>
+        <p class="meta">
+          <time><i class="fa fa-clock-o"></i>[field:pubdate function='strftime("%m-%d",@me)'/]</time><br/>
+          <span class="pv"><i class="fa fa-eye"></i>浏览：[field:click/] 次</span></p>
+      </article>
+      {/dede:arclist}
+      
+       <div style="clear:both;"></div>
+      <div class="ad"><div class="ad"></div></div>
+      <div class="title">
+        <h3>记录片</h3>{dede:autochannel  partsort='7' typeid='1' }
+        <span class="more_see"><a href="[field:typelink/]">更多>></a></span>
+        {/dede:autochannel}
+      </div>
+      {dede:arclist titlelen=100  orderby ='pubdate' typeid='15' row='5' listtype='image' }
+      <article class="excerpt " >
+        <p class="image-container" ><a target="_blank" class="focus" href="[field:arcurl/]"><img  src="[field:picname/]" class="thumb"></a></p>
+        <header>
+          <h2><a target="_blank" href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h2>
+        </header>
+        <p class="meta">
+          <time><i class="fa fa-clock-o"></i>[field:pubdate function='strftime("%m-%d",@me)'/]</time><br/>
+          <span class="pv"><i class="fa fa-eye"></i>浏览：[field:click/] 次</span></p>
+      </article>
+      {/dede:arclist}
+      
+       <div style="clear:both;"></div>
+      <div class="ad"><div class="ad"></div></div>
+      <div class="con_part">
+	      <div class="title">
+	        <h3>3D电影</h3>{dede:autochannel  partsort='8' typeid='1' }
+	        <span class="more_see"><a href="[field:typelink/]">更多>></a></span>
+	        {/dede:autochannel}
+	      </div>
+	      <div class="con_list">
+	      {dede:arclist titlelen=100  orderby ='pubdate' typeid='16' row='5' listtype='image' }
+	      <article class="excerpt " >
+	        <p class="image-container" ><a target="_blank" class="focus" href="[field:arcurl/]"><img  src="[field:picname/]" class="thumb"></a></p>
+	        <header>
+	          <h2><a target="_blank" href="[field:arcurl/]" title="[field:title/]">[field:title/]</a></h2>
+	        </header>
+	        <p class="meta">
+	          <time><i class="fa fa-clock-o"></i>[field:pubdate function='strftime("%m-%d",@me)'/]</time><br/>
+	          <span class="pv"><i class="fa fa-eye"></i>浏览：[field:click/] 次</span></p>
+	      </article>
+	      {/dede:arclist}
+	      </div>
+      </div>
+    </div>
+  </div>
+  <aside class="sidebar">
+    <div class="widget widget_ui_ads">
+      <div class="item"><span style=" display:block; margin:10px 0px 10px 2px;"><div class="item"><span style=" display:block; margin:10px 0px 10px 9px;"> 
+       <a href="http://www.adminbuy.cn" target="_blank"><img src="/skin/img/3cd871e89f2f6eb8a3a032653a4f8018.jpg" border="0" width="300" height="250" alt=""></a>
+        </span></div></span></div>
+    </div>
+    <div class="widget widget_ui_posts">
+      <h3>猜你喜欢</h3>
+      <ul>
+        {dede:arclist row="20" orderby='rand' flag='p' titlelen=100 }
+        <li><a target="_blank" href="[field:arcurl/]"><i class="a[field:global.autoindex/]">[field:global.autoindex/]&nbsp;&nbsp;</i>[field:title/]<time><i class="fa fa-clock-o"></i>[field:pubdate function='strftime("%m-%d",@me)'/]</time></a></li>
+          {/dede:arclist}
+          </ul>
+    </div>
+    <div class="widget widget_ui_posts">
+      <h3>2018播放排行榜</h3>
+      <ul>
+        {dede:arclist row="20" orderby='click' flag='p' titlelen=100 subday=365 }
+        <li><a target="_blank" href="[field:arcurl/]"><i class="a[field:global.autoindex/]">[field:global.autoindex/]&nbsp;&nbsp;</i>[field:title/]<time><i class="fa fa-clock-o"></i>[field:pubdate function='strftime("%m-%d",@me)'/]</time></a></li>
+          {/dede:arclist}
+          </ul>
+    </div>
+     <div class="widget widget_ui_posts">
+      <h3>本周播放排行榜</h3>
+      <ul>
+        {dede:arclist row="20" orderby='publish' flag='p' titlelen=100 subday=7 }
+        <li><a target="_blank" href="[field:arcurl/]"><i class="a[field:global.autoindex/]">[field:global.autoindex/]&nbsp;&nbsp;</i>[field:title/]<time><i class="fa fa-clock-o"></i>[field:pubdate function='strftime("%m-%d",@me)'/]</time></a></li>
+          {/dede:arclist}
+          </ul>
+    </div>
+    <div class="widget widget_ui_ads">
+      <div class="item"><span style=" display:block; margin:10px 0px 10px 2px;"> 
+       <div class="item"><span style=" display:block; margin:10px 0px 10px 9px;"> 
+       <a href="http://www.adminbuy.cn" target="_blank"><img src="/skin/img/ab93d4726fd97c7472919aa707607472.jpg" border="0" width="300" height="250" alt=""></a>
+        </span></div>
+        </span></div>
+    </div>
+    
+  </aside>
+</section>
+{dede:include filename="foot.htm"/}
+</body>
+</html>

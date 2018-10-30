@@ -1,0 +1,46 @@
+更改：
+
+1、{dede:field.body /}替换成{dede:field.body function="huan_body(@me)"/}    
+
+
+2、{dede:pagelist listitem="info,index,end,pre,next,pageno,option"listsize="3"/}   删掉,option
+
+
+3、标签[field:typelink/] 替换成 [field:typeurl/]  
+
+4、公用图片要么用成PC域名，要么把对应的图片复制到M目录下（http://m.**.com\templets\default\images）
+
+   
+【文章内容页里的图片系统会自动替换成pc端路径】
+
+==========后台参数设置格式1===============
+
+cfg_basehost：http://m.okfanwen.com 【网址后面不要有斜杠】
+
+(是/否)支持多站点： 否
+发布文章后马上更新网站主页：	是
+发表文章后马上更新相关栏目：	是
+发表文章后马上更新上下篇：	是
+
+
+=======后台参数设置格式2========有手机版的才设置===============
+MIP端：	
+http://m.okfanwen.com 【网址后面不要有斜杠】
+cfg_mip
+
+百度MIP域名参数：	
+m.okfanwen.com【前面不要有http://  网址后面不要有斜杠】
+cfg_mipyuming
+
+百度MIP-token：	
+uygBacPVHcOMb1Zx
+cfg_badumip
+
+是否使用伪静态：是
+
+
+===========旧模板改造=====
+list.php?tid=[field:id/]  改成   [field:typelink/]
+view.php?aid=[field:id/]   改成  [field:arcurl/]
+
+======================

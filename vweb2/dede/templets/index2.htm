@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title><?php echo $cfg_webname; ?>
+-<?php echo $cfg_softname." ".$cfg_version; ?>
+</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/root.css" rel="stylesheet">
+<style type="text/css">
+	.container-widget iframe#main{min-height:1500px;}
+</style>
+</head>
+<body>
+<div class="loading">
+	<img src="img/loading.gif" alt="loading-img">
+</div>
+<div id="top" class="clearfix">
+	<div class="applogo">
+		<a href="index.php" class="logo">企业网站后台管理</a>
+	</div>
+	<a href="#" class="sidebar-open-button"><i class="fa fa-bars" style="
+    color: #f7f7f7;
+"></i></a>
+	<a href="#" class="sidebar-open-button-mobile" style="
+    color: #f7f7f7;
+"><i class="fa fa-bars" ></i></a>
+	<form class="searchform" action="action_search.php" target="main" method="post">
+		<input type="text" class="searchbox" id="searchbox" name="keyword" placeholder="功能搜索">
+		<span class="searchbutton"><i class="fa fa-search"></i></span>
+	</form>
+	<ul class="topmenu">
+		<li><a href="../index.php?upcache=1" target="_blank">网站主页</a></li>
+                <li><a href="makehtml_all.php" target='main'>一键更新网站</a></li>
+		<li><a href="sys_cache_up.php" target='main'>清除缓存</a></li>
+		<li><a href="exit.php" target="_top">退出</a></li>
+	</ul>
+</div>
+<!-- 导航开始 -->
+<div class="sidebar clearfix">
+	<ul class="sidebar-panel nav" style="border-bottom:none">
+		<li><a href='index_body.php' target='main'><span class="icon color15"><i class="fa fa-home"></i></span>后台首页</a></li>
+		<li><a href="#"><span class="icon color7"><i class="fa fa-file-text-o"></i></span>常用操作<span class="caret"></span></a>
+		<ul>
+			
+                        <li><a href='templets_main.php' target='main'>模板管理</a></li>
+                        <li><a href="makehtml_homepage.php" target="main">更新主页HTML</a></li>
+                        <li><a href="makehtml_all.php" target='main'>一键更新网站</a></li>
+			<li><a href='content_list.php' target='main'>所有文章管理</a></li>
+			
+		</ul>
+		</li>
+		<li><a href="#"><span class="icon color7"><i class="fa fa-list-ul"></i></span>内容管理<span class="caret"></span></a>
+		<ul>
+<li><a href='catalog_main.php' target='main'>栏目管理</a></li>
+<li><a href='content_list.php?arcrank=-1' target='main'>等审核的档案</a></li>
+			<li><a href='content_batch_up.php' target='main'>文档批量维护</a></li>
+			<li><a href='recycling.php' target='main'>内容回收站</a></li>
+			<?php                    
+                    //载入可发布频道
+                    $addset = '';
+                    //检测可用的内容模型
+                    if($cfg_admin_channel = 'array' && count($admin_catalogs) >
+			 0)
+                    {
+                        $admin_catalog = join(',', $admin_catalogs);
+                        $dsql->SetQuery(" SELECT channeltype FROM `#@__arctype` WHERE id IN({$admin_catalog}) GROUP BY channeltype ");
+                    }
+                    else
+                    {
+                        $dsql->SetQuery(" SELECT channeltype FROM `#@__arctype` GROUP BY channeltype ");
+                    }
+                    $dsql->Execute();
+                    $candoChannel = '';
+                    while($row = $dsql->GetObject())
+                    {
+                        $candoChannel .= ($candoChannel=='' ? $row->channeltype : ','.$row->channeltype);
+                    }
+                    if(empty($candoChannel)) $candoChannel = 1;
+                    $dsql->SetQuery("SELECT id,typename,addcon,mancon FROM `#@__channeltype` WHERE id IN({$candoChannel}) AND id
+			<>-1 AND isshow=1 ORDER BY id ASC");
+                    $dsql->Execute();
+                    while($row = $dsql->GetObject())
+                    {
+                        $addset .="
+			<li><a href='{$row->mancon}?channelid={$row->id}' target='main'>{$row->typename}</a></li>
+			";
+                    }       
+                    echo $addset;
+                ?>
+		</ul>
+		</li>
+		<li><a href="#"><span class="icon color7"><i class="fa fa-cubes"></i></span>频道模型<span class="caret"></span></a>
+		<ul>
+			<li><a href='diy_main.php' target='main'>自定义表单</a></li>
+			<li><a href='freelist_main.php' target='main'>自由列表管理</a></li>
+			<li><a href='mychannel_main.php' target='main'>内容模型管理</a></li>
+		</ul>
+		</li>
+		
+		<li><a href="#"><span class="icon color7"><i class="fa fa-plug"></i></span>辅助插件<span class="caret"></span></a>
+		<ul>
+
+			<li><a href="plus_main.php" target="main">插件管理</a></li>
+			<li><a href="erraddsave.php" target="main">挑错管理</a></li>
+			<li><a href="ad_main.php" target="main">广告管理</a></li>
+			<li><a href="friendlink_main.php" target="main">友情链接</a></li>
+			<li><a href="http://changyan.kuaizhan.com" target="main">畅言评论</a></li>
+		</ul>
+		</li>
+
+<li><a href="#"><span class="icon color7"><i class="fa fa-archive"></i></span>模块管理<span class="caret"></span></a>
+		<ul>
+			<li><a href="module_main.php" target="main">模块管理</a></li>
+			<li><a href="module_upload.php" target="main">上传新模块</a></li>
+			<li><a href="module_make.php" target="main">模块生成向导</a></li>
+		</ul>
+		</li>
+	
+
+
+		<li><a href="#"><span class="icon color7"><i class="fa fa-refresh"></i></span>HTML更新<span class="caret"></span></a>
+		<ul>
+			<li><a href="makehtml_homepage.php" target="main">更新主页HTML</a></li>
+			<li><a href="makehtml_list.php" target="main">更新栏目HTML</a></li>
+			<li><a href="makehtml_archives.php" target="main">更新文档HTML</a></li>
+			<li><a href="makehtml_map_guide.php" target="main">更新网站地图</a></li>
+		</ul>
+		</li>
+		<li><a href="#"><span class="icon color7"><i class="fa fa-users"></i></span>会员管理<span class="caret"></span></a>
+		<ul>
+			<li><a href="member_rank.php" target="main">会员级别设置</a></li>
+			<li><a href="member_scores.php" target="main">积分头衔设置</a></li>
+			<li><a href="member_model_main.php" target="main">会员模型管理</a></li>
+			<li><a href="member_main.php" target="main">注册会员列表</a></li>
+			<li><a href="member_pm.php" target="main">会员短信管理</a></li>
+			<li><a href="member_guestbook.php" target="main">会员留言管理</a></li>
+		</ul>
+		</li>
+		<li><a href="#"><span class="icon color7"><i class="fa fa-desktop"></i></span>系统设置<span class="caret"></span></a>
+		<ul>
+			<li><a href="sys_info.php" target="main">系统基本参数</a></li>
+			<li><a href="sys_admin_user.php" target="main">系统用户管理</a></li>
+			<li><a href="sys_safe.php" target="main">验证安全设置</a></li>
+			<li><a href="sys_info_mark.php" target="main">图片水印设置</a></li>
+			<li><a href="sys_data.php" target="main">数据库备份/还原</a></li>
+			<li><a href="sys_sql_query.php" target="main">SQL命令行工具</a></li>
+		</ul>
+		</li>
+
+                <li><a href="http://www.baiyoujia.cn" target="_blank"><span class="icon color7"><i class="fa fa-cogs"></i></span>技术支持</a>
+		
+		</li>
+	</ul>
+</div>
+<div class="content">
+	<div class="container-widget" id="dcMain">
+		<iframe width="100%" src="index_body.php" name="main" id="main" scrolling="auto" frameborder="0" onload="setIframeHeight(this)">
+		</iframe>
+	</div>
+	<div class="row footer">
+		<div class="col-md-6 text-left">
+      Copyright &copy; 
+			<a target="_blank" href="http://www.baiyoujia.cn">百优佳旗下佳园网络企业后台管理系统</a> All rights reserved.
+		</div>
+		<div class="col-md-6 text-right">
+        技术支持:
+			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=262799680&amp;site=qq&amp;menu=yes">QQ：262799680</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/plugins.js"></script>
+<script type="text/javascript" src="js/bootstrap-select/bootstrap-select.js"></script>
+<script type="text/javascript" src="js/bootstrap-toggle/bootstrap-toggle.min.js"></script>
+<script type="text/javascript">
+function setIframeHeight(iframe) {
+if (iframe) {
+var iframeWin = iframe.contentWindow || iframe.contentDocument.parentWindow;
+if (iframeWin.document.body) {
+iframe.height = iframeWin.document.documentElement.scrollHeight || iframeWin.document.body.scrollHeight;
+}
+}
+};
+window.onload = function () {
+setIframeHeight(document.getElementById('main'));
+};
+</script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+<li id="navbar-category-1"><a href="[field:typelink /]"><i class="icon-desktop"></i> [field:typename /]</a></li>

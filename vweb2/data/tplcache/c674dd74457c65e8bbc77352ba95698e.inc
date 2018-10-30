@@ -1,0 +1,2 @@
+<li><a target="_blank" href="[field:arcurl/]">[field:title/]<time><i class="fa fa-clock-o"></i>[field:pubdate function='strftime("%m-%d",@me)'/]</time><span class="muted">
+          </span><br></li>

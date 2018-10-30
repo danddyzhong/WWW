@@ -1,0 +1,1 @@
+<li class=""><a id="banner5" href="[field:typelink /]" style="background: url(/templets/default/images/xinde.png) no-repeat center center;"></a></li>

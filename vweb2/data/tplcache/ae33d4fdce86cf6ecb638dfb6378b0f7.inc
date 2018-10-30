@@ -1,0 +1,1 @@
+<li><a title="[field:title/]" href="[field:global.cfg_mip/][field:arcurl/]"><i></i>[field:title/]</a></li>

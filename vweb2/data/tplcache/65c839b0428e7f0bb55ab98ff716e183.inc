@@ -1,0 +1,1 @@
+<h2 class="home-heading clr"> <span class="heading-text"> [field:typename/] </span> <a href="[field:typelink/]">+ 更多</a> </h2>

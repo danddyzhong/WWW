@@ -1,0 +1,1 @@
+<li><a title="[field:title function='htmlspecialchars(@me)'/]" href="[field:arcurl /]">[field:title /]</a></li>

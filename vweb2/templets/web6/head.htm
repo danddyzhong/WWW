@@ -1,0 +1,51 @@
+<header class="header">
+  <div class="inner">
+  <div class="logo animated fadeInLeft"> <a href="/" title="{dede:global.cfg_webname/}">赚钱网</a> </div>
+    <div class="top-other">
+      <ul>
+        <li><i class="icon-menu"></i></li>
+       <li><i class="icon-search"></i></li>
+        <!--  <li><i class="icon-share"></i>
+          <div class="social-share">
+            <div class="bdsharebuttonbox"> <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a> <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a> <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a> <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a> <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a> </div>
+          </div>
+        </li> -->
+        <div class="clear"></div>
+      </ul>
+    </div>
+    <nav class="nav">
+      <div class="menu">
+        <ul>
+          <li class="{dede:field name=typeid runphp='yes'}(@me=='')? @me='current':@me='';{/dede:field}"><a href="/" >首页</a> </li>
+          {dede:channelartlist typeid='12,18,14,15'  currentstyle='current'}
+          <li class="common {dede:field.currentstyle/}"><a href="{dede:field name='typeurl'/}" >{dede:field name='typename'/}</a>
+            <ul {dede:field name=typeid runphp="yes"}
+global $dsql;
+$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+$row = $dsql->GetOne($sql);
+@me=is_array($row)?'class="sub-nav"':'style="display:none"';
+{/dede:field}>
+            {dede:channel type='son'}
+              <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+            {/dede:channel}  
+            </ul>
+          </li>
+          {/dede:channelartlist} 
+        </ul>
+      </div>
+    </nav>
+    <div class="clear"></div>
+  </div>
+</header>
+<div class="search-bg" >
+  <div class="inner">
+  	<div class="search-form">
+    <form name="formsearch" method="get" action="{dede:global.cfg_cmsurl/}/plus/search.php">
+        <input type="hidden" name="kwtype" value="0" />        
+        <input type="text" class="s" name="q" id="q" value="" placeholder="输入关键词搜索..."/>
+        <button type="submit" name="s"><i class="icon-search"></i></button>
+      </form>
+    </div>
+   <!--  <div class="tagscloud"> <span>快捷搜索：</span> {dede:hotwords num='8'/}  </div> -->
+  </div>
+</div>

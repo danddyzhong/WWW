@@ -1,0 +1,2 @@
+<li><em class="num">[field:global.autoindex/].</em><a href="[field:arcurl /]" target="_blank" title="[field:title function='htmlspecialchars(@me)'/]">[field:title function='htmlspecialchars(@me)'/]</a>
+</li>

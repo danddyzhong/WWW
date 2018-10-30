@@ -1,0 +1,1 @@
+<li class="active"><a id="banner0" href="[field:typelink /]" style="background: url(/templets/default/images/gongzuo.png) no-repeat center center;"></a></li>

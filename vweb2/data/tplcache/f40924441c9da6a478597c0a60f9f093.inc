@@ -1,0 +1,2 @@
+<li><span class="date-time">[field:pubdate   function=mydate('Y-m-d',@me)/]</span><i class="iconfont 681dian Themefont">&#xe602;</i>
+<a title="[field:title/]" href="[field:arcurl/]" class="Themetxthover ">[field:title/]</a></li>

@@ -1,0 +1,1 @@
+<h3><span class="iconfont work-fw-icon"><mip-img src="[field:global name=cfg_mip/]/templets/default/images/htfw.jpg" width="20px" height="20px" alt=""></mip-img></span>[field:typename/]<a href="list.php?tid=[field:id/]" title="[field:typename/]" class="aui-pull-right">更多</a></h3>

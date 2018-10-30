@@ -1,0 +1,1 @@
+<li class=""><a id="banner4" href="[field:typelink /]" style="background: url(/templets/default/images/yanjiang.png) no-repeat center center;"></a></li>

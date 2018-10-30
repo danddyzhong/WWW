@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}DVD高清下载_720P高清_1080P下载-{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.title/}{dede:field.shorttitle/}在线下载" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<link href="{dede:global.cfg_templets_skin/}/static/images/index.css" rel="stylesheet" type="text/css" />
+<script language="javascript" type="text/javascript" src="/static/js/tab.js"></script>
+<SCRIPT src="{dede:global.cfg_templets_skin/}/static/js/kankan.js"></SCRIPT>
+<SCRIPT src="http://pstatic.xunlei.com/js/webThunderDetect.js"></SCRIPT>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+<!--[if IE 6]>
+<script type="text/javascript" src="/static/js/DD_belatedPNG.js" ></script>
+<script type="text/javascript">DD_belatedPNG.fix('.png,.h_site_top2');</script>
+<![endif]-->
+</head>
+<body>
+<!-- 
+{dede:include filename="header.htm"/}  -->
+<!--  <div class="divauto" id="main">
+	<div class="sections">
+      <div class="sl">
+        <div class="tit c5b5c5c">当前位置: {dede:field name='position'/}{dede:field.title/}{dede:field.shorttitle/}下载介绍</div>
+        <div class="con">
+          <div id="playinfo">
+            <div class="img"><img src="{dede:field.picname/}" width="154" height="214" alt="{dede:field.title/}{dede:field.shorttitle/}" /></div>
+            <div class="info">
+              <div class="pfen">
+                <h2>{dede:field.title/}{dede:field.shorttitle/}</h2><a href="#dl" class="downA" title="进入{dede:field.title/}{dede:field.shorttitle/}下载地址">立即下载</a>
+              </div>
+              <div class="text c0071bc">
+                <p>主演：{dede:field.authors/}</p>
+                <p><b>状态：{dede:field.source function='strreplace(@me)'/}</b><b>更新时间：{dede:field.pubdate function="GetDateTimeMK(@me)"/}</b></p>
+                <p><b>地区：{dede:field.areas/} </b><b>上映年代：{dede:field.writer/} </b></p> 
+              </div>
+              <div class="share">
+                <div class="shares">
+                  {dede:global.cfg_share/}
+                </div>
+              </div>
+              <div class="pic"><script language="javascript" type="text/javascript" src="/a/468x60.js"></script></div>
+            </div>
+          </div>
+        </div>
+        <div class="con">
+          <div class="about">
+            <div class="title">
+              <h2>{dede:field.title/}影片介绍</h2>
+            </div>
+            <div id="endtext">
+              {dede:field.body/}
+            </div>
+            <div class="downlink" id="dl">
+              <h2>{dede:field.title/}下载地址</h2>
+              <ul>
+                 {dede:field.murls function="GetMurls(@me)"/}
+              </ul>
+            </div>
+            <div class="next c0071bc">
+              <p>{dede:prenext get='pre'/}</p>
+              <p>{dede:prenext get='next'/}</p>
+            </div>
+          </div>
+          <div class="relinks c0071bc">
+            <ul> {dede:likearticle row='8'}
+              <li>·<a href="[field:arcurl/]" target="_blank">[field:title/][field:shorttitle/]</a> [field:typename/]</li>
+              {/dede:likearticle}
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="sr">
+          <div class="box newr1">
+            <h2>热门{dede:field.typename/}</h2>
+            <ul style="height:403px;">{dede:arclist orderby='click' row=14 titlelen='32'}
+              <li><a href="[field:arcurl/]">[field:title/][field:shorttitle/]</a></li>
+              {/dede:arclist}
+            </ul>
+          </div>
+          <div class="ads250 mt10"> <script language="javascript" type="text/javascript" src="/a/250x250.js"></script> </div>
+          <div class="box mt10 newr1">
+            <h2>猜你喜欢看{dede:field.typename/}</h2>
+            <ul style="height:286px;">{dede:arclist orderby='rand' row=14 titlelen='32'}
+              <li><a href="[field:arcurl/]">[field:title/][field:shorttitle/]</a></li>
+              {/dede:arclist}
+            </ul>
+          </div>
+        </div>
+    </div>
+</div>  -->
+<!--  {dede:include filename="footer.htm"/} -->
+</body>
+</html>

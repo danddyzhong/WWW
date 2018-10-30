@@ -1,0 +1,73 @@
+<div class="w_header">
+			<div class="container">
+				<div class="w_header_top">
+					<a href="#" class="w_logo">赚钱网</a>
+					<span class="w_header_nav">
+					<ul>
+						 <li ><a href="/" class="{dede:field name=typeid runphp='yes'}(@me=='')? @me='active':@me='';{/dede:field}" >&nbsp;&nbsp;首页</a></li>
+
+                 {dede:channelartlist typeid='top'  currentstyle="active current-menu-item"}
+                <li class=""><a href="{dede:field name='typeurl'/}" class='{dede:field.currentstyle/}'>{dede:field name='typename'/}</a>
+
+                  <ul class='{dede:field name=typeid runphp="yes"}
+global $dsql;
+$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+$row = $dsql->GetOne($sql);
+@me=is_array($row)?'sub-menu':'display:none';
+{/dede:field}'>
+                    {dede:channel type='son'}
+                    <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+                    {/dede:channel} 
+                  </ul>
+                </li>
+                {/dede:channelartlist}
+					</ul>
+				</span>
+					<div class="w_search">
+						<div class="w_searchbox">
+							<form method="get" id="searchform-slide" class="searchform" action="/plus/search.php"  role="search">
+							<input type="text" name='q' placeholder="search" />
+							<button>搜索</button>
+							</form>
+						</div>
+					</div>
+				<span class='mb_navf'><img src='{dede:global.cfg_templets_skin/}/skin/img/sm_menu_134bbe3.png'/></span>
+				</div>
+			</div>
+		</div>
+		<span class="m_header_nav">
+					<ul>
+						 <li class="{dede:field name=typeid runphp='yes'}(@me=='')? @me='active':@me='';{/dede:field}"><a href="/">&nbsp;&nbsp;首页</a></li>
+
+                 {dede:channelartlist typeid='top'  currentstyle="active"}
+                <li class="{dede:field.currentstyle/}"><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+
+                  <ul class='{dede:field name=typeid runphp="yes"}
+global $dsql;
+$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+$row = $dsql->GetOne($sql);
+@me=is_array($row)?'sub-menu':'display:none';
+{/dede:field}'>
+                    {dede:channel type='son'}
+                    <li><a href="[field:typeurl/]">[field:typename/]</a></li>
+                    {/dede:channel} 
+                  </ul>
+                </li>
+                {/dede:channelartlist}
+					</ul>
+				</span>
+<script>
+	$(function(){
+		$(".mb_navf").click(
+
+			function(){
+				if($(".m_header_nav").attr('style') == 'visibility:visible;' ){
+					$(".m_header_nav").attr('style','visibility:hidden;');
+				}else{
+					$(".m_header_nav").attr('style','visibility:visible;');
+				}
+				
+			}
+			);
+	})
+</script>

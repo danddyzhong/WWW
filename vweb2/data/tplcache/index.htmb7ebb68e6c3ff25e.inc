@@ -1,0 +1,41 @@
+<?php
+$z[0]=Array("global","",106,134);
+$z[0][4]['name']="cfg_soft_lang";
+$z[1]=Array("global","",416,442);
+$z[1][4]['name']="cfg_webname";
+$z[2]=Array("global","",486,516);
+$z[2][4]['name']="cfg_description";
+$z[3]=Array("global","",553,580);
+$z[3][4]['name']="cfg_keywords";
+$z[4]=Array("include","",1540,1575);
+$z[4][4]['filename']="head.htm";
+$z[5]=Array("myad","",1651,1677);
+$z[5][4]['name']="toppic";
+$z[6]=Array("arclist","\r\n      <section class=\"section wow fadeIn\">\r\n        <div class=\"thumbnail\"> <a href=\"[field:arcurl/]\" title=\"[field:title/]\" target=\"_blank\"><img src=\"[field:picname/]\" alt=\"[field:title/]\"/></a> </div>\r\n        <h2><a href=\"[field:arcurl/]\" title=\"[field:title/]\" target=\"_blank\">[field:title/]</a></h2>\r\n        <div class=\"postmeta\"> <span><i class=\"icon-user-circle-o\"></i> <a>[field:writer/]</a></span> <span><i class=\"icon-calendar\"></i>\r\n          <time>[field:pubdate function=\"MyDate('Y-m-d',@me)\"/]</time>\r\n          </span> <span><i class=\"icon-eye\"></i> [field:click/]</span></div>\r\n        <div class=\"excerpt\">\r\n          <p> [field:description function=\"cn_substr(@me,320)\"/]...</p>\r\n        </div>\r\n      </section>\r\n      ",1901,2713);
+$z[6][4]['titlelen']="80";
+$z[6][4]['orderby']="pubdate";
+$z[6][4]['row']="10";
+$z[7]=Array("arclist","\r\n        <li>\r\n        <div class=\"thumbnail\"> <a href=\"[field:arcurl/]\" title=\"[field:title/]\"><img src=\"[field:picname/]\" alt=\"[field:title/]\"/></a> </div>\r\n          <h4><a href=\"[field:arcurl/]\" title=\"[field:title/]\">[field:title/]</a></h4>\r\n          <p>[field:description function=\"cn_substr(@me,220)\"/]...</p>\r\n        </li>\r\n      ",2917,3318);
+$z[7][4]['titlelen']="80";
+$z[7][4]['flag']="a";
+$z[7][4]['row']="2";
+$z[8]=Array("arclist","\r\n        <li> <i class=\"a[field:global.autoindex/]\">[field:global.autoindex/]</i> <a href=\"[field:arcurl/]\" title=\"[field:title/]\" target=\"_blank\">[field:title/]</a> </li>\r\n       ",3496,3743);
+$z[8][4]['titlelen']="80";
+$z[8][4]['orderby']="click";
+$z[8][4]['row']="8";
+$z[9]=Array("arclist","\r\n         <li class=\"list cur\">\r\n          <div class=\"thumbnail\"> <a href=\"[field:arcurl/]\" title=\"[field:title/]\" target=\"_blank\"><img src=\"[field:picname/]\"/></a> </div>\r\n          <p><i class=\"icon-right-open-mini\"></i> <a href=\"[field:arcurl/]\" title=\"[field:title/]\" target=\"_blank\">[field:title/]</a></p>\r\n        </li>\r\n       ",3928,4334);
+$z[9][4]['titlelen']="80";
+$z[9][4]['orderby']="rand";
+$z[9][4]['limit']="0,1";
+$z[10]=Array("arclist","\r\n         <li class=\"list\">\r\n          <div class=\"thumbnail\"> <a href=\"[field:arcurl/]\" title=\"[field:title/]\" target=\"_blank\"><img src=\"[field:picname/]\"/></a> </div>\r\n          <p><i class=\"icon-right-open-mini\"></i> <a href=\"[field:arcurl/]\" title=\"[field:title/]\" target=\"_blank\">[field:title/]</a></p>\r\n        </li>\r\n       ",4343,4745);
+$z[10][4]['titlelen']="80";
+$z[10][4]['orderby']="rand";
+$z[10][4]['limit']="1,9";
+$z[11]=Array("myad","",5530,5558);
+$z[11][4]['name']="footepic";
+$z[12]=Array("flink","",5770,5792);
+$z[12][4]['row']="24";
+$z[13]=Array("include","",5907,5944);
+$z[13][4]['filename']="footer.htm";
+
+?>
