@@ -1,0 +1,9 @@
+DELETE FROM dede_addonarticle WHERE aid >= 1 and aid< =20000;
+DELETE FROM dede_arctiny WHERE id >= 1 and id< =20000;
+DELETE FROM dede_archives WHERE id >= 1 and id<=20000;
+
+
+
+ALTER TABLE `dede_archives` AUTO_INCREMENT =1;
+ALTER TABLE `dede_arctiny` AUTO_INCREMENT =1;
+ALTER TABLE `dede_addonarticle` AUTO_INCREMENT =1;
