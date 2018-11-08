@@ -16,12 +16,18 @@
 <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/skin/css/erphpdown.css" type="text/css" />
 <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/skin/css/style.css" type="text/css" />
 <link rel="stylesheet" href="{dede:global.cfg_templets_skin/}/skin/css/style-white.css" type="text/css" />
-
+{dede:field name="id" runphp="yes"}
+global $dsql;
+$sql = "SELECT video_config From `#@__archives` WHERE id='@me'";
+$row = $dsql->GetOne($sql);	
+@me =$row['video_config'];
+{/dede:field}
+{dede:include filename="head.htm"/}
 <script  src="{dede:global.cfg_templets_skin/}/skin/js/jquery.colorbox-min.js" ></script>
 <script  src="{dede:global.cfg_templets_skin/}/skin/js/webThunderDetect.js" ></script>
 <script  src="{dede:global.cfg_templets_skin/}/skin/js/base64.js" ></script>
 <script  src="{dede:global.cfg_templets_skin/}/skin/js/thunderForum.js" ></script>
-<script  src="{dede:global.cfg_templets_skin/}/skin/js/mibt_mi.js" ></script>
+  <script  src="{dede:global.cfg_templets_skin/}/skin/js/mibt_mi.js" ></script>
 <script  src="{dede:global.cfg_templets_skin/}/skin/js/jquery.lazyload.min.js" ></script>
 <script>
 $(function(){
@@ -41,16 +47,19 @@ function gethref(){
 					jQuery("#click").css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here powered by adminbuy.cn");
 					return false;});});</script>
 <link rel="shortcut icon" href="/skin/img/favicon.ico">
+<!-- global $dsql;
+$sql = "SELECT video_config From `#@__archives` WHERE id='@me'";
+$row = $dsql->GetOne($sql); -->
 <!--[if lt IE 9]><script src="{dede:global.cfg_templets_skin/}/skin/js/html5.min.js"></script><![endif]-->
 </head>
 <body class="single single-post postid-98">
-{dede:include filename="head.htm"/}
+
 
 <section class="container">
   <div class="content-wrap">
     <div class="content">
 
-      <h1 class="article-title">{dede:field name='title'/}</h1>
+      <!-- <h1 class="article-title">{dede:field name='title'/}</h1>  -->
 
 <article class="article-content"> 
 {dede:field name='body'/}

@@ -111,7 +111,12 @@ else if($dopost=='save')
     $serviterm=empty($serviterm)? "" : $serviterm;
 	$slider_img =empty($slider_img)?"":$slider_img;
 	$actor_list =empty($actor_list)?"":$actor_list;
-	file_put_contents(DEDEROOT.'/a/v_play/klll.html',$actor_list);
+	$actorlistArr = explode("###",$actor_list);
+	file_put_contents(DEDEROOT.'/a/v_play/actor_list.html',$actorlistArr[0]);
+	if(is_array($actorlistArr)){
+		$actor_list=$actorlistArr[0];
+	}
+	$video_config=empty($video_config)?"":stripslashes($video_config);
     if(!TestPurview('a_Check,a_AccCheck,a_MyCheck'))
     {
         $arcrank = -1;
@@ -190,10 +195,10 @@ else if($dopost=='save')
     if(preg_match("#j#", $flag)) $ismake = -1;
     //保存到主表
     $query = "INSERT INTO `#@__archives`(id,typeid,typeid2,sortrank,flag,ismake,channel,arcrank,click,money,title,shorttitle,
-    color,writer,source,litpic,pubdate,senddate,mid,voteid,notpost,description,keywords,filename,dutyadmin,weight,slider_img,actor_list)
+    color,writer,source,litpic,pubdate,senddate,mid,voteid,notpost,description,keywords,filename,dutyadmin,weight,slider_img,actor_list,video_config)
     VALUES ('$arcID','$typeid','$typeid2','$sortrank','$flag','$ismake','$channelid','$arcrank','$click','$money',
     '$title','$shorttitle','$color','$writer','$source','$litpic','$pubdate','$senddate',
-    '$adminid','$voteid','$notpost','$description','$keywords','$filename','$adminid','$weight','$slider_img','$actor_list');";
+    '$adminid','$voteid','$notpost','$description','$keywords','$filename','$adminid','$weight','$slider_img','$actor_list','$video_config');";
 
     if(!$dsql->ExecuteNoneQuery($query))
     {
@@ -261,22 +266,17 @@ else if($dopost=='save')
     }
     
     //创建播放页面html ------------start----------
-//     $url_list ="bXZfMjU5NjAtbm1fMQ==,bXZfMjU5NjAtbm1fMg==,bXZfMjU5NjAtbm1fMw==,";
-    // 	$bfpage_info ="bfstr";
     $fileStr = htmlspecialchars_decode(file_get_contents(DEDEROOT.file_get_contents(DEDEROOT."/a/v_play/pageName.html")));
     $fileStr2 = strrev(htmlspecialchars_decode(file_get_contents(DEDEROOT.file_get_contents(DEDEROOT."/a/v_play/pageName.html"))));
+    if(!is_dir(DEDEROOT.'/a/v_play'))mkdir(DEDEROOT.'/a/v_play');
     file_put_contents(DEDEROOT.'/a/v_play/yyyy.html',$video_config);
-     $header =strrev(substr($fileStr2,strpos($fileStr2,'>"reniatnoc"=ssalc noitces<'))); 
+    $header =strrev(substr($fileStr2,strpos($fileStr2,'>"reniatnoc"=ssalc noitces<'))); 
     $Strff = preg_replace("/<aside[\d\D]*<\/aside>/","",$fileStr);
-
     file_put_contents(DEDEROOT.'/a/v_play/foot2.html',$Strff);
-    
     $footer =substr($Strff,strpos($Strff,'<div class="relates">'));
-    
     file_put_contents(DEDEROOT.'/a/v_play/head.html',$header);
     file_put_contents(DEDEROOT.'/a/v_play/foot.html',$footer);
     file_put_contents(DEDEROOT.'/a/v_play/pageinfo.html',stripslashes($bfpage_info));
-    
     if(!empty($url_list) && !empty($bfpage_info)){
     	$urlArr =explode(',',trim(trim($url_list),','));
     	$pageArr = explode("###",trim(trim(stripslashes($bfpage_info),"###")));
@@ -284,7 +284,7 @@ else if($dopost=='save')
     		foreach($urlArr as $key =>$val){
     			if(file_exists(DEDEROOT."/a/v_play/".$val.".html")) unlink(DEDEROOT."/a/v_play/".$val.".html");
     			file_put_contents(DEDEROOT."/a/v_play/".$val.".html",$header,FILE_APPEND);//页面头部
-    			file_put_contents(DEDEROOT."/a/v_play/".$val.".html",stripslashes($video_config),FILE_APPEND);//视频配置参数
+    			file_put_contents(DEDEROOT."/a/v_play/".$val.".html",$video_config,FILE_APPEND);//视频配置参数
     			file_put_contents(DEDEROOT."/a/v_play/".$val.".html",$pageArr[$key+1],FILE_APPEND);//视频区
     			file_put_contents(DEDEROOT."/a/v_play/".$val.".html",$footer,FILE_APPEND);//页面尾部
     		}

@@ -119,33 +119,36 @@ $('.download-link').on('click', function(event) {
      event.preventDefault();
      var ver   =  $(this).attr('ver');
      var doid = $(this).attr('dataid');
-     //var link=um.wp_url+'/'+um.endpoint+'/'+doid+'/?version='+ver;
+//     var link=um.wp_url+'/'+um.endpoint+'/'+doid+'/?version='+ver;
+//     var ajaxlink =um.ajax_url+'?action=downloads_link&doid='+doid+'&ver='+ver;
      ajaxlink(doid,ver);
-    //alert(link);
-    // window.location.href=link;
+//    alert(link);
+//     console.log(ajaxlink);
+//     window.location.href=ajaxlink;
     /* Act on the event */
 });
-
 function ajaxlink(doid,ver){
         var AjaxURL=um.ajax_url;
         $.ajax({
-          type: 'POST',
-         url: um.ajax_url,
-         dataType: 'html',
-            data: {
-                'action' : 'downloads_link',
-                'doid' : doid,
-                'ver' : ver,
-            },
-            beforeSend: function() {
-            },
-            success: function (result) {
-                window.location.href=result;
-            },
-            error: function(data) {
-                var txt='数据获取失败，请重试。'
-               
-             }
+	        type: 'POST',
+//	        url: um.ajax_url,
+	        url: 'http://'+window.location.host+"/ajaxget.php",
+	        dataType: 'html',
+	        data: {
+	            'action' : 'downloads_link',
+	            'doid' : doid,
+	            'ver' : ver,
+	            'hosturl':um.ajax_url,
+	        },
+	        beforeSend: function() {
+	        },
+	        success: function (result) {
+	            window.location.href='http://'+window.location.host+result;
+	        },
+	        error: function(data) {
+	            var txt='数据获取失败，请重试。'
+	           
+	         }
 
         });
 };

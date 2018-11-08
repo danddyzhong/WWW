@@ -60,6 +60,7 @@ body{background-color: #f1f1f1;}
 .dobg{background-color: #f1f1f1;}
 .mi_down_dy{background-color: #fff;box-shadow: 0 1px 2px rgba(0,0,0,.1);}
 .ypbt_down_list li a{color: #18708a;}
+.ypbt_down_list li a span{float:left;}
 .moviedteail_list li a.play{background-color: #7299a7;color: #ecf2f5; margin-top:10px;}
 .moviedteail_list li a.play i{vertical-align: middle;}
 .moviedteail_list li a.play:hover{background-color: #00b2c2; color: #fff;}
